@@ -7,9 +7,9 @@ interface NavMenuProps {
 
 export default function NavMenu({ navList, className = "" }: NavMenuProps) {
   return (
-    <nav>
+    <nav className={className}>
       <ul
-        className={`flex flex-col lg:flex-row gap-10 lg:gap-6 xl:gap-10 lg:items-center ${className}`}
+        className={`flex flex-col lg:flex-row gap-10 lg:gap-6 xl:gap-10 lg:items-center`}
       >
         {navList.map(({ title, link }, idx) => (
           <li key={idx}>
