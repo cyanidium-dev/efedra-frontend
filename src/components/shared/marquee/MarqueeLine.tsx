@@ -29,13 +29,13 @@ export default function MarqueeLine({
             : "text-blue border-blue"
         }`}
       >
-        <span className="inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
+        <span className="font-evolenta inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
           efedra
         </span>
-        <span className="inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
+        <span className="font-evolenta inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
           efedra
         </span>
-        <span className="inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
+        <span className="font-evolenta inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
           efedra
         </span>
       </Marquee>
