@@ -1,3 +1,9 @@
+import LogoIcon from "../icons/LogoIcon";
+
 export default function Header() {
-  return <header></header>;
+  return (
+    <header>
+      <LogoIcon />
+    </header>
+  );
 }
