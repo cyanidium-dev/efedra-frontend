@@ -1,0 +1,12 @@
+export const navListOne = [
+  { title: "Головна", link: "/" },
+  { title: "ціни", link: "/price" },
+  { title: "Блог", link: "/blog" },
+  { title: "Стоматологія", link: "/dentistry" },
+];
+
+export const navListTwo = [
+  { title: "Естетична медицина", link: "/estetic-medicine" },
+  { title: "Про нас", link: "/about" },
+  { title: "Контакти", link: "/contacts" },
+];
