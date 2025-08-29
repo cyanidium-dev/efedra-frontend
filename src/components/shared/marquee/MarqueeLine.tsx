@@ -22,7 +22,7 @@ export default function MarqueeLine({
     >
       <Marquee
         autoFill={true}
-        speed={50}
+        speed={70}
         className={`h-[42px] lg:h-[76px] border-y lg:border-y-2 ${className} ${
           variant === "beige"
             ? "text-beige border-beige"
