@@ -13,12 +13,12 @@ export default function BurgerMenu({
   isOpenBurgerMenu,
   setIsOpenBurgerMenu,
 }: BurgerMenuProps) {
+  const toggleHeaderMenuOpen = () => setIsOpenBurgerMenu(!isOpenBurgerMenu);
   return (
     <>
       <BurgerMenuButton
-        onOpen={() => {
-          setIsOpenBurgerMenu(true);
-        }}
+        isHeaderMenuOpened={isOpenBurgerMenu}
+        toggleHeaderMenuOpen={toggleHeaderMenuOpen}
       />
       {/* <BurgerMenuContent
         isOpen={isOpenBurgerMenu}
