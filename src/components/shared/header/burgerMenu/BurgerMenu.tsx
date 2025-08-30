@@ -1,8 +1,8 @@
 "use client";
 import { Dispatch, SetStateAction } from "react";
 import BurgerMenuButton from "./BurgerMenuButton";
-// import BurgerMenuContent from "./BurgerMenuContent";
-// import Backdrop from "../../backdrop/Backdrop";
+import BurgerMenuContent from "./BurgerMenuContent";
+import Backdrop from "../../backdrop/Backdrop";
 
 interface BurgerMenuProps {
   isOpenBurgerMenu: boolean;
@@ -20,14 +20,15 @@ export default function BurgerMenu({
         isHeaderMenuOpened={isOpenBurgerMenu}
         toggleHeaderMenuOpen={toggleHeaderMenuOpen}
       />
-      {/* <BurgerMenuContent
+      <BurgerMenuContent
         isOpen={isOpenBurgerMenu}
         onClose={() => setIsOpenBurgerMenu(false)}
-      /> */}
-      {/* <Backdrop
+      />
+      <Backdrop
         isVisible={isOpenBurgerMenu}
         onClick={() => setIsOpenBurgerMenu(false)}
-      /> */}
+        className="lg:hidden"
+      />
     </>
   );
 }
