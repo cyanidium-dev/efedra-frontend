@@ -1,9 +1,15 @@
 @import "tailwindcss";
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredstrategy: "pseudoelements";
+}
 
 :root {
 }
 
 @theme inline {
+  --breakpoint-xs: 440px;
+
   --color-white: #f9f9fb;
   --color-black: #1e1e1e;
   --color-beige: #af8c6c;

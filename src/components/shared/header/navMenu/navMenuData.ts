@@ -10,3 +10,5 @@ export const navListTwo = [
   { title: "Про нас", link: "/about" },
   { title: "Контакти", link: "/contacts" },
 ];
+
+export const navListThree = [{ title: "Відгуки", link: "/#reviews" }];
