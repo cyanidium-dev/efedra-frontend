@@ -57,7 +57,7 @@ export default function BurgerMenuButton({
 
         {/* Нижня лінія */}
         <motion.span
-          className="absolute w-full h-[1.8px] rounded-md bg-black"
+          className="absolute w-full h-[1.9px] rounded-md bg-black"
           initial={{
             top: "16px",
             left: "0",
