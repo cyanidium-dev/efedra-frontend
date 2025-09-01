@@ -70,15 +70,15 @@ export const listVariants = ({
 });
 
 export const listItemVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
   },
   exit: {
     opacity: 0,
     scale: 0.95,
-    transition: { duration: 0.5, ease: [0.42, 0, 1, 1] as const },
+    transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as const },
   },
 };
