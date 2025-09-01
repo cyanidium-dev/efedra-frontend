@@ -73,7 +73,7 @@ export default function BurgerMenuContent({
             exit="exit"
             viewport={{ once: true, amount: 0.1 }}
             variants={fadeInAnimation({
-              scale: 0.9,
+              scale: 0.95,
               delay: 1,
               duration: 1,
             })}
