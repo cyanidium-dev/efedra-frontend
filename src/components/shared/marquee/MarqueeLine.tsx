@@ -2,6 +2,8 @@
 import Marquee from "react-fast-marquee";
 import * as motion from "motion/react-client";
 import { headerVariants } from "@/utils/animationVariants";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 interface MarqueeLineProps {
   variant?: "beige" | "blue";
@@ -23,21 +25,20 @@ export default function MarqueeLine({
       <Marquee
         autoFill={true}
         speed={70}
-        className={`h-[42px] lg:h-[76px] border-y lg:border-y-2 ${className} ${
-          variant === "beige"
-            ? "text-beige border-beige"
-            : "text-blue border-blue"
-        }`}
+        className={twMerge(
+          clsx(
+            `h-[42px] lg:h-[76px] border-y lg:border-y-2 font-evolenta text-[17px] lg:text-[30px] leading-none ${
+              variant === "beige"
+                ? "text-beige border-beige"
+                : "text-blue border-blue"
+            }`,
+            className
+          )
+        )}
       >
-        <span className="font-evolenta inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
-          efedra
-        </span>
-        <span className="font-evolenta inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
-          efedra
-        </span>
-        <span className="font-evolenta inline-block mx-[7.15px] lg:mx-[13px] text-[17px] lg:text-[30px] leading-none">
-          efedra
-        </span>
+        <span className="inline-block mx-[7.15px] lg:mx-[13px]">efedra</span>
+        <span className="inline-block mx-[7.15px] lg:mx-[13px]">efedra</span>
+        <span className="inline-block mx-[7.15px] lg:mx-[13px]">efedra</span>
       </Marquee>
     </motion.div>
   );
