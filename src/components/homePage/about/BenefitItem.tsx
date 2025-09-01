@@ -24,7 +24,7 @@ export default function BenefitItem({ benefit, idx }: BenefitItemProps) {
       <p className="mb-3 lg:mb-0 font-evolenta text-[48px] md:text-[36px] lg:text-[54px] font-normal leading-[120%] lg:leading-[133%] uppercase text-center">
         {value}
       </p>
-      <p className="max-w-[106px] text-[12px] lg:text-[14px] font-normal leading-[120%] text-center">
+      <p className="text-[12px] lg:text-[14px] font-normal leading-[120%] text-center">
         {description}
       </p>
     </motion.li>
