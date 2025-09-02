@@ -17,10 +17,10 @@ export default function ChooseUsItem({ item, idx }: ChooseUsItemProps) {
         idx === 0
           ? "text-white bg-beige"
           : idx === 1
-          ? "text-black bg-gray-light"
+          ? "text-black bg-blue-light"
           : idx === 2
-          ? "text-white bg-blue sm:text-black sm:bg-gray-light"
-          : "text-black bg-gray-light sm:text-white sm:bg-blue"
+          ? "text-white bg-blue sm:text-black sm:bg-blue-light"
+          : "text-black bg-blue-light sm:text-white sm:bg-blue"
       }`}
     >
       <p className="min-h-16 mb-10 font-evolenta text-[24px] md:text-[18px] lg:text-[24px] font-normal leading-[120%] uppercase">

@@ -18,7 +18,7 @@ export default function ChooseUs() {
             exit="exit"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInAnimation({
-              scale: 0.85,
+              scale: 0.9,
               duration: 1.6,
             })}
             className="relative flex flex-col justify-between md:w-[calc(50%-90px)] lg:w-[calc(50%-130px)] xl:w-[calc(50%-12px)] rounded-[20px] p-8 overflow-hidden text-white"
