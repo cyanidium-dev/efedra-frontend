@@ -15,7 +15,7 @@ export default function BenefitItem({ benefit, idx }: BenefitItemProps) {
       variants={listItemVariants}
       className={`flex flex-col items-center justify-center w-full sm:w-[calc(33.3%-10.67px)] h-[131px] xl:h-[173px] p-3 rounded-[16px] ${
         idx === 0
-          ? "text-blue bg-gray-light"
+          ? "text-blue bg-blue-light"
           : idx === 1
           ? "text-white bg-beige"
           : "text-white bg-blue"

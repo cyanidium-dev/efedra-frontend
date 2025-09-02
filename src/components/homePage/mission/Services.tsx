@@ -29,7 +29,7 @@ export default function Services() {
           exit="exit"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInAnimation({ x: 20 })}
-          className="flex flex-col justify-between md:w-[267px] rounded-[24px] bg-gray-light shrink-0"
+          className="flex flex-col justify-between md:w-[267px] rounded-[24px] bg-blue-light shrink-0"
         >
           <div className="px-6 pt-6">
             <h3 className="mb-[33px] font-evolenta text-[24px] font-normal leading-[133%] uppercase">
@@ -67,7 +67,7 @@ export default function Services() {
           exit="exit"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInAnimation({ x: -20 })}
-          className="flex flex-col justify-between md:w-[267px] rounded-[24px] bg-gray-light shrink-0"
+          className="flex flex-col justify-between md:w-[267px] rounded-[24px] bg-blue-light shrink-0"
         >
           <div className="px-6 pt-6">
             <h3 className="mb-8 font-evolenta text-[24px] font-normal leading-[133%] uppercase">
