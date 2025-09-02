@@ -49,7 +49,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
         <span className="relative z-10">
           {isLoading ? loadingText : children}
         </span>
-        {isLoading ? <LoaderIcon /> : null}
+        {isLoading ? <LoaderIcon variant={variant} /> : null}
       </button>
     );
   }
