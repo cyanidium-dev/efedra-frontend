@@ -4,6 +4,7 @@ import ChooseUs from "@/components/homePage/chooseUs/ChooseUs";
 import Mission from "@/components/homePage/mission/Mission";
 import Reviews from "@/components/homePage/reviews/Reviews";
 import StartJourneyCTA from "@/components/shared/cta/StartJourneyCTA";
+import CallBackForm from "@/components/shared/forms/CallBackForm";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
         image="/images/homePage/cta/office.webp"
         className="py-15"
       />
+      <CallBackForm />
     </>
   );
 }
