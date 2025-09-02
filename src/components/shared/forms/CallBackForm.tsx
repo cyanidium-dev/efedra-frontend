@@ -16,14 +16,15 @@ export interface ValuesCallBackFormType {
 interface CallBackFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
-  setIsPopUpShown?: Dispatch<SetStateAction<boolean>>;
+  setIsModalShown?: Dispatch<SetStateAction<boolean>>;
   className?: string;
-  buttonVariant: "blue" | "beige";
+  buttonVariant?: "blue" | "beige";
 }
 
 export default function CallBackForm({
   setIsError,
   setIsNotificationShown,
+  setIsModalShown,
   className = "",
   buttonVariant = "blue",
 }: CallBackFormProps) {
@@ -58,9 +59,15 @@ export default function CallBackForm({
         },
       });
       resetForm();
+      if (setIsModalShown) {
+        setIsModalShown(false);
+      }
       setIsNotificationShown(true);
     } catch (error) {
       setIsError(true);
+      if (setIsModalShown) {
+        setIsModalShown(false);
+      }
       setIsNotificationShown(true);
       return error;
     } finally {

@@ -1,7 +1,6 @@
 import { Field, ErrorMessage, useFormikContext } from "formik";
 import { IMaskInput } from "react-imask";
 import { useId } from "react";
-import LoaderIcon from "../icons/LoaderIcon";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -85,7 +84,7 @@ export default function CustomizedInput({
       <ErrorMessage
         name={fieldName}
         component="p"
-        className="absolute bottom-[-11px] left-2 text-[9px] font-normal leading-none text-red-500"
+        className="absolute bottom-[-12px] left-2 text-[9px] font-normal leading-none text-red-500"
       />
     </label>
   );
