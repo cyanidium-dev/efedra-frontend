@@ -10,8 +10,7 @@ import MainButton from "../buttons/MainButton";
 
 export interface ValuesCallBackFormType {
   name: string;
-  email: string;
-  message: string;
+  phone: string;
 }
 
 interface CallBackFormProps {
@@ -19,19 +18,20 @@ interface CallBackFormProps {
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
   setIsPopUpShown?: Dispatch<SetStateAction<boolean>>;
   className?: string;
+  buttonVariant: "blue" | "beige";
 }
 
 export default function CallBackForm({
   setIsError,
   setIsNotificationShown,
   className = "",
+  buttonVariant = "blue",
 }: CallBackFormProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
     name: "",
-    email: "",
-    message: "",
+    phone: "",
   };
 
   const validationSchema = callBackValidation();
@@ -44,8 +44,7 @@ export default function CallBackForm({
     const data =
       `<b>Заявка "Форма зворотнього зв'язку"</b>\n` +
       `<b>Ім'я:</b> ${values.name.trim()}\n` +
-      `<b>Email:</b> ${values.email.trim()}\n` +
-      `<b>Повідомлення:</b> ${values.message.trim()}\n`;
+      `<b>Телефон:</b> ${values.phone.trim()}\n`;
     try {
       setIsError(false);
       setIsLoading(true);
@@ -87,6 +86,7 @@ export default function CallBackForm({
           </div>
           <MainButton
             type="submit"
+            variant={buttonVariant}
             disabled={!(dirty && isValid) || isLoading}
             isLoading={isLoading}
             loadingText="Надсилання..."
