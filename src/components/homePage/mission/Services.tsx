@@ -79,7 +79,9 @@ export default function Services() {
             </p>
           </div>
           <Link href="/estetic-medicine">
-            <MainButton variant="beige">Естетична медицина</MainButton>
+            <MainButton variant="beige" className="px-5 lg:px-5">
+              Естетична медицина
+            </MainButton>
           </Link>
         </motion.div>
       </div>

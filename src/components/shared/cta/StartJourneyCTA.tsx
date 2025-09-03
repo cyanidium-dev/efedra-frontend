@@ -1,11 +1,9 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 import Container from "../container/Container";
-import MainButton from "../buttons/MainButton";
+
 import * as motion from "motion/react-client";
 import { ctaVariants } from "@/utils/animationVariants";
-import CallBackModal from "../modals/CallBackModal";
+import Callback from "./Callback";
 
 interface StartJourneyCTAProps {
   image: string;
@@ -16,8 +14,6 @@ export default function StartJourneyCTA({
   image,
   className = "",
 }: StartJourneyCTAProps) {
-  const [isModalShown, setIsModalShown] = useState(false);
-
   return (
     <>
       <section className={className}>
@@ -58,20 +54,11 @@ export default function StartJourneyCTA({
                 Маєте питання? Заповніть форму зворотнього звʼязку і ми
                 обовʼязково зателефонуємо Вам!
               </p>
-              <MainButton
-                onClick={() => setIsModalShown(true)}
-                className="text-[12px] font-normal lg:text-[18px] lg:font-medium md:max-w-[255px]"
-              >
-                Замовити дзвінок
-              </MainButton>
+              <Callback />
             </div>
           </motion.div>
         </Container>
       </section>
-      <CallBackModal
-        isModalShown={isModalShown}
-        setIsModalShown={setIsModalShown}
-      />
     </>
   );
 }
