@@ -30,7 +30,7 @@ export default function Hero() {
             >
               <Image
                 src="/images/aboutPage/hero/hero.webp"
-                alt="building"
+                alt="Aesthetic medicine center"
                 className="object-cover object-center"
                 fill
                 priority
@@ -61,7 +61,7 @@ export default function Hero() {
           >
             <Image
               src="/images/aboutPage/hero/hero.webp"
-              alt="building"
+              alt="Aesthetic medicine center"
               className="object-cover object-center"
               fill
             />
