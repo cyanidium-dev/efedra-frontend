@@ -97,7 +97,7 @@ export default function CallBackForm({
             disabled={!(dirty && isValid) || isLoading}
             isLoading={isLoading}
             loadingText="Надсилання..."
-            className="h-14 text-[14px] lg:text-[16px] font-medium"
+            className="h-14 px-5 lg:px-5 text-[14px] lg:text-[16px] font-medium"
           >
             Записатися на консультацію
           </MainButton>
