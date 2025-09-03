@@ -22,7 +22,7 @@ export default function BenefitItem({
       variants={listItemVariants}
       className={`flex flex-col items-center justify-center w-full sm:w-[calc(33.3%-10.67px)] ${
         isHero
-          ? "h-[89px] lg:h-[138px] px-1 rounded-[10.32px]"
+          ? "h-[89px] lg:h-[138px] px-1 rounded-[10.32px] lg:rounded-[16px]"
           : "h-[131px] xl:h-[173px] px-3 rounded-[16px]"
       } ${
         idx === 0
