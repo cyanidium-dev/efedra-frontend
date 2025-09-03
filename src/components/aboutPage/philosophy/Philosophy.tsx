@@ -64,7 +64,7 @@ export default function Philosophy() {
               exit="exit"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ y: 20, delay: 0.3 })}
-              className="absolute left-0 bottom-0 sm:bottom-[25%] lg:-left-[100%] xl:-left-[130%] lg:-bottom-[0px] xl:-bottom-[2px] font-evolenta italic h-fit  min-[360px]:max-h-[225px] max-w-[100px]  min-[360px]:max-w-[160px] sm:max-w-[270px] lg:max-w-[400px] xl:max-w-[472px] text-[18px] min-[360px]:text-[24px] xl:text-[32px] uppercase leading-[135%]"
+              className="absolute left-0 bottom-0 sm:bottom-[25%] lg:-left-[100%] xl:-left-[133%] lg:-bottom-[0px] xl:-bottom-[2px] font-evolenta italic h-fit  min-[360px]:max-h-[225px] max-w-[100px]  min-[360px]:max-w-[160px] sm:max-w-[270px] lg:max-w-[400px] xl:max-w-[472px] text-[18px] min-[360px]:text-[24px] xl:text-[32px] uppercase leading-[135%]"
             >
               Ми не нав’язуємо послуги — ми вирішуємо реальні задачі.
             </motion.p>
