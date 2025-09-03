@@ -8,6 +8,7 @@ export interface Category {
   approach: {
     imageMob: string;
     imageDesk: string;
+    imageTwo: string;
     list: { title: string; description: string }[];
   };
 }

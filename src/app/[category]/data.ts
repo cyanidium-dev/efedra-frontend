@@ -10,6 +10,7 @@ export const categoriesData = {
     approach: {
       imageMob: "/images/categoryPage/approach/dentistryMob.svg",
       imageDesk: "/images/categoryPage/approach/dentistryDesk.svg",
+      imageTwo: "/images/categoryPage/approach/dentistryTwo.webp",
       list: [
         {
           title: "Лікування без болю",
@@ -44,6 +45,7 @@ export const categoriesData = {
     approach: {
       imageMob: "/images/categoryPage/approach/medicineMob.svg",
       imageDesk: "/images/categoryPage/approach/medicineDesk.svg",
+      imageTwo: "/images/categoryPage/approach/medicineTwo.webp",
       list: [
         {
           title: "Увага до деталей",

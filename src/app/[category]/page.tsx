@@ -2,6 +2,7 @@ import Hero from "@/components/categoryPage/hero/Hero";
 import { categoriesData } from "./data";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 import Approach from "@/components/categoryPage/approach/Approach";
+import Categories from "@/components/categoryPage/categories/Categories";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -21,6 +22,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Hero variant={variant} category={currentCategory} />
       <MarqueeLine variant={variant} />
       <Approach variant={variant} category={currentCategory} />
+      <Categories />
     </>
   );
 }
