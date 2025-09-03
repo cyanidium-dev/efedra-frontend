@@ -64,6 +64,7 @@ export default function Hero() {
               alt="Aesthetic medicine center"
               className="object-cover object-center"
               fill
+              priority
             />
           </motion.div>
         </div>
