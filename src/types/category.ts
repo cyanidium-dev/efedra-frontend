@@ -5,4 +5,9 @@ export interface Category {
     imageOne: string;
     imageTwo: string;
   };
+  approach: {
+    imageMob: string;
+    imageDesk: string;
+    list: { title: string; description: string }[];
+  };
 }
