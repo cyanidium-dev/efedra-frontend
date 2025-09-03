@@ -20,8 +20,10 @@ export default function BenefitItem({
     <motion.li
       viewport={{ once: true, amount: 0.2 }}
       variants={listItemVariants}
-      className={`flex flex-col items-center justify-center w-full sm:w-[calc(33.3%-10.67px)] rounded-[16px] ${
-        isHero ? "h-[89px] lg:h-[138px] px-1" : "h-[131px] xl:h-[173px] px-3"
+      className={`flex flex-col items-center justify-center w-full sm:w-[calc(33.3%-10.67px)] ${
+        isHero
+          ? "h-[89px] lg:h-[138px] px-1 rounded-[10.32px]"
+          : "h-[131px] xl:h-[173px] px-3 rounded-[16px]"
       } ${
         idx === 0
           ? "text-blue bg-blue-light"
