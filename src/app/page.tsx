@@ -1,3 +1,4 @@
+import Hero from "@/components/homePage/hero/Hero";
 import About from "@/components/homePage/about/About";
 import Blog from "@/components/homePage/blog/Blog";
 import ChooseUs from "@/components/homePage/chooseUs/ChooseUs";
@@ -9,6 +10,7 @@ import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 export default function HomePage() {
   return (
     <>
+      <Hero />
       <MarqueeLine />
       <About />
       <ChooseUs />

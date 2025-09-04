@@ -45,7 +45,7 @@ export default function CallBackForm({
     const data =
       `<b>Заявка "Форма зворотнього зв'язку"</b>\n` +
       `<b>Ім'я:</b> ${values.name.trim()}\n` +
-      `<b>Телефон:</b> ${values.phone.trim()}\n`;
+      `<b>Телефон:</b> ${values.phone.trim().replace(/(?!^)\D/g, "")}\n`;
     try {
       setIsError(false);
       setIsLoading(true);

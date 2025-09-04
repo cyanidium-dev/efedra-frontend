@@ -62,7 +62,7 @@ export default function About() {
             className="relative w-full md:w-[calc(50%-84.5px)] lg:w-[calc(50%-110px)] xl:w-[calc(50%-15px)] h-[195px] xs:h-[280px] sm:h-[320px] md:h-[287px] lg:h-[330px] xl:h-[373px] overflow-hidden rounded-[20px]"
           >
             <Image
-              src="/images/homePage/about/building.webp"
+              src="/images/shared/building.webp"
               alt="building"
               className="object-cover object-center"
               fill

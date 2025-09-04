@@ -82,6 +82,34 @@ export const listVariants = ({
   },
 });
 
+export const approachItemVariants = {
+  hidden: { opacity: 0, x: 30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as const },
+  },
+};
+
+export const iconItemVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as const },
+  },
+};
+
 export const listItemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
