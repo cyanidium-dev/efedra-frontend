@@ -20,6 +20,7 @@ export default function Hero() {
           <Image
             src="/images/homePage/hero/bgMob.webp"
             alt="background"
+            priority
             width={1063}
             height={868}
             className="object-cover"
@@ -36,6 +37,7 @@ export default function Hero() {
           <Image
             src="/images/homePage/hero/bgDesk.webp"
             alt="background"
+            priority
             width={2295}
             height={1093}
             className="object-cover"
