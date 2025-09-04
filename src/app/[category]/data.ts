@@ -1,3 +1,8 @@
+import ApproachDentistryDesk from "@/components/shared/icons/ApproachDentistryDesk";
+import ApproachDentistryMob from "@/components/shared/icons/ApproachDentistryMob";
+import ApproachMedicineDesk from "@/components/shared/icons/ApproachMedicineDesk";
+import ApproachMedicineMob from "@/components/shared/icons/ApproachMedicineMob";
+
 export const categoriesData = {
   dentistry: {
     hero: {
@@ -8,8 +13,8 @@ export const categoriesData = {
       imageTwo: "/images/categoryPage/hero/dentistryTwo.webp",
     },
     approach: {
-      imageMob: "/images/categoryPage/approach/dentistryMob.svg",
-      imageDesk: "/images/categoryPage/approach/dentistryDesk.svg",
+      imageMob: ApproachDentistryMob,
+      imageDesk: ApproachDentistryDesk,
       imageTwo: "/images/categoryPage/approach/dentistryTwo.webp",
       list: [
         {
@@ -43,8 +48,8 @@ export const categoriesData = {
       imageTwo: "/images/categoryPage/hero/medicineTwo.webp",
     },
     approach: {
-      imageMob: "/images/categoryPage/approach/medicineMob.svg",
-      imageDesk: "/images/categoryPage/approach/medicineDesk.svg",
+      imageMob: ApproachMedicineMob,
+      imageDesk: ApproachMedicineDesk,
       imageTwo: "/images/categoryPage/approach/medicineTwo.webp",
       list: [
         {

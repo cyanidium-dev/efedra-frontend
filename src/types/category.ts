@@ -1,3 +1,5 @@
+import { ComponentType } from "react";
+
 export interface Category {
   hero: {
     title: string;
@@ -6,8 +8,8 @@ export interface Category {
     imageTwo: string;
   };
   approach: {
-    imageMob: string;
-    imageDesk: string;
+    imageMob: ComponentType;
+    imageDesk: ComponentType;
     imageTwo: string;
     list: { title: string; description: string }[];
   };
