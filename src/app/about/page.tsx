@@ -1,3 +1,13 @@
+import Hero from "@/components/aboutPage/hero/Hero";
+import Philosophy from "@/components/aboutPage/philosophy/Philosophy";
+import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
+
 export default function AboutPage() {
-  return <></>;
+  return (
+    <>
+      <Hero />
+      <MarqueeLine />
+      <Philosophy />
+    </>
+  );
 }

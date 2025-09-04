@@ -16,13 +16,13 @@ export default function SectionTitle({
   className = "",
 }: SectionTitleProps) {
   return (
-    <motion.h2
+    <motion.div
       initial="hidden"
       whileInView="visible"
       exit="exit"
       viewport={{ once: true, amount: 0.8 }}
       variants={fadeInAnimation({ x: -30 })}
-      className={`w-fit font-evolenta text-[14px] lg:text-[16px] leading-[120%] font-normal uppercase rounded-full px-3 py-1 ${className}
+      className={`flex items-center justify-center w-fit h-[29px] mb-5 rounded-full px-3 py-1 bg-beige/80 ${className}
       ${
         variant === "beige"
           ? type === "solid"
@@ -34,7 +34,11 @@ export default function SectionTitle({
       }
       ${variant === "beige" ? "bg-beige/80" : "bg-blue/80"}`}
     >
-      {children}
-    </motion.h2>
+      <h2
+        className={`pt-0.5 font-evolenta text-[14px] lg:text-[16px] font-normal uppercase`}
+      >
+        {children}
+      </h2>
+    </motion.div>
   );
 }

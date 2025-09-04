@@ -24,12 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
+    <html lang="uk" className="scroll-smooth">
       <body
         className={`${montserrat.variable} ${evolenta.variable} flex min-h-dvh flex-col antialiased text-[14px] font-normal leading-[120%]`}
       >
         <Header />
-        <main className="flex-1 pt-[84px] lg:pt-[99px]">{children}</main>
+        <main className="flex-1 pt-[86px] lg:pt-[99px]">{children}</main>
         <Footer />
       </body>
     </html>

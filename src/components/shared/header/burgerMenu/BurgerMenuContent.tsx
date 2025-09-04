@@ -27,15 +27,14 @@ export default function BurgerMenuContent({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="lg:hidden fixed right-0 top-0 z-[50] w-full h-dvh max-h-dvh
-          pt-[131px] bg-white "
+          className="lg:hidden fixed right-0 top-0 z-[50] pt-21 w-full h-dvh max-h-dvh bg-white"
           initial="hidden"
           animate="visible"
           exit="exit"
           variants={burgerMenuVariants}
         >
           <Container
-            className="flex flex-col justify-between h-full  pb-8 overflow-y-auto scrollbar scrollbar-w-[3px] scrollbar-thumb-rounded-full 
+            className="flex flex-col justify-between h-full pt-9 pb-8 overflow-y-auto scrollbar scrollbar-w-[3px] scrollbar-thumb-rounded-full 
           scrollbar-track-rounded-full scrollbar-thumb-beige/50 scrollbar-track-transparent"
           >
             {/* Меню */}
@@ -46,9 +45,17 @@ export default function BurgerMenuContent({
               exit="exit"
               className="mb-15"
             >
-              <NavMenu navList={navListOne} className="mb-10" />
-              <NavMenu navList={navListTwo} className="mb-10" />
-              <NavMenu navList={navListThree} />
+              <NavMenu
+                navList={navListOne}
+                className="mb-10"
+                onClick={onClose}
+              />
+              <NavMenu
+                navList={navListTwo}
+                className="mb-10"
+                onClick={onClose}
+              />
+              <NavMenu navList={navListThree} onClick={onClose} />
             </motion.div>
             <motion.a
               href={`tel:+${PHONE.replace(/\D/g, "")}`}
@@ -73,7 +80,7 @@ export default function BurgerMenuContent({
             exit="exit"
             viewport={{ once: true, amount: 0.1 }}
             variants={fadeInAnimation({
-              scale: 0.9,
+              scale: 0.97,
               delay: 1,
               duration: 1,
             })}

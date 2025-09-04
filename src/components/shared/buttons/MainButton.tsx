@@ -2,16 +2,18 @@ import { forwardRef, ReactNode } from "react";
 import LoaderIcon from "../icons/LoaderIcon";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
+import ArrowIcon from "../icons/ArrowIcon";
 
 interface MainButtonProps {
   children: string | ReactNode;
-  variant?: "beige" | "blue";
+  variant?: "beige" | "blue" | "bordered";
   className?: string;
   type?: "submit" | "button";
   disabled?: boolean;
   isLoading?: boolean;
   onClick?: () => void;
   loadingText?: string;
+  withArrow?: boolean;
 }
 
 const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
@@ -25,6 +27,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
       isLoading = false,
       onClick,
       loadingText,
+      withArrow = false,
     },
     ref
   ) => {
@@ -36,8 +39,12 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
         onClick={onClick}
         className={twMerge(
           clsx(
-            `group relative overflow-hidden enabled:cursor-pointer flex items-center justify-center h-[50px] px-5 rounded-full text-white ${
-              variant === "beige" ? "bg-beige" : "bg-blue"
+            `group relative overflow-hidden enabled:cursor-pointer flex items-center justify-center h-[50px] px-[30px] lg:px-[52px] rounded-full ${
+              variant === "beige"
+                ? "text-white  bg-beige"
+                : variant === "blue"
+                ? "text-white bg-blue"
+                : "bg-white border border-blue text-black"
             } 
           disabled:opacity-60 enabled:xl:hover:brightness-125 enabled:focus-visible:brightness-125 enabled:active:scale-[98%] will-change-transform transition duration-300 ease-in-out`,
             "w-full",
@@ -46,10 +53,15 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
           )
         )}
       >
-        <span className="relative z-10">
-          {isLoading ? loadingText : children}
-        </span>
-        {isLoading ? <LoaderIcon /> : null}
+        <div className="flex items-center justify-between gap-2.5 w-full">
+          <p className="relative z-10 w-full text-center">
+            {isLoading ? loadingText : children}
+          </p>
+          {withArrow ? (
+            <ArrowIcon className="w-[16px] h-auto shrink-0 xl:group-hover:translate-x-[1px] xl:group-hover:-translate-y-[1px] will-change-transform transition duration-300 ease-in-out" />
+          ) : null}
+        </div>
+        {isLoading ? <LoaderIcon variant={variant} /> : null}
       </button>
     );
   }

@@ -11,6 +11,19 @@ export const headerVariants = {
   },
 };
 
+export const ctaVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.3, ease: [0.42, 0, 1, 1] as const },
+  },
+};
+
 export const fadeInAnimation = ({
   x = 0,
   y = 0,
@@ -53,4 +66,60 @@ export const burgerListVariants = {
   hidden: { opacity: 0, x: -10 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.3, delay: 0.4 } },
   exit: { opacity: 0, x: 10, transition: { duration: 0.2 } },
+};
+
+export const listVariants = ({
+  staggerChildren = 0.3,
+  delayChildren = 0,
+} = {}) => ({
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren,
+      delayChildren,
+    },
+  },
+});
+
+export const approachItemVariants = {
+  hidden: { opacity: 0, x: 30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as const },
+  },
+};
+
+export const iconItemVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as const },
+  },
+};
+
+export const listItemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as const },
+  },
 };

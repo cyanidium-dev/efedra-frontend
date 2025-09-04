@@ -1,5 +1,5 @@
 interface LoaderIconProps {
-  variant?: "beige" | "blue";
+  variant?: "beige" | "blue" | "bordered";
 }
 
 export default function LoaderIcon({ variant = "beige" }: LoaderIconProps) {
