@@ -64,7 +64,7 @@ export default function Philosophy() {
               exit="exit"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ y: 20, delay: 0.3 })}
-              className="absolute left-0 bottom-0 sm:bottom-[25%] lg:-left-[100%] xl:-left-[133%] lg:-bottom-[0px] xl:-bottom-[2px] font-evolenta italic h-fit  min-[360px]:max-h-[225px] max-w-[100px]  min-[360px]:max-w-[160px] sm:max-w-[270px] lg:max-w-[400px] xl:max-w-[472px] text-[18px] min-[360px]:text-[24px] xl:text-[32px] uppercase leading-[135%]"
+              className="absolute left-0 bottom-0 sm:bottom-[25%] lg:-left-[110%] xl:-left-[133%] lg:-bottom-[0px] xl:-bottom-[2px] font-evolenta italic h-fit  min-[360px]:max-h-[225px] max-w-[100px]  min-[360px]:max-w-[160px] sm:max-w-[270px] lg:max-w-[400px] xl:max-w-[472px] text-[18px] min-[360px]:text-[24px] xl:text-[32px] uppercase leading-[135%]"
             >
               Ми не нав’язуємо послуги — ми вирішуємо реальні задачі.
             </motion.p>
@@ -74,7 +74,7 @@ export default function Philosophy() {
               exit="exit"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ scale: 0.95, delay: 0.3 })}
-              className="relative ml-auto w-[calc(50%-28px)] md:w-[calc(50%-50px)] lg:w-[calc(50%+30px)] xl:w-[100%] h-[140px] xs:h-[260px] lg:h-[250px] xl:h-[317px] overflow-hidden rounded-[20px]"
+              className="relative ml-auto w-[calc(50%-28px)] md:w-[calc(50%-50px)] lg:w-[calc(50%+80px)] xl:w-[100%] h-[140px] xs:h-[260px] lg:h-[250px] xl:h-[317px] overflow-hidden rounded-[20px]"
             >
               <Image
                 src="/images/aboutPage/philosophy/doctor.webp"
