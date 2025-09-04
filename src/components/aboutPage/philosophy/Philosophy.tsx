@@ -7,7 +7,7 @@ import { fadeInAnimation } from "@/utils/animationVariants";
 
 export default function Philosophy() {
   return (
-    <section className="pt-15 lg:pt-[88px] lg:pb-[107px]">
+    <section className="pt-15 lg:pt-[88px]">
       <Container>
         <SectionTitle>Наша філософія</SectionTitle>
         <div className="flex flex-col lg:flex-row">

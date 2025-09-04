@@ -39,7 +39,7 @@ export default function Advantages() {
   ];
 
   return (
-    <section className="pt-15 lg:pt-[88px] lg:pb-[107px]">
+    <section className="pt-[60px] lg:pt-[72px]">
       <Container>
         <SectionTitle>Наші переваги</SectionTitle>
         <div className="flex flex-col gap-6 pt-1 md:hidden">
