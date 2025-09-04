@@ -35,8 +35,8 @@ export default function ApproachIcon({ className }: ApproachIconProps) {
         fill="black"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M48.75 17.6045C48.75 15.3608 50.5688 13.542 52.8125 13.542C55.0562 13.542 56.875 15.3608 56.875 17.6045V45.0979L52.8125 51.1916L48.75 45.0979V17.6045ZM52.8125 16.2503C52.0646 16.2503 51.4583 16.8566 51.4583 17.6045V20.3128H54.1667V17.6045C54.1667 16.8566 53.5604 16.2503 52.8125 16.2503ZM52.8125 46.309L54.1667 44.2778V23.0212H51.4583V44.2778L52.8125 46.309Z"
         fill="black"
       />
