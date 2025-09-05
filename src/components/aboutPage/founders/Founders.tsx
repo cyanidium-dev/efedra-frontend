@@ -57,6 +57,7 @@ export default function Founders() {
                 whileInView="visible"
                 exit="exit"
                 viewport={{ once: true, amount: 0.3 }}
+                variants={fadeInAnimation({ x: 20 })}
                 className="hidden md:inline-block relative w-full md:h-[100px] lg:h-[323px] xl:h-[178px] rounded-[16px] md:rounded-[20px] overflow-hidden"
               >
                 <Image
@@ -132,6 +133,7 @@ export default function Founders() {
                 whileInView="visible"
                 exit="exit"
                 viewport={{ once: true, amount: 0.3 }}
+                variants={fadeInAnimation({ x: 20 })}
                 className="hidden md:inline-block relative w-full md:h-[100px] lg:h-[323px] xl:h-[178px] rounded-[16px] md:rounded-[20px] overflow-hidden"
               >
                 <Image
@@ -141,7 +143,13 @@ export default function Founders() {
                   className="object-cover"
                 />
               </motion.div>
-              <motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                exit="exit"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={fadeInAnimation({ x: 20 })}
+              >
                 <Link href="/dentistry">
                   <MainButton
                     withArrow
