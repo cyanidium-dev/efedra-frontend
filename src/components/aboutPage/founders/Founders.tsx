@@ -24,7 +24,7 @@ export default function Founders() {
             >
               <Image
                 src="/images/aboutPage/founders/founder1.webp"
-                alt="dentistry"
+                alt="cosmetolog"
                 fill
                 className="object-cover"
               />
@@ -61,7 +61,7 @@ export default function Founders() {
               >
                 <Image
                   src="/images/aboutPage/founders/cosmetics.webp"
-                  alt="dentistry"
+                  alt="cosmetics"
                   fill
                   className="object-cover lg:object-[center_70%] xl:object-center"
                 />
@@ -99,7 +99,7 @@ export default function Founders() {
             >
               <Image
                 src="/images/aboutPage/founders/founder2.webp"
-                alt="dentistry"
+                alt="dentist"
                 fill
                 className="object-cover object-[center_20%]"
               />
