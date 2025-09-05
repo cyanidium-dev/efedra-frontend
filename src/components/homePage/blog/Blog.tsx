@@ -5,11 +5,13 @@ import { fetchSanityDataServer } from "@/utils/fetchSanityDataServer";
 import BlogList from "./BlogList";
 import { Suspense } from "react";
 import Loader from "@/components/shared/loader/Loader";
+import * as motion from "motion/react-client";
+import { fadeInAnimation } from "@/utils/animationVariants";
 
 export default async function Blog() {
   const posts = await fetchSanityDataServer(allPostsQuery);
 
-  console.log(posts);
+  const postsList = posts.slice(0, 3);
 
   return (
     <section className="pt-15 lg:py-[95px] lg:mb-6">
@@ -18,13 +20,19 @@ export default async function Blog() {
           <SectionTitle animationDirection="left" className="shrink-0">
             Блог і корисні матеріали
           </SectionTitle>
-          <p className="max-w-[520px] font-evolenta text-[24px] lg:text-[32px] font-normal leading-[120%] uppercase text-blue">
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            exit="exit"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInAnimation({ x: -30 })}
+            className="max-w-[520px] font-evolenta text-[24px] lg:text-[32px] font-normal leading-[120%] uppercase text-blue"
+          >
             довіряй лише перевіреній інформації
-          </p>
+          </motion.p>
         </div>
-        <Loader />
         <Suspense fallback={<Loader />}>
-          <BlogList />
+          <BlogList postsList={postsList} />
         </Suspense>
       </Container>
     </section>
