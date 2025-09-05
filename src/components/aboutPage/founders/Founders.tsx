@@ -11,16 +11,16 @@ export default function Founders() {
   return (
     <section className="pt-[60px] lg:pt-[176px]">
       <Container>
-        <SectionTitle>Від засновника</SectionTitle>
+        <SectionTitle>Від засновників</SectionTitle>
         <div className="flex flex-col gap-8 lg:gap-6 lg:pt-1">
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-5">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-4 lg:gap-5">
             <motion.div
               initial="hidden"
               whileInView="visible"
               exit="exit"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ x: -20 })}
-              className="relative w-full lg:w-[calc(115%)] xl:w-[calc(106%)] h-[231px] xs:h-[330px] sm:h-[450px] md:h-[520px] lg:h-[700px] xl:h-[526px] rounded-[16px] md:rounded-[20px] overflow-hidden"
+              className="relative w-full lg:w-[calc(115%)] xl:w-[calc(106%)] h-[231px] xs:h-[330px] sm:h-[450px] md:h-[326px] lg:h-[700px] xl:h-[526px] rounded-[16px] md:rounded-[20px] overflow-hidden"
             >
               <Image
                 src="/images/aboutPage/founders/founder1.webp"
@@ -30,7 +30,7 @@ export default function Founders() {
               />
             </motion.div>
 
-            <div className="flex flex-col justify-between gap-6 lg:max-w-[calc(50%-10px)] xl:w-[calc(70%+70px)] lg:gap-5">
+            <div className="flex flex-col justify-between gap-6 md:gap-2 md:max-w-[calc(50%-8px)] lg:max-w-[calc(50%-10px)] xl:w-[calc(70%+70px)] lg:gap-5">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -57,7 +57,7 @@ export default function Founders() {
                 whileInView="visible"
                 exit="exit"
                 viewport={{ once: true, amount: 0.3 }}
-                className="hidden md:inline-block relative w-full lg:h-[323px] xl:h-[178px] rounded-[16px] md:rounded-[20px] overflow-hidden"
+                className="hidden md:inline-block relative w-full md:h-[100px] lg:h-[323px] xl:h-[178px] rounded-[16px] md:rounded-[20px] overflow-hidden"
               >
                 <Image
                   src="/images/aboutPage/founders/cosmetics.webp"
@@ -78,7 +78,7 @@ export default function Founders() {
                   <MainButton
                     variant="beige"
                     withArrow
-                    className="xl:h-[56px] xl:max-w-[258px] xl:px-6"
+                    className="xl:h-[56px] xl:w-[258px] xl:px-6"
                   >
                     <span className="text-[14px] lg:text-[15px] font-normal">
                       Естетична медицина
@@ -88,14 +88,14 @@ export default function Founders() {
               </motion.div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-5">
+          <div className="flex flex-col md:flex-row-reverse gap-6 md:gap-4 lg:gap-5">
             <motion.div
               initial="hidden"
               whileInView="visible"
               exit="exit"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ x: -20 })}
-              className="relative w-full lg:w-[calc(115%)] xl:w-[calc(106%)] h-[231px] xs:h-[330px] sm:h-[450px] md:h-[520px] lg:h-[700px] xl:h-[526px] rounded-[16px] md:rounded-[20px] overflow-hidden"
+              className="relative w-full md:max-w-[calc(50%-8px)] lg:w-[calc(115%)] xl:w-[calc(106%)] h-[231px] xs:h-[330px] sm:h-[450px] md:h-[326px] lg:h-[700px] xl:h-[526px] rounded-[16px] md:rounded-[20px] overflow-hidden"
             >
               <Image
                 src="/images/aboutPage/founders/founder2.webp"
@@ -104,7 +104,7 @@ export default function Founders() {
                 className="object-cover object-[center_20%]"
               />
             </motion.div>
-            <div className="flex flex-col justify-between gap-6 lg:max-w-[calc(50%-10px)] xl:w-[calc(70%+70px)] lg:gap-5">
+            <div className="flex flex-col justify-between gap-6 md:gap-2 md:w-[344px] xl:w-[calc(70%+70px)] lg:gap-5">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -132,7 +132,7 @@ export default function Founders() {
                 whileInView="visible"
                 exit="exit"
                 viewport={{ once: true, amount: 0.3 }}
-                className="hidden md:inline-block relative w-full lg:h-[323px] xl:h-[178px] rounded-[16px] md:rounded-[20px] overflow-hidden"
+                className="hidden md:inline-block relative w-full md:h-[100px] lg:h-[323px] xl:h-[178px] rounded-[16px] md:rounded-[20px] overflow-hidden"
               >
                 <Image
                   src="/images/aboutPage/founders/instruments.webp"
@@ -145,7 +145,7 @@ export default function Founders() {
                 <Link href="/dentistry">
                   <MainButton
                     withArrow
-                    className="xl:h-[56px] xl:max-w-[258px] xl:px-6"
+                    className="xl:h-[56px] xl:w-[200px] xl:px-[26px]"
                   >
                     <span className="text-[14px] lg:text-[15px] font-normal">
                       Стоматологія
