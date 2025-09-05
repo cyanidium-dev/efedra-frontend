@@ -68,8 +68,8 @@ export default function Advantages() {
             className="relative w-full h-[319px] min-[480px]:max-w-[400px] sm:max-w-full sm:h-[390px] overflow-hidden rounded-tl-[300px] rounded-tr-[300px] rounded-br-[20px] rounded-bl-[300px]"
           >
             <Image
-              src="/images/aboutPage/advantages/destistry.webp"
-              alt="building"
+              src="/images/aboutPage/advantages/dentistry.webp"
+              alt="dentistry"
               className="object-cover object-bottom"
               fill
             />
@@ -113,8 +113,8 @@ export default function Advantages() {
             className="relative w-full md:w-[calc(50%-50px)] lg:w-[calc(50%-5px)] xl:w-[calc(50%)]  md:h-[295px] lg:h-[420px] xl:h-[625px] overflow-hidden  rounded-tl-[300px] rounded-tr-[300px] rounded-br-[20px] rounded-bl-[300px]"
           >
             <Image
-              src="/images/aboutPage/advantages/destistry.webp"
-              alt="building"
+              src="/images/aboutPage/advantages/dentistry.webp"
+              alt="dentistry"
               className="object-cover object-bottom"
               fill
             />
