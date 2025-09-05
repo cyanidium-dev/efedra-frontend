@@ -1,7 +1,7 @@
 import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
-export default function Blog() {
+export default async function Blog() {
   return (
     <section className="pt-15 lg:py-[95px] lg:mb-6">
       <Container>
