@@ -21,6 +21,7 @@ export default function MarqueeLine({
       exit="exit"
       viewport={{ once: true, amount: 0.2 }}
       variants={headerVariants}
+      className={className}
     >
       <Marquee
         autoFill={true}

@@ -7,6 +7,7 @@ interface SectionTitleProps {
   variant?: "beige" | "blue";
   type?: "bordered" | "solid";
   className?: string;
+  animationDirection?: "left" | "right";
 }
 
 export default function SectionTitle({
@@ -14,6 +15,7 @@ export default function SectionTitle({
   variant = "beige",
   type = "solid",
   className = "",
+  animationDirection = "right",
 }: SectionTitleProps) {
   return (
     <motion.div
@@ -21,7 +23,9 @@ export default function SectionTitle({
       whileInView="visible"
       exit="exit"
       viewport={{ once: true, amount: 0.8 }}
-      variants={fadeInAnimation({ x: -30 })}
+      variants={fadeInAnimation({
+        x: animationDirection === "right" ? -30 : 30,
+      })}
       className={`flex items-center justify-center w-fit h-[29px] mb-5 rounded-full px-3 py-1 bg-beige/80 ${className}
       ${
         variant === "beige"
@@ -29,8 +33,8 @@ export default function SectionTitle({
             ? "text-white bg-beige/80"
             : "text-beige bg-white border-[1.8px] border-beige/80"
           : type === "solid"
-          ? "text-white bg-blue/80"
-          : "text-blue bg-white border-[1.8px] border-blue/80"
+            ? "text-white bg-blue/80"
+            : "text-blue bg-white border-[1.8px] border-blue/80"
       }
       ${variant === "beige" ? "bg-beige/80" : "bg-blue/80"}`}
     >
