@@ -80,7 +80,7 @@ export default function Founders() {
                     withArrow
                     className="xl:h-[56px] xl:max-w-[258px] xl:px-6"
                   >
-                    <span className="text-[14px] font-normal">
+                    <span className="text-[14px] lg:text-[15px] font-normal">
                       Естетична медицина
                     </span>
                   </MainButton>
@@ -147,7 +147,7 @@ export default function Founders() {
                     withArrow
                     className="xl:h-[56px] xl:max-w-[258px] xl:px-6"
                   >
-                    <span className="text-[14px] font-normal">
+                    <span className="text-[14px] lg:text-[15px] font-normal">
                       Стоматологія
                     </span>
                   </MainButton>
