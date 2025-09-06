@@ -128,4 +128,16 @@
       box-shadow: 0 0 0 10px inset;
     }
   }
+
+  /* Swiper */
+
+  .swiper-slide {
+    padding: 0 0.5px;
+    height: auto !important;
+    min-height: 100%;
+    @media screen and (min-width: 1024px) {
+      width: 334px !important;
+      height: 383px !important;
+    }
+  }
 }
