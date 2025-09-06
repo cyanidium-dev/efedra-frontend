@@ -6,7 +6,7 @@ import ArrowIcon from "../icons/ArrowIcon";
 
 interface MainButtonProps {
   children: string | ReactNode;
-  variant?: "beige" | "blue" | "bordered";
+  variant?: "beige" | "blue" | "white" | "bordered";
   className?: string;
   type?: "submit" | "button";
   disabled?: boolean;
@@ -43,8 +43,10 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
               variant === "beige"
                 ? "text-white  bg-beige"
                 : variant === "blue"
-                ? "text-white bg-blue"
-                : "bg-white border border-blue text-black"
+                  ? "text-white bg-blue"
+                  : variant === "white"
+                    ? "bg-white text-blue"
+                    : "bg-white border border-blue text-black"
             } 
           disabled:opacity-60 enabled:xl:hover:brightness-125 enabled:focus-visible:brightness-125 enabled:active:scale-[98%] will-change-transform transition duration-300 ease-in-out`,
             "w-full",
