@@ -10,7 +10,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
 
   return (
     <div className="p-6 rounded-[20px] border border-beige">
-      <div className="flex gap-3 items-center mb-8">
+      <div className="flex gap-3 items-center mb-[26px] lg:mb-8">
         <Image src={photo} alt={name} width={64} height={64} />
         <div>
           <h3 className="mb-1.5 font-evolenta text-[15px] font-normal leading-[133%] uppercase">

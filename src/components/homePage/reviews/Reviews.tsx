@@ -3,6 +3,7 @@ import SectionTitle from "@/components/shared/titles/SectionTitle";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
 import RateUs from "./RateUs";
+import ReviewsSlider from "./ReviewsSlider";
 
 export default function Reviews() {
   return (
@@ -21,6 +22,7 @@ export default function Reviews() {
           <span className="italic">ваша черга</span>!
         </motion.p>
         <RateUs />
+        <ReviewsSlider />
       </Container>
     </section>
   );
