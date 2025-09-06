@@ -21,8 +21,11 @@ export default function Reviews() {
           Вони вже довірили нам свою красу - тепер{" "}
           <span className="italic">ваша черга</span>!
         </motion.p>
-        <RateUs />
-        <ReviewsSlider />
+        <div className="flex flex-col gap-5 ">
+          {" "}
+          <RateUs />
+          <ReviewsSlider />
+        </div>
       </Container>
     </section>
   );

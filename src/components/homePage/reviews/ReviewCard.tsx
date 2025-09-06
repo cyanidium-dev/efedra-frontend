@@ -9,7 +9,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
   const { name, photo, direction, text } = review;
 
   return (
-    <div className="p-6 rounded-[20px] border border-beige">
+    <div className="flex flex-col h-full p-6 rounded-[20px] border border-beige">
       <div className="flex gap-3 items-center mb-[26px] lg:mb-8">
         <Image src={photo} alt={name} width={64} height={64} />
         <div>
@@ -19,7 +19,9 @@ export default function ReviewCard({ review }: ReviewCardProps) {
           <p className="text-[13px] font-normal leading-[120%]">{direction}</p>
         </div>
       </div>
-      <p className="text-[14px] font-light leading-[120%]">{text}</p>
+      <div className="flex-grow flex flex-col justify-center">
+        <p className="h-fit text-[14px] font-light leading-[120%]">{text}</p>
+      </div>
     </div>
   );
 }
