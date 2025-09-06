@@ -4,7 +4,7 @@ import { GOOGLE_MAPS_URL } from "@/constants/constants";
 
 export default function RateUs() {
   return (
-    <div className="flex flex-col items-center gap-y-4 py-8 px-10 lg:px-7 rounded-[20px] bg-blue text-white">
+    <div className="flex flex-col items-center gap-y-4 lg:w-[270px] lg:h-[343px] py-8 px-10 lg:px-7 rounded-[20px] bg-blue text-white shrink-0">
       <Image
         src="/images/homePage/reviews/people.webp"
         alt="people"
@@ -27,7 +27,7 @@ export default function RateUs() {
         <MainButton
           withArrow
           variant="white"
-          className="h-[58px] text-[14px] lg:text-[15px] font-medium leading-[120%]"
+          className="w-full h-[58px] text-[14px] lg:text-[15px] px-5 lg:px-5 font-medium leading-[120%]"
         >
           Оцінити нас на Google Картах
         </MainButton>

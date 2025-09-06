@@ -1,41 +1,36 @@
 "use client";
-import * as motion from "motion/react-client";
-import { fadeInAnimation } from "@/utils/animationVariants";
 import { reviewsList } from "./data";
 import SwiperWrapper from "@/components/shared/swiper/SwiperWrapper";
 import { SwiperSlide } from "swiper/react";
 import ReviewCard from "./ReviewCard";
+import { useScreenWidth } from "@/hooks/useScreenWidth";
 
 export default function ReviewsSlider() {
+  const screenWidth = useScreenWidth();
+  const isDesktop = screenWidth >= 1024;
+
+  const sliderReviews = isDesktop
+    ? reviewsList.slice(1, reviewsList.length)
+    : reviewsList;
+
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      exit="exit"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={fadeInAnimation({ y: 30 })}
+    <SwiperWrapper
+      swiperClassName="reviews"
+      loop
+      breakpoints={{
+        0: {
+          spaceBetween: 16,
+          slidesPerView: 1,
+        },
+        640: { spaceBetween: 16, slidesPerView: 2 },
+        1024: { spaceBetween: 20, slidesPerView: "auto" },
+      }}
     >
-      <SwiperWrapper
-        swiperClassName="reviews"
-        breakpoints={{
-          0: {
-            spaceBetween: 16,
-            slidesPerView: 1,
-          },
-          500: { spaceBetween: 16, slidesPerView: 2 },
-          768: { spaceBetween: 20, slidesPerView: 3 },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 5,
-          },
-        }}
-      >
-        {reviewsList.map((review, idx) => (
-          <SwiperSlide key={idx}>
-            <ReviewCard review={review} />
-          </SwiperSlide>
-        ))}
-      </SwiperWrapper>
-    </motion.div>
+      {sliderReviews.map((review, idx) => (
+        <SwiperSlide key={idx}>
+          <ReviewCard review={review} />
+        </SwiperSlide>
+      ))}
+    </SwiperWrapper>
   );
 }

@@ -1,15 +1,28 @@
 import { Review } from "@/types/review";
 import Image from "next/image";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 interface ReviewCardProps {
   review: Review;
+  className?: string;
 }
 
-export default function ReviewCard({ review }: ReviewCardProps) {
+export default function ReviewCard({
+  review,
+  className = "",
+}: ReviewCardProps) {
   const { name, photo, direction, text } = review;
 
   return (
-    <div className="flex flex-col h-full p-6 rounded-[20px] border border-beige">
+    <div
+      className={twMerge(
+        clsx(
+          `flex flex-col h-full p-6 rounded-[20px] border border-beige`,
+          className
+        )
+      )}
+    >
       <div className="flex gap-3 items-center mb-[26px] lg:mb-8">
         <Image src={photo} alt={name} width={64} height={64} />
         <div>
