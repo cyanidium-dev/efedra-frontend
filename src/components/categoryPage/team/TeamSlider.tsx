@@ -15,6 +15,7 @@ export default function TeamSlider({ doctorsList, variant }: TeamSliderProps) {
     <SwiperWrapper
       swiperClassName="team"
       buttonsWrapperClassName="mt-5 lg:mt-[34px]"
+      variant={variant}
       loop
       breakpoints={{
         0: {
