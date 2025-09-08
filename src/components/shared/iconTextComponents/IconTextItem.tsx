@@ -1,13 +1,13 @@
 import * as motion from "motion/react-client";
 import { listItemVariants } from "@/utils/animationVariants";
-import { IPreferenceItem } from "@/types/preference";
+import { IIconTextItem } from "@/types/iconText";
 
-interface PreferenceItemProps {
-  preference: IPreferenceItem;
+interface IconTextItemProps {
+  item: IIconTextItem;
 }
 
-export default function PreferenceItem({ preference }: PreferenceItemProps) {
-  const { value, description, icon } = preference;
+export default function IconTextItem({ item }: IconTextItemProps) {
+  const { value, description, icon } = item;
 
   return (
     <motion.li

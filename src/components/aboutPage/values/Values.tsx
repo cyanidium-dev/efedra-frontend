@@ -1,11 +1,11 @@
 import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
-import PreferencesList from "@/components/shared/preferences/PreferencesList";
 import EmpathyIcon from "@/components/shared/icons/EmpathyIcon";
 import RecommendationIcon from "@/components/shared/icons/RecommendationIcon";
 import ResultIcon from "@/components/shared/icons/ResultIcon";
 import SafetyIcon from "@/components/shared/icons/SafetyIcon";
 import GrowthIcon from "@/components/shared/icons/GrowthIcon";
+import IconTextList from "@/components/shared/iconTextComponents/IconTextList";
 
 export default function Values() {
   const values = [
@@ -46,9 +46,9 @@ export default function Values() {
       <Container>
         <SectionTitle>Цінності і підхід</SectionTitle>
 
-        <PreferencesList
+        <IconTextList
           title="Ваше благополуччя — наш пріоритет"
-          preferences={values}
+          items={values}
         />
       </Container>
     </section>

@@ -1,18 +1,15 @@
 import * as motion from "motion/react-client";
 
-import { IPreferenceItem } from "@/types/preference";
+import { IIconTextItem } from "@/types/iconText";
 import { fadeInAnimation, listVariants } from "@/utils/animationVariants";
-import PreferenceItem from "./PreferenceItem";
+import IconTextItem from "./IconTextItem";
 
-interface PreferencesListProps {
+interface IconTextListProps {
   title: string;
-  preferences: IPreferenceItem[];
+  items: IIconTextItem[];
 }
 
-export default function PreferencesList({
-  title,
-  preferences,
-}: PreferencesListProps) {
+export default function IconTextList({ title, items }: IconTextListProps) {
   return (
     <motion.div
       initial="hidden"
@@ -20,7 +17,7 @@ export default function PreferencesList({
       exit="exit"
       viewport={{ once: true, amount: 0.4 }}
       variants={listVariants({ staggerChildren: 0.3, delayChildren: 0.3 })}
-      className="lg:pt-5 flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-20 lg:gap-x-10 xl:gap-x-[53px] sm:gap-y-10 xl:gap-y-15"
+      className="lg:pt-5 flex flex-col min-[400px]:items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-20 lg:gap-x-10 xl:gap-x-[53px] sm:gap-y-10 xl:gap-y-15"
     >
       <motion.h3
         variants={fadeInAnimation({ x: 30 })}
@@ -29,9 +26,9 @@ export default function PreferencesList({
         {title}
       </motion.h3>
 
-      <motion.ul className="flex flex-col items-center space-y-[44px] sm:space-y-0 sm:contents">
-        {preferences.map((preference, idx) => (
-          <PreferenceItem key={idx} preference={preference} />
+      <motion.ul className="flex flex-col min-[400px]:items-center space-y-[44px] sm:space-y-0 sm:contents">
+        {items.map((item, idx) => (
+          <IconTextItem key={idx} item={item} />
         ))}
       </motion.ul>
     </motion.div>

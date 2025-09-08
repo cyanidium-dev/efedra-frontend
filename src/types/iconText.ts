@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface IPreferenceItem {
+export interface IIconTextItem {
   value: string;
   description: string;
   icon: ReactNode;
