@@ -9,6 +9,7 @@ import { allDoctorsQuery } from "@/lib/queries";
 import { Doctor } from "@/types/doctor";
 import { Suspense } from "react";
 import Loader from "@/components/shared/loader/Loader";
+import Advantages from "@/components/categoryPage/advantages/Advantages";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -37,6 +38,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Suspense fallback={<Loader />}>
         <Team variant={variant} doctorsList={filteredDoctorsList} />
       </Suspense>
+      <Advantages variant={variant} category={currentCategory} />
     </>
   );
 }
