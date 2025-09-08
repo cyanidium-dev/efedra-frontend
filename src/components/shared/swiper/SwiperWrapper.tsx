@@ -17,6 +17,7 @@ interface SwiperWrapperProps {
   loop?: boolean;
   isPagination?: boolean;
   autoplay?: SwiperOptions["autoplay"];
+  variant?: "blue" | "beige";
 }
 
 export default function SwiperWrapper({
@@ -28,6 +29,7 @@ export default function SwiperWrapper({
   loop = false,
   isPagination = false,
   autoplay = false,
+  variant = "blue",
 }: SwiperWrapperProps) {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
@@ -82,8 +84,8 @@ export default function SwiperWrapper({
         <button
           ref={prevRef}
           disabled={isBeginning}
-          className="enabled:cursor-pointer w-[30px] h-[30px] bg-blue rounded-full flex items-center justify-center pointer-events-auto transition-filter 
-          duration-300 xl:enabled:hover:brightness-[1.25] disabled:bg-gray"
+          className={`enabled:cursor-pointer w-[30px] h-[30px] rounded-full flex items-center justify-center pointer-events-auto transition-filter 
+          duration-300 xl:enabled:hover:brightness-[1.25] disabled:bg-gray ${variant === "blue" ? "bg-blue" : "bg-beige"}`}
         >
           <Image
             src="/images/icons/arrow-left.svg"
@@ -96,8 +98,8 @@ export default function SwiperWrapper({
         <button
           ref={nextRef}
           disabled={isEnd}
-          className="enabled:cursor-pointer w-[30px] h-[30px] bg-blue rounded-full flex items-center justify-center pointer-events-auto transition-filter 
-          duration-300 xl:enabled:hover:brightness-[1.25] disabled:bg-gray"
+          className={`enabled:cursor-pointer w-[30px] h-[30px] rounded-full flex items-center justify-center pointer-events-auto transition-filter 
+          duration-300 xl:enabled:hover:brightness-[1.25] disabled:bg-gray ${variant === "blue" ? "bg-blue" : "bg-beige"}`}
         >
           <Image
             src="/images/icons/arrow-right.svg"

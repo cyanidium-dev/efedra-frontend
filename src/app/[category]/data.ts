@@ -1,7 +1,16 @@
+import HeartsIcon from "@/components/shared/icons/HeartsIcon";
+import DoctorIcon from "@/components/shared/icons/DoctorIcon";
+import SafetyIcon from "@/components/shared/icons/SafetyIcon";
+import DollarsIcon from "@/components/shared/icons/DollarsIcon";
+import StarsIcon from "@/components/shared/icons/StarsIcon";
+import LeafInHeartIcon from "@/components/shared/icons/LeafInHeartIcon";
+import SmileIcon from "@/components/shared/icons/SmileIcon";
+
 import ApproachDentistryDesk from "@/components/shared/icons/ApproachDentistryDesk";
 import ApproachDentistryMob from "@/components/shared/icons/ApproachDentistryMob";
 import ApproachMedicineDesk from "@/components/shared/icons/ApproachMedicineDesk";
 import ApproachMedicineMob from "@/components/shared/icons/ApproachMedicineMob";
+import MedicineIcon from "@/components/shared/icons/MedicineIcon";
 
 export const categoriesData = {
   dentistry: {
@@ -39,6 +48,38 @@ export const categoriesData = {
         },
       ],
     },
+    advantages: [
+      {
+        value: "Комфортне лікування",
+        description:
+          "Дотримуємось найвищих стандартів стерильності, дезінфекції та безпеки у всіх процедурах.",
+        icon: HeartsIcon,
+      },
+      {
+        value: "Досвідчені спеціалісти",
+        description:
+          "Дотримуємось найвищих стандартів стерильності, дезінфекції та безпеки у всіх процедурах.",
+        icon: DoctorIcon,
+      },
+      {
+        value: "Прозоре ціноутворення",
+        description:
+          "Працюємо прозоро — ви завжди знаєте повну ціну до початку лікування.",
+        icon: DollarsIcon,
+      },
+      {
+        value: "Естетичний підхід",
+        description:
+          "Досягаємо результатів, що виглядають природно та гармонійно, без надмірностей.",
+        icon: StarsIcon,
+      },
+      {
+        value: "Стерильність і безпека",
+        description:
+          "Дотримуємось найвищих стандартів стерильності, дезінфекції та безпеки у всіх процедурах",
+        icon: SafetyIcon,
+      },
+    ],
   },
   aesthetic: {
     hero: {
@@ -73,5 +114,36 @@ export const categoriesData = {
         },
       ],
     },
+    advantages: [
+      {
+        value: "Натуральний результат",
+        description: "Робимо акцент на природній красі без перебільшень.",
+        icon: LeafInHeartIcon,
+      },
+
+      {
+        value: "Стерильність і безпека",
+        description:
+          "Дотримуємось найвищих стандартів стерильності, дезінфекції та безпеки у всіх процедурах.",
+        icon: SafetyIcon,
+      },
+      {
+        value: "Комфортні процедури",
+        description: "Дбаємо про ваш спокій до, під час і після процедури.",
+        icon: SmileIcon,
+      },
+      {
+        value: "Перевірені препарати",
+        description:
+          "Дотримуємось найвищих стандартів стерильності, дезінфекції та безпеки у всіх процедурах",
+        icon: MedicineIcon,
+      },
+      {
+        value: "Досвідчені спеціалісти",
+        description:
+          "Забезпечуємо лікування командою лікарів із багаторічною практикою та сучасним підходом.",
+        icon: DoctorIcon,
+      },
+    ],
   },
 };

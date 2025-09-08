@@ -13,31 +13,31 @@ export default function Values() {
       value: "Емпатія та увага",
       description:
         "Ми вміємо слухати, розуміємо ваші переживання та ставимося до кожного з турботою та повагою.",
-      icon: <EmpathyIcon />,
+      icon: EmpathyIcon,
     },
     {
       value: "Чесні рекомендації",
       description:
         "Пропонуємо лише те, що справді необхідно. Жодних зайвих процедур — тільки прозорі рішення.",
-      icon: <RecommendationIcon />,
+      icon: RecommendationIcon,
     },
     {
       value: "Робота на результат",
       description:
         "Ми орієнтовані на ефективність — довготривалий, помітний результат і задоволення пацієнта.",
-      icon: <ResultIcon />,
+      icon: ResultIcon,
     },
     {
       value: "Безпека та стерильність",
       description:
         "Дотримуємось найвищих стандартів стерильності, дезінфекції та безпеки у всіх процедурах.",
-      icon: <SafetyIcon />,
+      icon: SafetyIcon,
     },
     {
       value: "Розвиток команди",
       description:
         "Наші фахівці постійно підвищують кваліфікацію, освоюють нові методики та впроваджують інновації.",
-      icon: <GrowthIcon />,
+      icon: GrowthIcon,
     },
   ];
 

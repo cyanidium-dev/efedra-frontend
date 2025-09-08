@@ -1,4 +1,5 @@
 import { ComponentType } from "react";
+import { IIconTextItem } from "./iconText";
 
 export interface Category {
   hero: {
@@ -13,4 +14,5 @@ export interface Category {
     imageTwo: string;
     list: { title: string; description: string }[];
   };
+  advantages: IIconTextItem[];
 }

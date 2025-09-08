@@ -7,7 +7,7 @@ interface IconTextItemProps {
 }
 
 export default function IconTextItem({ item }: IconTextItemProps) {
-  const { value, description, icon } = item;
+  const { value, description, icon: Icon } = item;
 
   return (
     <motion.li
@@ -15,7 +15,9 @@ export default function IconTextItem({ item }: IconTextItemProps) {
       variants={listItemVariants}
       className="flex gap-4 min-[400px]:gap-6 sm:gap-4 xl:gap-[25px] items-center xl:max-h-[103px] lg:max-w-[280px] xl:max-w-fit"
     >
-      <div>{icon}</div>
+      <div className="size-[65px] shrink-0">
+        <Icon />
+      </div>
       <div className="flex flex-col gap-1 lg:gap-2">
         <p className="font-evolenta text-[16px] lg:text-[20px] uppercase leading-[132%] lg:leading-[135%]">
           {value}
