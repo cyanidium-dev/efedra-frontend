@@ -40,7 +40,7 @@ export const categoriesData = {
       ],
     },
   },
-  esteticMedicine: {
+  aesthetic: {
     hero: {
       title: "Естетична медицина: делікатна турбота про вашу красу",
       description: "Безпечно. Ефективно. Естетично.",

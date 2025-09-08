@@ -135,9 +135,19 @@
     padding: 0 0.5px;
     height: auto !important;
     min-height: 100%;
+  }
+
+  .reviews .swiper-slide {
     @media screen and (min-width: 1024px) {
       width: 334px !important;
       height: 383px !important;
+    }
+  }
+
+  .team .swiper-slide {
+    width: 296px !important;
+    @media screen and (min-width: 1024px) {
+      width: 369px !important;
     }
   }
 }

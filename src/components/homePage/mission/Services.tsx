@@ -78,7 +78,7 @@ export default function Services() {
               препарати та результат, який дарує впевненість.
             </p>
           </div>
-          <Link href="/estetic-medicine">
+          <Link href="/aesthetic">
             <MainButton variant="beige" className="px-5 lg:px-5">
               Естетична медицина
             </MainButton>

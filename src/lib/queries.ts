@@ -8,3 +8,21 @@ export const allPostsQuery = `
     content
   }
 `;
+
+export const allDoctorsQuery = `*[_type == "doctor"] | order(order asc) {
+ "id":_id,
+  name,
+  photo {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+  },
+  position,
+  startYear,
+  direction,
+  description,
+  order
+}`;

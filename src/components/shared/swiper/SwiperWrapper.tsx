@@ -11,7 +11,9 @@ import Image from "next/image";
 interface SwiperWrapperProps {
   children: ReactNode;
   breakpoints: SwiperOptions["breakpoints"];
-  swiperClassName: string;
+  swiperClassName?: string;
+  wrapperClassName?: string;
+  buttonsWrapperClassName?: string;
   loop?: boolean;
   isPagination?: boolean;
   autoplay?: SwiperOptions["autoplay"];
@@ -20,7 +22,9 @@ interface SwiperWrapperProps {
 export default function SwiperWrapper({
   children,
   breakpoints,
-  swiperClassName,
+  swiperClassName = "",
+  wrapperClassName = "",
+  buttonsWrapperClassName = "",
   loop = false,
   isPagination = false,
   autoplay = false,
@@ -30,8 +34,6 @@ export default function SwiperWrapper({
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
-
-  console.log(isBeginning);
 
   // Прив'язуємо кнопки навігації після рендеру
   useEffect(() => {
@@ -60,7 +62,7 @@ export default function SwiperWrapper({
   }, [swiperInstance]);
 
   return (
-    <div className="lg:flex lg:flex-row-reverse lg:gap-6">
+    <div className={wrapperClassName}>
       <Swiper
         onSwiper={setSwiperInstance} // отримуємо екземпляр після рендеру
         pagination={isPagination}
@@ -74,7 +76,9 @@ export default function SwiperWrapper({
         {children}
       </Swiper>
 
-      <div className="flex items-center lg:items-end justify-center gap-2.5 mt-7 lg:mt-0">
+      <div
+        className={`flex items-center lg:items-end justify-center gap-2.5 ${buttonsWrapperClassName}`}
+      >
         <button
           ref={prevRef}
           disabled={isBeginning}
