@@ -2,6 +2,7 @@ import Advantages from "@/components/aboutPage/advantages/Advantages";
 import Founders from "@/components/aboutPage/founders/Founders";
 import Hero from "@/components/aboutPage/hero/Hero";
 import Philosophy from "@/components/aboutPage/philosophy/Philosophy";
+import Values from "@/components/aboutPage/values/Values";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 
 export default function AboutPage() {
@@ -12,6 +13,7 @@ export default function AboutPage() {
       <Philosophy />
       <Advantages />
       <Founders />
+      <Values />
     </>
   );
 }
