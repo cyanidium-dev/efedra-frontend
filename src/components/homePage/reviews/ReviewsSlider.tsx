@@ -16,6 +16,8 @@ export default function ReviewsSlider() {
   return (
     <SwiperWrapper
       swiperClassName="reviews"
+      wrapperClassName="lg:flex lg:flex-row-reverse lg:gap-6"
+      buttonsWrapperClassName="mt-7 lg:mt-0"
       loop
       breakpoints={{
         0: {

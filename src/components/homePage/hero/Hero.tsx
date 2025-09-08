@@ -90,7 +90,7 @@ export default function Hero() {
             variants={fadeInAnimation({ x: 20, delay: 1.2 })}
             className="w-full max-w-[346px] mx-auto lg:mx-0"
           >
-            <Link href="/estetic-medicine">
+            <Link href="/aesthetic">
               <MainButton
                 variant="beige"
                 className="lg:h-[69px] px-5 lg:px-5 text-[16px] lg:text-[24px] font-medium"

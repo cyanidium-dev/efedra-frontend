@@ -6,7 +6,7 @@ export const navListOne = [
 ];
 
 export const navListTwo = [
-  { title: "Естетична медицина", link: "/estetic-medicine" },
+  { title: "Естетична медицина", link: "/aesthetic" },
   { title: "Про нас", link: "/about" },
   { title: "Контакти", link: "/contacts" },
 ];
