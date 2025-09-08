@@ -1,4 +1,5 @@
 import Advantages from "@/components/aboutPage/advantages/Advantages";
+import CTA from "@/components/aboutPage/cta/CTA";
 import Founders from "@/components/aboutPage/founders/Founders";
 import Hero from "@/components/aboutPage/hero/Hero";
 import Philosophy from "@/components/aboutPage/philosophy/Philosophy";
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <Advantages />
       <Founders />
       <Values />
+      <CTA />
     </>
   );
 }
