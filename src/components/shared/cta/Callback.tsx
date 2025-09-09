@@ -22,22 +22,14 @@ export default function Callback({
 
   return (
     <>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        exit="exit"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={ctaVariants}
+      <MainButton
+        variant={variant}
+        withArrow={withArrow}
+        onClick={() => setIsModalShown(true)}
+        className={buttonClassName}
       >
-        <MainButton
-          variant={variant}
-          withArrow={withArrow}
-          onClick={() => setIsModalShown(true)}
-          className={buttonClassName}
-        >
-          {buttonText}
-        </MainButton>
-      </motion.div>
+        {buttonText}
+      </MainButton>
       <CallBackModal
         isModalShown={isModalShown}
         setIsModalShown={setIsModalShown}
