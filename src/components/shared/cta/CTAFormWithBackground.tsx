@@ -4,7 +4,7 @@ import * as motion from "motion/react-client";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
-import { listVariants, fadeInAnimation } from "@/utils/animationVariants";
+import { fadeInAnimation } from "@/utils/animationVariants";
 import Container from "../container/Container";
 import CallBackForm from "../forms/CallBackForm";
 import NotificationPopUp from "../notifications/NotificationPopUp";
@@ -31,6 +31,7 @@ export default function CTAFormWithBackground({
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         exit="exit"
+        variants={fadeInAnimation({ scale: 0.95, duration: 1.2 })}
         className={twMerge(
           "md:hidden relative w-full text-white rounded-[20px] h-auto flex flex-col pt-[30px] pb-11 overflow-hidden",
           className
