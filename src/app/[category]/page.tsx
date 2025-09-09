@@ -11,6 +11,7 @@ import { Suspense } from "react";
 import Loader from "@/components/shared/loader/Loader";
 import Advantages from "@/components/categoryPage/advantages/Advantages";
 import MeetCenterCTA from "@/components/shared/cta/MeetCenterCTA";
+import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -47,9 +48,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           className="py-15 lg:pt-[126px] lg:pb-25"
         />
       ) : (
-        <MeetCenterCTA
-          imageOne="/images/shared/cosmetic-procedure.webp"
-          imageTwo="/images/shared/braces.webp"
+        <CTAFormWithBackground
+          buttonVariant={variant}
+          image="/images/aboutPage/cta/cta.webp"
           className="py-15 lg:pt-[126px] lg:pb-25"
         />
       )}
