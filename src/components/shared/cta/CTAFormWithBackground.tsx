@@ -30,48 +30,42 @@ export default function CTAFormWithBackground({
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        exit="exit"
         className={twMerge(
-          "md:hidden relative text-white rounded-[20px] h-[612px] flex flex-col pt-[30px] pb-11 overflow-hidden",
+          "md:hidden relative w-full text-white rounded-[20px] h-auto flex flex-col pt-[30px] pb-11 overflow-hidden",
           className
         )}
       >
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInAnimation({ y: 20 })}
-          className="absolute -top-[60px] sm:-top-[20px] inset-0"
-        >
-          <Image
-            src={image}
-            alt="cta background"
-            fill
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+        <Image
+          src={image}
+          alt="cta background"
+          fill
+          className="object-cover object-[center_-27px] xs:object-center scale-[108%] xs:scale-none"
+        />
 
-        <Container className="relative z-10 flex flex-col justify-between flex-1">
-          <motion.p
-            variants={fadeInAnimation({ y: 30 })}
-            className="text-[24px] font-evolenta uppercase text-center leading-[134%] xs:max-w-[378px]"
-          >
-            Бажаєте познайомитися з нашим центром особисто?
-          </motion.p>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInAnimation({ y: 40 })}
-            className="rounded-[16px] bg-white py-[35px] px-[18px]"
-          >
-            <CallBackForm
-              setIsError={setIsError}
-              setIsNotificationShown={setIsNotificationShown}
-              className="text-black"
-              buttonVariant={buttonVariant}
-            />
-          </motion.div>
+        <Container className="w-full">
+          <div className="relative z-10 flex flex-col items-center gap-[112px] w-full">
+            <motion.p
+              variants={fadeInAnimation({ y: 30, delay: 0.3 })}
+              className="text-[24px] font-evolenta uppercase text-center leading-[134%] xs:max-w-[378px]"
+            >
+              Бажаєте познайомитися з нашим центром особисто?
+            </motion.p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInAnimation({ y: 30, delay: 0.3 })}
+              className="rounded-[16px] bg-white py-[35px] px-[18px] w-full max-w-[500px]"
+            >
+              <CallBackForm
+                setIsError={setIsError}
+                setIsNotificationShown={setIsNotificationShown}
+                className="text-black"
+                buttonVariant={buttonVariant}
+              />
+            </motion.div>
+          </div>
         </Container>
       </motion.div>
 
@@ -81,8 +75,8 @@ export default function CTAFormWithBackground({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInAnimation({ y: 20 })}
-            className="relative w-[calc(100%)] lg:w-[calc(100%+30px)] h-[420px] lg:h-[536px] rounded-[20px]  overflow-hidden"
+            variants={fadeInAnimation({ scale: 0.95, duration: 1.2 })}
+            className="relative w-[calc(100%)] lg:w-[calc(100%+30px)] h-auto rounded-[20px]  overflow-hidden"
           >
             <Image
               src={image}
@@ -96,16 +90,19 @@ export default function CTAFormWithBackground({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            variants={listVariants({ staggerChildren: 0.2 })}
-            className="flex flex-col justify-between bg-gray-light rounded-[20px] px-[20px] py-[30px] lg:px-[45px] lg:py-[56px]"
+            variants={fadeInAnimation({ y: 30, delay: 0.3 })}
+            className="flex flex-col gap-[15px] bg-gray-light rounded-[20px] px-[20px] py-[30px] lg:px-[45px] lg:py-[56px]"
           >
             <motion.p
-              variants={fadeInAnimation({ y: 30 })}
+              variants={fadeInAnimation({ y: 30, delay: 0.3 })}
               className="text-[20px] lg:text-[24px] xl:text-[32px] font-evolenta uppercase text-center leading-[135%]"
             >
               Бажаєте познайомитися з нашим центром особисто?
             </motion.p>
-            <motion.div variants={listVariants({ staggerChildren: 0.2 })}>
+            <motion.div
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInAnimation({ y: 30, delay: 0.3 })}
+            >
               <CallBackForm
                 setIsError={setIsError}
                 setIsNotificationShown={setIsNotificationShown}
