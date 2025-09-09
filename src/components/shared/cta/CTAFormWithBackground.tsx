@@ -29,7 +29,7 @@ export default function CTAFormWithBackground({
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         className={twMerge(
-          "md:hidden relative text-white rounded-[20px] h-[612px] flex flex-col pt-[29px] pb-11 overflow-hidden",
+          "md:hidden relative text-white rounded-[20px] h-[612px] flex flex-col pt-[30px] pb-11 overflow-hidden",
           className
         )}
       >
@@ -38,7 +38,7 @@ export default function CTAFormWithBackground({
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInAnimation({ y: 20 })}
-          className="absolute -top-[60px] inset-0"
+          className="absolute -top-[60px] sm:-top-[20px] inset-0"
         >
           <Image
             src={image}
@@ -49,15 +49,13 @@ export default function CTAFormWithBackground({
         </motion.div>
 
         <Container className="relative z-10 flex flex-col justify-between flex-1">
-          {/* Title — вгорі */}
           <motion.p
             variants={fadeInAnimation({ y: 30 })}
-            className="text-[24px] font-evolenta uppercase text-center leading-[134%]"
+            className="text-[24px] font-evolenta uppercase text-center leading-[134%] xs:max-w-[378px]"
           >
             Бажаєте познайомитися з нашим центром особисто?
           </motion.p>
 
-          {/* Form — внизу */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -74,27 +72,33 @@ export default function CTAFormWithBackground({
         </Container>
       </motion.div>
 
-      {/* Desktop */}
       <Container>
-        <div className="hidden md:flex">
+        <div className="hidden md:flex gap-4 lg:gap-5">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className={`bg-cover bg-center bg-[${image})]`}
-          ></motion.div>
+            variants={fadeInAnimation({ y: 20 })}
+            className="relative w-[calc(100%)] lg:w-[calc(100%+30px)] h-[420px] lg:h-[536px] rounded-[20px]  overflow-hidden"
+          >
+            <Image
+              src={image}
+              alt="cta background"
+              fill
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
 
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={listVariants({ staggerChildren: 0.2 })}
-            className="flex flex-col justify-center bg-gray-100 px-12 py-16"
+            className="flex flex-col justify-between bg-gray-light rounded-[20px] px-[20px] py-[30px] lg:px-[45px] lg:py-[56px]"
           >
             <motion.p
               variants={fadeInAnimation({ y: 30 })}
-              className="text-3xl font-bold mb-8"
+              className="text-[20px] lg:text-[24px] xl:text-[32px] font-evolenta uppercase text-center leading-[135%]"
             >
               Бажаєте познайомитися з нашим центром особисто?
             </motion.p>
