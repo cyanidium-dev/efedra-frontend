@@ -12,12 +12,14 @@ import Backdrop from "../backdrop/Backdrop";
 
 interface CTAFormWithBackgroundProps {
   image: string;
+  buttonVariant?: "blue" | "beige";
   className?: string;
 }
 
 export default function CTAFormWithBackground({
   image,
   className,
+  buttonVariant = "blue",
 }: CTAFormWithBackgroundProps) {
   const [isNotificationShown, setIsNotificationShown] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -67,6 +69,7 @@ export default function CTAFormWithBackground({
               setIsError={setIsError}
               setIsNotificationShown={setIsNotificationShown}
               className="text-black"
+              buttonVariant={buttonVariant}
             />
           </motion.div>
         </Container>
@@ -106,6 +109,7 @@ export default function CTAFormWithBackground({
               <CallBackForm
                 setIsError={setIsError}
                 setIsNotificationShown={setIsNotificationShown}
+                buttonVariant={buttonVariant}
               />
             </motion.div>
           </motion.div>
