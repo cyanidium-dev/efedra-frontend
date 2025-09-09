@@ -2,7 +2,7 @@ import Container from "../container/Container";
 import Image from "next/image";
 import Callback from "./Callback";
 import * as motion from "motion/react-client";
-import { fadeInAnimation } from "@/utils/animationVariants";
+import { fadeInAnimation, ctaVariants } from "@/utils/animationVariants";
 
 interface MeetCenterCTAProps {
   imageOne: string;
@@ -76,25 +76,24 @@ export default function MeetCenterCTA({
               />
             </motion.div>
           </div>
-          <div>
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              exit="exit"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInAnimation({ x: 30, delay: 0.3 })}
-              className="lg:max-w-[342px] mb-4 lg:mb-8 text-[14px] lg:text-[16px] font-normal leading-[120%] text-center sm:text-left"
-            >
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            exit="exit"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={ctaVariants}
+          >
+            <p className="lg:max-w-[342px] mb-4 lg:mb-8 text-[14px] lg:text-[16px] font-normal leading-[120%] text-center sm:text-left">
               Заповніть форму зворотнього звʼязку і ми обовʼязково зателефонуємо
               Вам!
-            </motion.p>
+            </p>
             <Callback
               buttonText="Записатися на консультацію"
               variant="bordered"
               withArrow
               buttonClassName="lg:w-[331px] h-14 px-6 lg:px-6 text-[14px] lg:text-[16px] font-medium leading-[120%]"
             />
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>
