@@ -12,6 +12,7 @@ export default function LogoIcon({ className }: LogoIconProps) {
       viewBox="0 0 86 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="logo icon"
       className={`overflow-visible ${className}`}
     >
       <motion.path

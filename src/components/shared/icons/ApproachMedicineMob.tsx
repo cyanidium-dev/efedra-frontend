@@ -20,6 +20,7 @@ export default function ApproachMedicineMob({
       viewBox="0 0 117 340"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="approach medicine icon"
       className={className}
     >
       <path
