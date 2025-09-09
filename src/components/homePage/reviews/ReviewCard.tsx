@@ -24,7 +24,14 @@ export default function ReviewCard({
       )}
     >
       <div className="flex gap-3 items-center mb-[26px] lg:mb-8">
-        <Image src={photo} alt={name} width={64} height={64} />
+        <div className="relative w-16 h-16 rounded-full">
+          <Image
+            src={photo}
+            alt={name}
+            fill
+            className="object-cover rounded-full"
+          />
+        </div>
         <div>
           <h3 className="mb-1.5 font-evolenta text-[15px] font-normal leading-[133%] uppercase">
             {name}
