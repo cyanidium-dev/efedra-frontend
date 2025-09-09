@@ -20,6 +20,7 @@ export default function ApproachDentistryDesk({
       viewBox="0 0 230 609"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="approach dentistry icon"
       className={`${className}`}
     >
       <path

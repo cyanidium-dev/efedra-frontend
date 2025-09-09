@@ -10,6 +10,7 @@ export default function GrowthIcon({ className }: GrowthIconProps) {
       viewBox="0 0 65 65"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="growth icon"
       className={className}
     >
       <path

@@ -20,6 +20,7 @@ export default function ApproachDentistryMob({
       viewBox="0 0 117 340"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="approach dentistry icon"
       className={`${className} w-[117px] h-[340px]`}
     >
       <path
