@@ -54,7 +54,10 @@ export default function StartJourneyCTA({
                 Маєте питання? Заповніть форму зворотнього звʼязку і ми
                 обовʼязково зателефонуємо Вам!
               </p>
-              <Callback />
+              <Callback
+                buttonText="Замовити дзвінок"
+                buttonClassName="px-5 lg:px-5 text-[12px] font-normal lg:text-[18px] lg:font-medium md:max-w-[255px]"
+              />
             </div>
           </motion.div>
         </Container>

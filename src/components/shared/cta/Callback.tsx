@@ -3,16 +3,30 @@ import { useState } from "react";
 import MainButton from "../buttons/MainButton";
 import CallBackModal from "../modals/CallBackModal";
 
-export default function Callback() {
+interface CallbackProps {
+  buttonText: string;
+  variant?: "beige" | "blue" | "white" | "bordered";
+  withArrow?: boolean;
+  buttonClassName?: string;
+}
+
+export default function Callback({
+  buttonText,
+  variant = "blue",
+  withArrow = false,
+  buttonClassName = "",
+}: CallbackProps) {
   const [isModalShown, setIsModalShown] = useState(false);
 
   return (
     <>
       <MainButton
+        variant={variant}
+        withArrow={withArrow}
         onClick={() => setIsModalShown(true)}
-        className="px-5 lg:px-5 text-[12px] font-normal lg:text-[18px] lg:font-medium md:max-w-[255px]"
+        className={buttonClassName}
       >
-        Замовити дзвінок
+        {buttonText}
       </MainButton>
       <CallBackModal
         isModalShown={isModalShown}
