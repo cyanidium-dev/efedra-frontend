@@ -1,5 +1,5 @@
 import Advantages from "@/components/aboutPage/advantages/Advantages";
-import CTA from "@/components/aboutPage/cta/CTA";
+import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
 import Founders from "@/components/aboutPage/founders/Founders";
 import Hero from "@/components/aboutPage/hero/Hero";
 import Philosophy from "@/components/aboutPage/philosophy/Philosophy";
@@ -15,7 +15,10 @@ export default function AboutPage() {
       <Advantages />
       <Founders />
       <Values />
-      <CTA />
+      <CTAFormWithBackground
+        image="/images/aboutPage/cta/cta.webp"
+        className="py-15 lg:pt-35 lg:pb-25"
+      />
     </>
   );
 }

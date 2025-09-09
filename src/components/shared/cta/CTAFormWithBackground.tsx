@@ -14,18 +14,20 @@ interface CTAFormWithBackgroundProps {
   image: string;
   buttonVariant?: "blue" | "beige";
   className?: string;
+  imageClassName?: string;
 }
 
 export default function CTAFormWithBackground({
   image,
-  className,
+  className = "",
   buttonVariant = "blue",
+  imageClassName = "",
 }: CTAFormWithBackgroundProps) {
   const [isNotificationShown, setIsNotificationShown] = useState(false);
   const [isError, setIsError] = useState(false);
 
   return (
-    <>
+    <section className={className}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -33,15 +35,17 @@ export default function CTAFormWithBackground({
         exit="exit"
         variants={fadeInAnimation({ scale: 0.95, duration: 1.2 })}
         className={twMerge(
-          "md:hidden relative w-full text-white rounded-[20px] h-auto flex flex-col pt-[30px] pb-11 overflow-hidden",
-          className
+          "md:hidden relative w-full text-white rounded-[20px] h-auto flex flex-col pt-[30px] pb-11 overflow-hidden"
         )}
       >
         <Image
           src={image}
           alt="cta background"
           fill
-          className="object-cover object-[center_-27px] xs:object-center scale-[108%] xs:scale-none"
+          className={twMerge(
+            "object-cover object-[center_-27px] xs:object-center scale-[108%] xs:scale-none",
+            imageClassName
+          )}
         />
 
         <Container className="w-full">
@@ -129,6 +133,6 @@ export default function CTAFormWithBackground({
           setIsNotificationShown(false);
         }}
       />
-    </>
+    </section>
   );
 }
