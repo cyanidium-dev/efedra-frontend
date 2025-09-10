@@ -1,7 +1,7 @@
 import EstimatedReadingTime from "@/components/shared/estReadingTime/estimatedReadingTime";
 import { Post } from "@/types/post";
 import Image from "next/image";
-import DirectionTag from "./DirectionTag";
+import DirectionTag from "../../shared/directionTag/DirectionTag";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
@@ -38,8 +38,14 @@ export default function ArticleTwo({ post }: ArticleTwoProps) {
           {description}
         </p>
         <div className="flex gap-3 items-center">
-          <DirectionTag direction={direction} />
-          <EstimatedReadingTime post={post} />
+          <DirectionTag
+            className="px-3 py-1 rounded-full bg-white"
+            direction={direction}
+          />
+          <EstimatedReadingTime
+            className="px-3 py-1 rounded-full bg-white"
+            post={post}
+          />
         </div>
       </motion.div>
     </Link>

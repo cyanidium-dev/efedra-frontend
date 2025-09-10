@@ -1,6 +1,6 @@
 import { Post } from "@/types/post";
 import Image from "next/image";
-import DirectionTag from "./DirectionTag";
+import DirectionTag from "../../shared/directionTag/DirectionTag";
 import EstimatedReadingTime from "@/components/shared/estReadingTime/estimatedReadingTime";
 import Link from "next/link";
 import * as motion from "motion/react-client";
@@ -34,8 +34,14 @@ export default function ArticleThree({ post }: ArticleThreeProps) {
           {description}
         </p>
         <div className="flex gap-3 items-center mb-6">
-          <DirectionTag direction={direction} />
-          <EstimatedReadingTime post={post} />
+          <DirectionTag
+            className="px-3 py-1 rounded-full bg-white"
+            direction={direction}
+          />
+          <EstimatedReadingTime
+            className="px-3 py-1 rounded-full bg-white"
+            post={post}
+          />
         </div>
         <div className="flex-grow relative w-full rounded-[12px] overflow-hidden">
           <Image src={image} alt={title} fill className="object-cover" />
