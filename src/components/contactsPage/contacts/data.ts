@@ -3,6 +3,7 @@ import {
   CITY,
   EMAIL,
   GOOGLE_MAPS_URL,
+  LICENSE_INFO,
   PHONE,
 } from "@/constants/constants";
 import { contactsPhoneRegex } from "@/regex/regex";
@@ -17,10 +18,7 @@ export const leftContactItems = [
     label: "Графік роботи",
     value: "Пн-Нд: 09:00 - 20:00",
   },
-  {
-    label: "Ліцензія МОЗ України",
-    value: "від 01.02.2021 №317/21/М",
-  },
+  LICENSE_INFO,
 ];
 
 export const rightContactItems = [

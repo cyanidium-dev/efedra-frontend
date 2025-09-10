@@ -16,3 +16,8 @@ export const INSTAGRAM_URL = "https://www.instagram.com/efedra.od";
 export const FACEBOOK_URL = "";
 
 export const LINKEDIN_URL = "";
+
+export const LICENSE_INFO = {
+  label: "Ліцензія МОЗ України",
+  value: "від 01.02.2021 №317/21/М",
+};
