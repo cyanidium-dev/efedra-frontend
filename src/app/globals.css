@@ -151,3 +151,10 @@
     }
   }
 }
+
+.certificates .swiper-slide {
+  @media screen and (min-width: 1024px) {
+    width: 334px !important;
+    height: 383px !important;
+  }
+}

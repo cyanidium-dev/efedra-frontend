@@ -5,6 +5,7 @@ import Hero from "@/components/aboutPage/hero/Hero";
 import Philosophy from "@/components/aboutPage/philosophy/Philosophy";
 import Values from "@/components/aboutPage/values/Values";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
+import Certificates from "@/components/aboutPage/certificates/Certificates";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <Advantages />
       <Founders />
       <Values />
+      <Certificates />
       <CTAFormWithBackground
         image="/images/aboutPage/cta/cta.webp"
         className="py-15 lg:pt-35 lg:pb-25"
