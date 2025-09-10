@@ -8,9 +8,14 @@ import {
 } from "@/constants/constants";
 import { contactsPhoneRegex } from "@/regex/regex";
 
+export interface ScheduleItem {
+  category: string;
+  schedule: string;
+}
+
 export interface ContactItem {
   label: string;
-  value: string | string[];
+  value: string | string[] | ScheduleItem[];
   href?: string;
 }
 
@@ -21,9 +26,11 @@ export const leftContactItems: ContactItem[] = [
     href: `tel:${PHONE}`,
   },
   {
-    label: "Графік роботи",
-    value: "Пн-Нд: 09:00 - 20:00",
+    label: "Адреса",
+    value: [CITY, ADDRESS],
+    href: GOOGLE_MAPS_URL,
   },
+
   LICENSE_INFO,
 ];
 
@@ -34,8 +41,10 @@ export const rightContactItems: ContactItem[] = [
     href: `mailto:${EMAIL}`,
   },
   {
-    label: "Адреса",
-    value: [CITY, ADDRESS],
-    href: GOOGLE_MAPS_URL,
+    label: "Графік роботи",
+    value: [
+      { category: "Стоматологія", schedule: "Пн-Пт: 09:00 - 20:00" },
+      { category: "Естетична медицина", schedule: "Пн-Нд: 09:00 - 20:00" },
+    ],
   },
 ];
