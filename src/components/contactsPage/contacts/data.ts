@@ -8,7 +8,13 @@ import {
 } from "@/constants/constants";
 import { contactsPhoneRegex } from "@/regex/regex";
 
-export const leftContactItems = [
+export interface ContactItem {
+  label: string;
+  value: string | string[];
+  href?: string;
+}
+
+export const leftContactItems: ContactItem[] = [
   {
     label: "Контактний номер",
     value: PHONE.replace(contactsPhoneRegex, "+38 ($1) $2 $3 $4"),
@@ -21,7 +27,7 @@ export const leftContactItems = [
   LICENSE_INFO,
 ];
 
-export const rightContactItems = [
+export const rightContactItems: ContactItem[] = [
   {
     label: "E-mail",
     value: EMAIL,
