@@ -19,4 +19,5 @@ export interface Post {
     }>;
     style: "normal" | string;
   }>;
+  createdAt: string;
 }

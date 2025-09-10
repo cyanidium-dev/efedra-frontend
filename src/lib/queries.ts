@@ -5,7 +5,8 @@ export const allPostsQuery = `
     "image": image.asset->url,
     direction,
     description,
-    content
+    content,
+    "createdAt": _createdAt
   }
 `;
 
