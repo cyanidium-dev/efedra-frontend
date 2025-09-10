@@ -39,6 +39,7 @@ export default function Contacts() {
               src="/images/contactsPage/contacts/decoration.webp"
               alt="decoration"
               fill
+              priority
               className="object-cover object-[20px_-55px] min-[480px]:object-[40px_-90px] sm:object-[30px_-110px] scale-[125%]"
             />
           </motion.div>
@@ -65,6 +66,7 @@ export default function Contacts() {
                 src="/images/contactsPage/contacts/building.webp"
                 alt="building"
                 fill
+                priority
                 className="object-cover object-[20px_-55px] md:object-[center_31%] scale-[125%] md:scale-[130%]   xl:scale-none"
               />
             </motion.div>
@@ -112,6 +114,7 @@ export default function Contacts() {
                   src="/images/contactsPage/contacts/map.webp"
                   alt="map"
                   fill
+                  priority
                   className="object-cover "
                 />
               </motion.div>
