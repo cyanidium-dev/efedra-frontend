@@ -10,31 +10,35 @@ export default function Contacts() {
   return (
     <section className="pt-[26px] pb-12 lg:pt-13 lg:pb-[78px]">
       <Container className="relative">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          exit="exit"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInAnimation({ x: -20, delay: 0.8 })}
-          className="md:hidden absolute -right-[60%] min-[260px]:-right-[50%] min-[320px]:-right-[35%] min-[360px]:-right-[28%] xs:-right-[22%] min-[480px]:-right-[22%] min-[520px]:-right-[20%] top-[0px] w-[207px] h-[208px] bg-blue rounded-full"
-        />
-        <div className="relative w-full pt-[4px] md:pt-0">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            exit="exit"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInAnimation({ x: -20, delay: 0.3 })}
-            className="md:hidden relative w-[calc(80%+10px)] h-[93px] xs:h-[120px] sm:h-[160px] rounded-[16px] overflow-hidden mb-[17px]"
-          >
-            <Image
-              src="/images/contactsPage/contacts/decoration.webp"
-              alt="decoration"
-              fill
-              priority
-              className="object-cover object-[20px_-55px] min-[480px]:object-[40px_-90px] sm:object-[30px_-110px] scale-[125%]"
+        <div className="relative w-full">
+          <div className="relative w-[calc(80%+10px)] h-[93px] xs:h-[120px] sm:h-[160px] mb-[17px] md:hidden">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              exit="exit"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInAnimation({ x: -20, delay: 0.8 })}
+              className="absolute -right-[185px] top-[-4px] w-[207px] h-[208px] bg-blue rounded-full z-0"
             />
-          </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              exit="exit"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInAnimation({ x: -20, delay: 0.3 })}
+              className="relative w-full h-full rounded-[16px] overflow-hidden z-10"
+            >
+              <Image
+                src="/images/contactsPage/contacts/decoration.webp"
+                alt="decoration"
+                fill
+                priority
+                className="object-cover object-[20px_-55px] min-[480px]:object-[40px_-90px] sm:object-[30px_-110px] scale-[125%]"
+              />
+            </motion.div>
+          </div>
+
           <div className="md:flex md:gap-10 lg:gap-[56px]">
             <motion.h1
               initial="hidden"
