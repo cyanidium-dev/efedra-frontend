@@ -12,7 +12,7 @@ interface ContactItemProps {
 export default function ContactItem({ label, value, href }: ContactItemProps) {
   const baseValueClasses =
     "block text-[12px] lg:text-[15px] font-medium leading-[150%] md:leading-[154%]";
-  const linkClasses = "block transition-colors duration-300 hover:text-beige";
+  const linkClasses = "block transition-colors duration-300 hover:text-blue";
   const wrapperClasses = label.includes("Ліцензія")
     ? "max-w-[120px] md:max-w-[150px]"
     : "max-w-[150px] md:max-w-[250px]";

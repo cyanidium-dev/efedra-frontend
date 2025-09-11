@@ -5,7 +5,7 @@ export default function FollowUs() {
   return (
     <div>
       <FooterSubtitle>Слідкуйте за нами</FooterSubtitle>
-      <SocialMedia />
+      <SocialMedia/>
     </div>
   );
 }

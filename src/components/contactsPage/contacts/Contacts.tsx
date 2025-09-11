@@ -16,9 +16,9 @@ export default function Contacts() {
           exit="exit"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInAnimation({ x: -20, delay: 0.8 })}
-          className="md:hidden absolute -right-[60%] min-[260px]:-right-[50%] min-[320px]:-right-[35%]  min-[360px]:-right-[30%] xs:-right-[20%] sm:-right-[25%] top-[46px] xs:top-[70px] sm:top-[120px] w-[207px] h-[208px] bg-blue rounded-full"
+          className="md:hidden absolute -right-[60%] min-[260px]:-right-[50%] min-[320px]:-right-[35%] min-[360px]:-right-[28%] xs:-right-[20%] sm:-right-[25%] top-[0px] xs:top-[30px] sm:top-[70px] w-[207px] h-[208px] bg-blue rounded-full"
         />
-        <div className="relative w-full">
+        <div className="relative w-full pt-[4px] md:pt-0">
           <motion.div
             initial="hidden"
             whileInView="visible"

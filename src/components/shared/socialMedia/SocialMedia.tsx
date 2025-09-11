@@ -12,11 +12,13 @@ import LinkedinIcon from "../icons/LinkedinIcon";
 interface SocialMediaProps {
   className?: string;
   iconClassName?: string;
+  iconStrokeColor?: string;
 }
 
 export default function SocialMedia({
   className = "",
   iconClassName = "",
+  iconStrokeColor = "#0F3C5A",
 }: SocialMediaProps) {
   return (
     <ul className={twMerge("flex items-center gap-[21px]", className)}>
@@ -29,6 +31,7 @@ export default function SocialMedia({
         >
           <InstagramIcon
             className={twMerge("h-6 lg:h-7 w-auto", iconClassName)}
+            strokeColor={iconStrokeColor}
           />
         </a>
       </li>
@@ -41,6 +44,7 @@ export default function SocialMedia({
         >
           <FacebookIcon
             className={twMerge("h-6 lg:h-7 w-auto", iconClassName)}
+            strokeColor={iconStrokeColor}
           />
         </a>
       </li>
@@ -53,6 +57,7 @@ export default function SocialMedia({
         >
           <LinkedinIcon
             className={twMerge("h-6 lg:h-7 w-auto", iconClassName)}
+            strokeColor={iconStrokeColor}
           />
         </a>
       </li>

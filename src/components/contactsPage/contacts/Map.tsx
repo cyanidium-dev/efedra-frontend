@@ -25,7 +25,8 @@ export default function Map() {
       >
         <SocialMedia
           className="flex flex-col md:flex-row gap-[29px] xs:gap-12 sm:gap-16 md:gap-[29px] pt-[3px] md:pt-0"
-          iconClassName="h-[29px] text-black transition-colors duration-300 hover:text-beige"
+          iconClassName="h-[29px] text-black transition-colors duration-300 hover:brightness-125"
+          iconStrokeColor="text-black hover:brightness-125"
         />
       </motion.div>
       <motion.a
@@ -37,7 +38,7 @@ export default function Map() {
         exit="exit"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInAnimation({ x: 20, delay: 0.4 })}
-        className="relative w-[100%] -mr-[25px] md:mr-0 md:w-[100%] h-auto md:h-[200px] lg:h-[263px] rounded-[16px] md:rounded-[20px] overflow-hidden"
+        className="relative w-[100%] -mr-[25px] md:mr-0 md:w-[100%] h-auto md:h-[220px] lg:h-[286px] rounded-[16px] md:rounded-[20px] overflow-hidden"
       >
         <Image
           src="/images/contactsPage/contacts/map.webp"

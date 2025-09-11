@@ -13,7 +13,7 @@ export default function ContactsList() {
         exit="exit"
         viewport={{ once: true, amount: 0.4 }}
         variants={listVariants({ staggerChildren: 0.3, delayChildren: 0.3 })}
-        className="flex flex-col gap-[15px] md:gap-6 lg:gap-12"
+        className="flex flex-col gap-[15px] md:gap-6 lg:gap-8 xl:gap-12"
       >
         {leftContactItems.map((item, idx) => (
           <ContactItem key={idx} {...item} />
@@ -26,7 +26,7 @@ export default function ContactsList() {
         exit="exit"
         viewport={{ once: true, amount: 0.4 }}
         variants={listVariants({ staggerChildren: 0.3, delayChildren: 0.3 })}
-        className="flex-1 flex flex-col gap-[15px] md:gap-6 lg:gap-12"
+        className="flex-1 flex flex-col gap-[15px] md:gap-6 lg:gap-8 xl:gap-12"
       >
         {rightContactItems.map((item, idx) => (
           <ContactItem key={idx} {...item} />

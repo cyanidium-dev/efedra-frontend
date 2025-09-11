@@ -5,6 +5,7 @@ import {
   GOOGLE_MAPS_URL,
   LICENSE_INFO,
   PHONE,
+  SCHEDULE,
 } from "@/constants/constants";
 import { contactsPhoneRegex } from "@/regex/regex";
 
@@ -42,9 +43,6 @@ export const rightContactItems: ContactItem[] = [
   },
   {
     label: "Графік роботи",
-    value: [
-      { category: "Стоматологія", schedule: "Пн-Пт: 09:00 - 20:00" },
-      { category: "Естетична медицина", schedule: "Пн-Нд: 09:00 - 20:00" },
-    ],
+    value: SCHEDULE,
   },
 ];

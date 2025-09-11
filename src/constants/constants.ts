@@ -21,3 +21,8 @@ export const LICENSE_INFO = {
   label: "Ліцензія МОЗ України",
   value: "від 01.02.2021 №317/21/М",
 };
+
+export const SCHEDULE = [
+  { category: "Стоматологія", schedule: "Пн-Пт: 09:00 - 20:00" },
+  { category: "Естетична медицина", schedule: "Пн-Нд: 09:00 - 20:00" },
+];
