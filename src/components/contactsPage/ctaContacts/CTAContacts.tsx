@@ -59,7 +59,7 @@ export default function CTAContacts() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ y: 30, delay: 0.3 })}
-              className="rounded-[16px] rounded-[20px] bg-white py-4 md:py-5 px-[14px] md:pl-[15px] md:pr-8 w-full max-w-[500px] md:max-w-full flex flex-col md:flex-row md:justify-between md:items-center gap-5 self-center w-full"
+              className="rounded-[20px] bg-white py-4 md:py-5 px-[14px] md:pl-[15px] md:pr-8 w-full max-w-[500px] md:max-w-full flex flex-col md:flex-row md:justify-between md:items-center gap-5 self-center w-full"
             >
               <p className="text-[12px] md:text-[14px] lg:text-[16px] text-black text-center md:text-start leading-[125%] md:font-medium md:max-w-[410px]">
                 Маєте питання? Заповніть форму зворотнього звʼязку і ми
