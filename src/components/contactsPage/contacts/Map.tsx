@@ -25,7 +25,7 @@ export default function Map() {
       >
         <SocialMedia
           className="flex flex-col md:flex-row gap-[29px] xs:gap-12 sm:gap-16 md:gap-[29px] pt-[3px] md:pt-0"
-          iconClassName="h-[29px] text-black transition-colors duration-300 hover:brightness-125"
+          iconClassName="h-[29px] text-black transition-colors duration-300 hover:text-blue"
           iconStrokeColor="text-black hover:brightness-125"
         />
       </motion.div>
