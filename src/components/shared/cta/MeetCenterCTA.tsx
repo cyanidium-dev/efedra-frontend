@@ -16,7 +16,7 @@ export default function MeetCenterCTA({
   className = "",
 }: MeetCenterCTAProps) {
   return (
-    <section className={className}>
+    <section className={`overflow-hidden ${className}`}>
       <motion.div
         initial="hidden"
         whileInView="visible"

@@ -1,17 +1,27 @@
 import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
-import { Category } from "@/types/category";
+import { Service } from "@/types/service";
+import CategoriesList from "./CategoriesListDentistry";
+import CategoriesListDentistry from "./CategoriesListDentistry";
+import CategoriesListAesthetic from "./CategoryListAesthetic";
 
 interface CategoriesProps {
-  category: Category;
+  categories: Service[];
   variant: "blue" | "beige";
 }
 
-export default function Categories({ category, variant }: CategoriesProps) {
+export default function Categories({ categories, variant }: CategoriesProps) {
+  if (!categories || categories?.length < 5) return null;
+
   return (
-    <section className="pt-15">
+    <section className="pt-15 lg:pt-[67px]">
       <Container>
         <SectionTitle variant={variant}>Категорії послуг</SectionTitle>
+        {variant === "blue" ? (
+          <CategoriesListDentistry categories={categories} />
+        ) : (
+          <CategoriesListAesthetic categories={categories} />
+        )}
       </Container>
     </section>
   );
