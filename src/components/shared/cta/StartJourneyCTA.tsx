@@ -4,15 +4,18 @@ import Container from "../container/Container";
 import * as motion from "motion/react-client";
 import { ctaVariants } from "@/utils/animationVariants";
 import Callback from "./Callback";
+import { twMerge } from "tailwind-merge";
 
 interface StartJourneyCTAProps {
   image: string;
   className?: string;
+  imageClassName?: string;
 }
 
 export default function StartJourneyCTA({
   image,
   className = "",
+  imageClassName = "",
 }: StartJourneyCTAProps) {
   return (
     <>
@@ -30,7 +33,10 @@ export default function StartJourneyCTA({
               src={image}
               alt="background"
               fill
-              className="-z-20 object-cover object-bottom"
+              className={twMerge(
+                "-z-20 object-cover object-bottom",
+                imageClassName
+              )}
             />
             <div
               className="absolute top-0 left-0 -z-10 w-full h-full bg-[linear-gradient(101deg,rgba(0,0,0,0)_9.65%,rgba(1,19,31,0.8)_91.67%),linear-gradient(145deg,rgba(6,32,50,0.56)_15.09%,rgba(0,0,0,0)_50.23%)] 
