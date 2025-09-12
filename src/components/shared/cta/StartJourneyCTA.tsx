@@ -48,7 +48,7 @@ export default function StartJourneyCTA({
                 <span className="italic">вже сьогодні</span>!
               </p>
               <div
-                className="max-w-[160px] flex flex-col gap-4 lg:gap-2.5 ml-auto font-evolenta text-[15px] font-normal leading-[120%] uppercase 
+                className="max-w-[160px] flex flex-col gap-4 lg:gap-2.5 ml-auto font-evolenta text-[15px] font-normal leading-[134%] uppercase 
             text-white text-right"
               >
                 <p className="">Естетична медицина</p>
