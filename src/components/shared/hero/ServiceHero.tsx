@@ -24,7 +24,7 @@ export default function ServiceHero({ title, image }: ServiceHeroProps) {
           whileInView="visible"
           exit="exit"
           viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInAnimation({ x: 30 })}
+          variants={fadeInAnimation({ scale: 0.95, x: 50, duration: 1.2 })}
           className="max-h-[195px] lg:max-h-[380px] text-[16px] md:text-[28px] lg:text-[32px] leading-[115%] lg:leading-[135%] font-evolenta uppercase self-end [writing-mode:sideways-lr]"
         >
           {title}
@@ -36,7 +36,7 @@ export default function ServiceHero({ title, image }: ServiceHeroProps) {
             whileInView="visible"
             exit="exit"
             viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInAnimation({ x: 20 })}
+            variants={fadeInAnimation({ scale: 0.95, x: 50, duration: 1.2 })}
             className="relative w-full h-[195px] md:h-[320px] lg:h-[380px] xl:h-[472px] rounded-[20px] overflow-hidden"
           >
             <Image
