@@ -11,7 +11,12 @@ interface CategoriesProps {
 }
 
 export default function Categories({ categories, variant }: CategoriesProps) {
-  if (!categories || categories?.length < 5) return null;
+  if (
+    !categories ||
+    (variant === "blue" && categories?.length < 6) ||
+    (variant === "beige" && categories?.length < 5)
+  )
+    return null;
 
   return (
     <section className="pt-15 lg:pt-[67px]">

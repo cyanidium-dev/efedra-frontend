@@ -1,5 +1,9 @@
+import ArrowIcon from "@/components/shared/icons/ArrowIcon";
 import { Service } from "@/types/service";
 import Image from "next/image";
+import Link from "next/link";
+import * as motion from "motion/react-client";
+import { fadeInAnimation } from "@/utils/animationVariants";
 
 interface CategoriesListAestheticProps {
   categories: Service[];
@@ -11,90 +15,147 @@ export default function CategoriesListAesthetic({
   const currentCategories = categories?.slice(0, 5);
 
   return (
-    <div className="flex flex-col gap-2 lg:gap-[23px]">
-      <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
-          <div className="relative flex items-end w-[calc(50%-4px)] h-[130px] py-1.5 px-2.5 rounded-[14px] overflow-hidden">
+    <div className="flex flex-col gap-2 lg:gap-[22px]">
+      <div className="flex flex-col sm:flex-row gap-2 lg:gap-[22px]">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          exit="exit"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInAnimation({ y: 20 })}
+          className="flex gap-2 lg:gap-[22px] sm:w-[calc(50%-4px)] lg:w-[calc(50%-11px)]"
+        >
+          <Link
+            href={`/catalog/dentistry/${currentCategories[0].slug}`}
+            className="group relative flex items-end w-[calc(50%-4px)] lg:w-[calc(50%-11px)] h-[130px] sm:h-full py-1.5 px-2.5 sm:p-3 lg:p-[22px] rounded-[14px] overflow-hidden"
+          >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
               src={currentCategories[0].categoryImage}
               alt={currentCategories[0].title}
               fill
-              className="-z-20 object-cover"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
-            <h3 className="font-evolenta text-[10px] font-normal leading-[133%] text-white uppercase">
+            <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[0].title}
             </h3>
-          </div>
-          <div className="relative flex items-end w-[calc(50%-4px)] h-[130px] py-1.5 px-2.5 rounded-[14px] overflow-hidden">
+          </Link>
+          <Link
+            href={`/catalog/dentistry/${currentCategories[1].slug}`}
+            className="group relative flex items-end w-[calc(50%-4px)] lg:w-[calc(50%-11px)] h-[130px] sm:h-full py-1.5 px-2.5 sm:p-3 lg:p-[22px] rounded-[14px] overflow-hidden"
+          >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
               src={currentCategories[1].categoryImage}
               alt={currentCategories[1].title}
               fill
-              className="-z-20 object-cover"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
-            <h3 className="font-evolenta text-[10px] font-normal leading-[133%] text-white uppercase">
+            <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[1].title}
             </h3>
-          </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <div className="relative flex items-end w-full h-[105px] py-1.5 px-2.5 rounded-[14px] overflow-hidden">
+          </Link>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          exit="exit"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInAnimation({ x: 20, delay: 0.3 })}
+          className="flex flex-col gap-2 lg:gap-[22px] sm:w-[calc(50%-4px)] lg:w-[calc(50%-11px)]"
+        >
+          <Link
+            href={`/catalog/dentistry/${currentCategories[2].slug}`}
+            className="group relative flex items-end w-full h-[105px] lg:h-[180px] py-1.5 px-2.5 sm:p-3 lg:p-[22px] rounded-[14px] overflow-hidden"
+          >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
               src={currentCategories[2].categoryImage}
               alt={currentCategories[2].title}
               fill
-              className="-z-20 object-cover object-[center_-220px]"
+              className="-z-20 object-cover object-[center_-2px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
-            <h3 className="font-evolenta text-[10px] font-normal leading-[133%] text-white uppercase">
+            <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[2].title}
             </h3>
-          </div>
-          <div className="relative flex items-end w-full h-[105px] py-1.5 px-2.5 rounded-[14px] overflow-hidden">
+          </Link>
+          <Link
+            href={`/catalog/dentistry/${currentCategories[3].slug}`}
+            className="group hidden sm:flex relative items-end w-full h-[105px] lg:h-[180px] py-1.5 px-2.5 sm:p-3 lg:p-[22px] rounded-[14px] overflow-hidden"
+          >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
               src={currentCategories[3].categoryImage}
               alt={currentCategories[3].title}
               fill
-              className="-z-20 object-cover"
+              className="-z-20 object-cover object-bottom sm:object-[center_-255px] md:object-[center_-310px] lg:object-[center_-395px] 
+              xl:object-[center_-514px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
-            <h3 className="font-evolenta text-[10px] font-normal leading-[133%] text-white uppercase">
+            <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[3].title}
             </h3>
-          </div>
-        </div>
+          </Link>
+        </motion.div>
       </div>
 
-      <div className="flex gap-2">
-        <div className="relative flex items-end w-full h-[130px] py-1.5 px-2.5 rounded-[14px] overflow-hidden">
-          <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
-          <Image
-            src={currentCategories[4].categoryImage}
-            alt={currentCategories[4].title}
-            fill
-            className="-z-20 object-cover"
-          />
-          <h3 className="font-evolenta text-[10px] font-normal leading-[133%] text-white uppercase">
-            {currentCategories[4].title}
-          </h3>
-        </div>
-        {currentCategories?.length > 5 ? (
-          <div className="relative flex items-end w-[calc(50%-4px)] h-[130px] py-1.5 px-2.5 rounded-[14px] overflow-hidden">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        exit="exit"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInAnimation({ scale: 0.95, delay: 0.6 })}
+        className="flex flex-col sm:flex-row gap-2 lg:gap-[22px]"
+      >
+        <div className="flex gap-2 lg:gap-[22px] sm:w-[calc(66.67%-4px)] lg:w-[calc(66.67%-11px)]">
+          <Link
+            href={`/catalog/dentistry/${currentCategories[3].slug}`}
+            className="group sm:hidden relative flex items-end w-full h-[105px] lg:h-[180px] py-1.5 px-2.5 sm:p-3 lg:p-[22px] rounded-[14px] overflow-hidden"
+          >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[5].categoryImage}
-              alt={currentCategories[5].title}
+              src={currentCategories[3].categoryImage}
+              alt={currentCategories[3].title}
               fill
-              className="-z-20 object-cover"
+              className="-z-20 object-cover object-bottom xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
-            <h3 className="font-evolenta text-[10px] font-normal leading-[133%] text-white uppercase">
-              {currentCategories[5].title}
+            <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
+              {currentCategories[3].title}
             </h3>
-          </div>
-        ) : null}
-      </div>
+          </Link>
+          <Link
+            href={`/catalog/dentistry/${currentCategories[4].slug}`}
+            className="group relative flex items-end w-full h-[105px] lg:h-[179px] py-1.5 px-2.5 sm:p-3 lg:p-[22px] rounded-[14px] overflow-hidden"
+          >
+            <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
+            <Image
+              src={currentCategories[4].categoryImage}
+              alt={currentCategories[4].title}
+              fill
+              className="-z-20 object-cover object-bottom sm:object-[center_-385px] md:object-[center_-475px] lg:object-[center_-600px] 
+              xl:object-[center_-775px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+            />
+            <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
+              {currentCategories[4].title}
+            </h3>
+          </Link>
+        </div>
+        <Link
+          href="/catalog/dentistry"
+          className="group cursor-pointer flex items-center sm:items-end justify-between sm:w-[calc(33.33%-4px)] lg:w-[calc(33.33%-11px)] px-[18px] sm:p-3 lg:p-[22px] h-14 sm:h-auto bg-beige rounded-full sm:rounded-[20px] xl:hover:brightness-125 focus-visible:brightness-125
+          active:brightness-125 transition duration-300 ease-in-out shrink-0"
+        >
+          <p className="max-w-[147px] mt-1 font-evolenta text-[13px] sm:text-[10px] lg:text-[16px] font-normal leading-[133%] uppercase text-white">
+            Переглянути інші послуги
+          </p>
+          <button
+            type="button"
+            aria-label="arrow button"
+            className="cursor-pointer flex items-center justify-center size-[27px] lg:size-10 rounded-full bg-white shrink-0"
+          >
+            <ArrowIcon className="lg:w-[22px] h-auto xl:group-hover:translate-x-0.5 xl:group-hover:-translate-y-0.5 transition duration-300 ease-in-out will-change-transform" />
+          </button>
+        </Link>
+      </motion.div>
     </div>
   );
 }
