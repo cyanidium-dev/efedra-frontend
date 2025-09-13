@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 interface SectionTitleProps {
   children?: ReactNode;
@@ -26,7 +28,9 @@ export default function SectionTitle({
       variants={fadeInAnimation({
         x: animationDirection === "right" ? -30 : 30,
       })}
-      className={`flex items-center justify-center w-fit h-[29px] mb-5 rounded-full px-3 py-1 bg-beige/80 ${className}
+      className={twMerge(
+        clsx(
+          `flex items-center justify-center w-fit h-[29px] mb-5 lg:mb-6 rounded-full px-3 py-1 bg-beige/80
       ${
         variant === "beige"
           ? type === "solid"
@@ -36,7 +40,10 @@ export default function SectionTitle({
             ? "text-white bg-blue/80"
             : "text-blue bg-white border-[1.8px] border-blue/80"
       }
-      ${variant === "beige" ? "bg-beige/80" : "bg-blue/80"}`}
+      ${variant === "beige" ? "bg-beige/80" : "bg-blue/80"}`,
+          className
+        )
+      )}
     >
       <h2
         className={`pt-0.5 font-evolenta text-[14px] lg:text-[16px] font-normal uppercase`}

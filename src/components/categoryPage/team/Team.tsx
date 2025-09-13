@@ -16,7 +16,9 @@ export default function Team({ doctorsList, variant }: TeamProps) {
   return (
     <section className="pt-16 lg:pt-[154px] lg:pb-[77px]">
       <Container>
-        <SectionTitle variant={variant}>Наша команда</SectionTitle>
+        <SectionTitle variant={variant} className="lg:mb-[46px]">
+          Наша команда
+        </SectionTitle>
       </Container>
       <motion.div
         initial="hidden"
