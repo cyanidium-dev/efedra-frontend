@@ -62,7 +62,7 @@ export default function VerticalTitleHero({
               withArrow
               className="md:hidden absolute -bottom-[20px] -right-[12px] px-[17px] max-w-[158px] h-[43px] text-[14px]"
               iconClassName="w-[26px] h-[21px]"
-              iconStrokeColor="#F9F9FB"
+              iconStrokeColor="var(--color-white)"
             >
               Записатись
             </MainButton>
@@ -73,7 +73,7 @@ export default function VerticalTitleHero({
               withArrow
               className="hidden md:flex absolute bottom-[16px] right-[15px] px-[23px] lg:px-[23px] max-w-[175px] h-[56px] text-[15px] leading-[120%] text-black"
               iconClassName="w-[26px] h-[21px]"
-              iconStrokeColor="#F9F9FB"
+              iconStrokeColor="var(--color-white)"
             >
               Записатись
             </MainButton>

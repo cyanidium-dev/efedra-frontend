@@ -5,7 +5,7 @@ interface InstagramIconProps {
 
 export default function InstagramIcon({
   className,
-  strokeColor = "#0F3C5A",
+  strokeColor = "var(--color-blue)",
 }: InstagramIconProps) {
   return (
     <svg

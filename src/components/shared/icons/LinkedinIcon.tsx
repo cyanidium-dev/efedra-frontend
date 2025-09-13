@@ -5,7 +5,7 @@ interface LinkedinIconProps {
 
 export default function LinkedinIcon({
   className,
-  strokeColor = "#0F3C5A",
+  strokeColor = "var(--color-blue)",
 }: LinkedinIconProps) {
   return (
     <svg
