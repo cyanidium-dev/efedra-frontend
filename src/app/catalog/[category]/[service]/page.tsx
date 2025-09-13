@@ -1,3 +1,3 @@
-export default function CosmetologyServicePpage() {
+export default function ServicePpage() {
   return <></>;
 }

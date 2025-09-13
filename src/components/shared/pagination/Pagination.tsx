@@ -9,6 +9,7 @@ interface PaginationProps<T> {
   useItemsPerPage: () => number;
   scrollTargetRef: RefObject<HTMLElement | null>;
   className?: string;
+  variant?: "blue" | "beige";
 }
 
 export default function Pagination<T>({
@@ -17,6 +18,7 @@ export default function Pagination<T>({
   useItemsPerPage,
   scrollTargetRef,
   className = "",
+  variant = "blue",
 }: PaginationProps<T>) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -59,9 +61,9 @@ export default function Pagination<T>({
       >
         <button
           aria-label="left"
-          className={`enabled:cursor-pointer flex justify-center items-center size-[30px] bg-blue rounded-full transition duration-300 ease-in-out
+          className={`enabled:cursor-pointer flex justify-center items-center size-[30px]  rounded-full transition duration-300 ease-in-out
           enabled:hover:brightness-125 enabled:active:scale-95 enabled:focus-visible:brightness-125
-          disabled:bg-gray`}
+          disabled:bg-gray ${variant === "blue" ? "bg-blue" : "bg-beige"}`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={page === 1}
         >
@@ -79,9 +81,9 @@ export default function Pagination<T>({
 
         <button
           aria-label="right"
-          className={`enabled:cursor-pointer flex justify-center items-center size-[30px] bg-blue rounded-full transition duration-300 ease-in-out
+          className={`enabled:cursor-pointer flex justify-center items-center size-[30px] rounded-full transition duration-300 ease-in-out
           enabled:hover:brightness-125 enabled:active:scale-95 enabled:focus-visible:brightness-125
-          disabled:bg-gray`}
+          disabled:bg-gray  ${variant === "blue" ? "bg-blue" : "bg-beige"}`}
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={page === totalPages}
         >
