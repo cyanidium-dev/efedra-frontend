@@ -30,7 +30,7 @@ export default function SectionTitle({
       })}
       className={twMerge(
         clsx(
-          `flex items-center justify-center w-fit h-[29px] mb-5 lg:mb-6 rounded-full px-3 py-1 bg-beige/80
+          `flex items-center justify-center w-fit h-[29px] mb-5 lg:mb-6 rounded-full px-3 py-1 
       ${
         variant === "beige"
           ? type === "solid"
@@ -40,7 +40,7 @@ export default function SectionTitle({
             ? "text-white bg-blue/80"
             : "text-blue bg-white border-[1.8px] border-blue/80"
       }
-      ${variant === "beige" ? "bg-beige/80" : "bg-blue/80"}`,
+      `,
           className
         )
       )}
