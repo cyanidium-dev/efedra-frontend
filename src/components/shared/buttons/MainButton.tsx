@@ -15,6 +15,7 @@ interface MainButtonProps {
   loadingText?: string;
   withArrow?: boolean;
   iconClassName?: string;
+  iconStrokeColor?: string;
 }
 
 const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
@@ -30,6 +31,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
       loadingText,
       withArrow = false,
       iconClassName = "",
+      iconStrokeColor = "",
     },
     ref
   ) => {
@@ -67,6 +69,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
                 "w-[16px] h-auto shrink-0 xl:group-hover:translate-x-[1px] xl:group-hover:-translate-y-[1px] will-change-transform transition duration-300 ease-in-out",
                 iconClassName
               )}
+              strokeColor={iconStrokeColor}
             />
           ) : null}
         </div>

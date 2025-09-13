@@ -8,12 +8,15 @@ import { fadeInAnimation } from "@/utils/animationVariants";
 import MainButton from "../buttons/MainButton";
 import CallBackModal from "../modals/CallBackModal";
 
-interface ServiceHeroProps {
+interface VerticalTitleHeroProps {
   title: string;
   image: string;
 }
 
-export default function ServiceHero({ title, image }: ServiceHeroProps) {
+export default function VerticalTitleHero({
+  title,
+  image,
+}: VerticalTitleHeroProps) {
   const [isModalShown, setIsModalShown] = useState(false);
 
   return (
@@ -52,15 +55,16 @@ export default function ServiceHero({ title, image }: ServiceHeroProps) {
             whileInView="visible"
             exit="exit"
             viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInAnimation({ x: 50, delay: 0.3 })}
+            variants={fadeInAnimation({ x: 10, delay: 0.6 })}
           >
             <MainButton
               variant="bordered"
               withArrow
               className="md:hidden absolute -bottom-[20px] -right-[12px] px-[17px] max-w-[158px] h-[43px] text-[14px]"
               iconClassName="w-[26px] h-[21px]"
+              iconStrokeColor="#F9F9FB"
             >
-              Записатися
+              Записатись
             </MainButton>
 
             <MainButton
@@ -69,8 +73,9 @@ export default function ServiceHero({ title, image }: ServiceHeroProps) {
               withArrow
               className="hidden md:flex absolute bottom-[16px] right-[15px] px-[23px] lg:px-[23px] max-w-[175px] h-[56px] text-[15px] leading-[120%] text-black"
               iconClassName="w-[26px] h-[21px]"
+              iconStrokeColor="#F9F9FB"
             >
-              Записатися
+              Записатись
             </MainButton>
           </motion.div>
         </div>
