@@ -18,7 +18,7 @@ const components: Partial<PortableTextReactComponents> = {
         variants={fadeInAnimation({
           y: 20,
         })}
-        className="mb-10 lg:mb-15"
+        className="not-last:mb-10 lg:not-last:mb-15"
       >
         {props.children}
       </motion.p>
@@ -39,7 +39,7 @@ const components: Partial<PortableTextReactComponents> = {
         variants={fadeInAnimation({
           y: 20,
         })}
-        className="list-disc pl-6 mb-6 space-y-2"
+        className="list-disc pl-6 not-last:mb-6 space-y-2"
       >
         {props.children}
       </motion.ul>
@@ -53,7 +53,7 @@ const components: Partial<PortableTextReactComponents> = {
         variants={fadeInAnimation({
           y: 20,
         })}
-        className="list-decimal pl-6 mb-6 space-y-2"
+        className="list-decimal pl-6 not-last:mb-6 space-y-2"
       >
         {props.children}
       </motion.ol>

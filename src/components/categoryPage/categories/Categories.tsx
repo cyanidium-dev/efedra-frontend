@@ -21,7 +21,9 @@ export default function Categories({ categories, variant }: CategoriesProps) {
   return (
     <section className="pt-15 lg:pt-[67px]">
       <Container>
-        <SectionTitle variant={variant}>Категорії послуг</SectionTitle>
+        <SectionTitle variant={variant} className="lg:mb-14">
+          Категорії послуг
+        </SectionTitle>
         {variant === "blue" ? (
           <CategoriesListDentistry categories={categories} />
         ) : (

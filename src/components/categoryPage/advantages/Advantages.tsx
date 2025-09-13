@@ -13,7 +13,7 @@ export default function Advantages({ category, variant }: AdvantagesProps) {
   return (
     <section className="pt-15 lg:pt-[77px]">
       <Container>
-        <SectionTitle>Переваги центру</SectionTitle>
+        <SectionTitle className="lg:mb-10">Переваги центру</SectionTitle>
         <IconTextList
           title="Досвід, якому можна довіритись"
           items={advantages}
