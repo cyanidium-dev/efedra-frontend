@@ -5,7 +5,7 @@ interface FacebookIconProps {
 
 export default function FacebookIcon({
   className,
-  strokeColor = "#0F3C5A",
+  strokeColor = "var(--color-blue)",
 }: FacebookIconProps) {
   return (
     <svg

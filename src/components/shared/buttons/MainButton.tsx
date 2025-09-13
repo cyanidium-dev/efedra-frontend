@@ -14,6 +14,8 @@ interface MainButtonProps {
   onClick?: () => void;
   loadingText?: string;
   withArrow?: boolean;
+  iconClassName?: string;
+  iconStrokeColor?: string;
 }
 
 const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
@@ -28,6 +30,8 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
       onClick,
       loadingText,
       withArrow = false,
+      iconClassName = "",
+      iconStrokeColor = "",
     },
     ref
   ) => {
@@ -60,7 +64,13 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
             {isLoading ? loadingText : children}
           </p>
           {withArrow ? (
-            <ArrowIcon className="w-[16px] h-auto shrink-0 xl:group-hover:translate-x-[1px] xl:group-hover:-translate-y-[1px] will-change-transform transition duration-300 ease-in-out" />
+            <ArrowIcon
+              className={twMerge(
+                "w-[16px] h-auto shrink-0 xl:group-hover:translate-x-[1px] xl:group-hover:-translate-y-[1px] will-change-transform transition duration-300 ease-in-out",
+                iconClassName
+              )}
+              strokeColor={iconStrokeColor}
+            />
           ) : null}
         </div>
         {isLoading ? <LoaderIcon variant={variant} /> : null}

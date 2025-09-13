@@ -18,7 +18,7 @@ interface SocialMediaProps {
 export default function SocialMedia({
   className = "",
   iconClassName = "",
-  iconStrokeColor = "#0F3C5A",
+  iconStrokeColor = "var(--color-blue)",
 }: SocialMediaProps) {
   return (
     <ul className={twMerge("flex items-center gap-[21px]", className)}>
