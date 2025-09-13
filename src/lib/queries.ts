@@ -10,6 +10,18 @@ export const allPostsQuery = `
   }
 `;
 
+export const postBySlugQuery = `
+  *[_type == "post" && slug.current == $slug][0] {
+    title,
+    "slug": slug.current,
+    "image": image.asset->url,
+    direction,
+    description,
+    content,
+    "createdAt": _createdAt
+  }
+`;
+
 export const allDoctorsQuery = `*[_type == "doctor"] | order(order asc) {
  "id":_id,
   name,

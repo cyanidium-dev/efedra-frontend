@@ -1,6 +1,8 @@
-import Image from "next/image";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 import { calculateReadingTime } from "@/utils/calculateReadingTime";
 import { Post } from "@/types/post";
+import ClockIcon from "../icons/ClockIcon";
 
 interface EstimatedReadingTimeProps {
   post: Post;
@@ -14,11 +16,17 @@ export default function EstimatedReadingTime({
   const readingTime = calculateReadingTime(post);
 
   return (
-    <div className={`flex items-center gap-[5px] shrink-0 w-fit ${className}`}>
-      <Image src="/images/icons/clock.svg" alt="clock" width="12" height="12" />
-      <p className="text-[10px] xl:text-[12px] font-normal leading-[120%]">
-        {readingTime} хв
-      </p>
+    <div
+      className={twMerge(
+        clsx(
+          `flex items-center gap-[5px] shrink-0 w-fit text-[10px] xl:text-[12px] font-normal leading-[120%]`,
+          className
+        )
+      )}
+    >
+      <ClockIcon />
+
+      <p>{readingTime} хв</p>
     </div>
   );
 }

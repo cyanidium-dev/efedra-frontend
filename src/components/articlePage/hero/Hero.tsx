@@ -1,0 +1,57 @@
+import Container from "@/components/shared/container/Container";
+import { Post } from "@/types/post";
+import Image from "next/image";
+import FormattedDate from "@/components/shared/formattedDate/FormattedDate";
+import DirectionTag from "@/components/shared/directionTag/DirectionTag";
+import EstimatedReadingTime from "@/components/shared/estReadingTime/estimatedReadingTime";
+
+interface HeroProps {
+  post: Post;
+}
+
+export default function Hero({ post }: HeroProps) {
+  if (!post) return null;
+
+  const { image, title, description, direction, createdAt } = post;
+
+  return (
+    <section className="pt-4 pb-10 lg:pt-9 lg:pb-16">
+      <Container className="flex flex-col sm:flex-row gap-[22px] lg:gap-[46px]">
+        <div className="relative sm:w-[calc(50%-11px)] lg:w-[calc(50%-23px)] h-[195px] sm:h-auto sm:min-h-[240px] lg:min-h-[280px] xl:min-h-[350px] rounded-[20px]">
+          <Image
+            src={image}
+            priority
+            fill
+            alt={title}
+            className="object-cover rounded-[20px]"
+          />
+          <div className="sm:hidden absolute -left-0.5 bottom-[-13px] flex items-center justify-center py-1 px-3 min-w-[70px] h-[26px] bg-beige rounded-full text-white">
+            <EstimatedReadingTime
+              post={post}
+              className="gap-2 text-[12px] font-medium leading-[120%]"
+            />
+          </div>
+        </div>
+        <div className="sm:w-[calc(50%-11px)] lg:w-[calc(50%-23px)]">
+          <h1 className="mb-[13px] lg:mb-[23px] font-evolenta text-[20px] lg:text-[36px] font-normal leading-[133%] uppercase">
+            {title}
+          </h1>
+          <div className="flex items-center gap-[19px] mb-5">
+            <FormattedDate
+              createdAt={createdAt}
+              className="text-[12px] leading-none"
+            />
+            <DirectionTag direction={direction} className="text-[12px]" />
+          </div>
+          <p className="mb-[19px] lg:mb-8">{description}</p>
+          <div className="hidden sm:flex items-center justify-center mb-6 py-1 px-3 min-w-[70px] w-fit h-[26px] bg-beige rounded-full text-white">
+            <EstimatedReadingTime
+              post={post}
+              className="gap-2 text-[12px] font-medium leading-[120%]"
+            />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
