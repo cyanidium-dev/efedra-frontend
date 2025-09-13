@@ -1,4 +1,6 @@
 import Image from "next/image";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 interface DirectionTagProps {
   direction: string;
@@ -10,16 +12,21 @@ export default function DirectionTag({
   className = "",
 }: DirectionTagProps) {
   return (
-    <div className={`flex items-center gap-[5px] shrink-0 w-fit ${className}`}>
+    <div
+      className={twMerge(
+        clsx(
+          `flex items-center gap-[5px] shrink-0 w-fit text-[10px] xl:text-[12px] font-normal leading-[120%]`,
+          className
+        )
+      )}
+    >
       <Image
         src="/images/icons/price-tag.svg"
-        alt="clock"
+        alt="price-tag"
         width="11"
         height="11"
       />
-      <p className="text-[10px] xl:text-[12px] font-normal leading-[120%]">
-        {direction === "aesthetic" ? "Естетична медицина" : "Стоматологія"}
-      </p>
+      <p>{direction === "aesthetic" ? "Естетична медицина" : "Стоматологія"}</p>
     </div>
   );
 }

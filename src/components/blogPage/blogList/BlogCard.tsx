@@ -4,7 +4,7 @@ import EstimatedReadingTime from "@/components/shared/estReadingTime/estimatedRe
 import { Post } from "@/types/post";
 import Image from "next/image";
 import Link from "next/link";
-import { formatDate } from "@/utils/formatDate";
+import FormattedDate from "@/components/shared/formattedDate/FormattedDate";
 
 interface BlogCardProps {
   post: Post;
@@ -12,8 +12,6 @@ interface BlogCardProps {
 
 export default function BlogCard({ post }: BlogCardProps) {
   const { title, image, direction, slug, description, createdAt } = post;
-
-  const formattedDate = formatDate(createdAt);
 
   return (
     <Link
@@ -27,17 +25,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <EstimatedReadingTime post={post} />
-            <div className="flex items-center gap-1.5">
-              <Image
-                src="/images/icons/calendar.svg"
-                alt="clock"
-                width="12"
-                height="12"
-              />
-              <p className="text-[10px] xl:text-[12px] font-normal leading-[120%]">
-                {formattedDate}
-              </p>
-            </div>
+            <FormattedDate createdAt={createdAt} />
             <DirectionTag direction={direction} />
           </div>
           <h2 className="mb-2 font-evolenta text-[16px] font-normal leading-[133%] uppercase">
