@@ -88,3 +88,49 @@ export const allServicesQuery = `
     }
   }
 `;
+
+export const serviceBySlugQuery = `
+  *[_type == "service" && slug.current == $slug][0]{
+    title,
+    category,
+    order,
+    "categoryImage": categoryImage.asset->url,
+    "mainImage": mainImage.asset->url,
+    shortDescription,
+    "slug": slug.current,
+    procedureDescription{
+      text,
+      "images": images[].asset->url,
+      info
+    },
+    recommended[]{
+      "image": image.asset->url,
+      text
+    },
+    howItGoes{
+      "image": image.asset->url,
+      steps[]{
+        title,
+        description
+      }
+    },
+    advantages[]{
+      "icon": icon.asset->url,
+      title,
+      text
+    },
+    contraindications{
+      "image": image.asset->url,
+      items
+    },
+    types{
+      title,
+      list[]{
+        "image": image.asset->url,
+        title,
+        text,
+        details
+      }
+    }
+  }
+`;

@@ -1,37 +1,43 @@
-export interface Service {
+export type Service = {
   title: string;
-  slug: string;
-  category: string;
-  order: number;
+  category: "dentistry" | "aesthetic";
+  order?: number;
   categoryImage: string;
   mainImage: string;
   shortDescription: string;
-  procedureDescription: {
+  slug: string;
+
+  procedureDescription?: {
     text: string;
     images: string[];
     info: string[];
   };
-  recommended: {
-    image: string;
-    text: string;
+
+  recommended?: {
+    image?: string;
+    text?: string;
   }[];
-  howItGoes: {
+
+  howItGoes?: {
     image: string;
     steps: {
       title: string;
       description: string;
     }[];
   };
-  advantages: {
-    icon: string;
-    title: string;
-    text: string;
+
+  advantages?: {
+    icon?: string;
+    title?: string;
+    text?: string;
   }[];
-  contraindications: {
+
+  contraindications?: {
     image: string;
-    items: string[];
+    items?: string[];
   };
-  types: {
+
+  types?: {
     title: string;
     list: {
       image: string;
@@ -40,7 +46,4 @@ export interface Service {
       details?: string[];
     }[];
   };
-  pricing: {
-    link: string;
-  };
-}
+};
