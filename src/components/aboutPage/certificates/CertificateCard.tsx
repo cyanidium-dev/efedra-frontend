@@ -1,6 +1,4 @@
-import { Review } from "@/types/review";
 import Image from "next/image";
-import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
 interface CertificateCardProps {
