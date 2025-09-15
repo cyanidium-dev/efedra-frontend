@@ -1,60 +1,25 @@
 export type Service = {
-  _id: string;
-  _type: "service";
-  category: "dentistry" | "aesthetic";
   title: string;
+  category: "dentistry" | "aesthetic";
   order?: number;
-  categoryImage: {
-    asset: {
-      _ref: string;
-      _type: "reference";
-      url?: string;
-    };
-  };
-  mainImage: {
-    asset: {
-      _ref: string;
-      _type: "reference";
-      url?: string;
-    };
-  };
+  categoryImage: string;
+  mainImage: string;
   shortDescription: string;
-  slug: {
-    _type: "slug";
-    current: string;
-  };
+  slug: string;
 
   procedureDescription?: {
     text: string;
-    images: {
-      asset: {
-        _ref: string;
-        _type: "reference";
-        url?: string;
-      };
-    }[];
+    images: string[];
     info: string[];
   };
 
   recommended?: {
-    image?: {
-      asset: {
-        _ref: string;
-        _type: "reference";
-        url?: string;
-      };
-    };
+    image?: string;
     text?: string;
   }[];
 
   howItGoes?: {
-    image: {
-      asset: {
-        _ref: string;
-        _type: "reference";
-        url?: string;
-      };
-    };
+    image: string;
     steps: {
       title: string;
       description: string;
@@ -62,38 +27,20 @@ export type Service = {
   };
 
   advantages?: {
-    icon?: {
-      asset: {
-        _ref: string;
-        _type: "reference";
-        url?: string;
-      };
-    };
+    icon?: string;
     title?: string;
     text?: string;
   }[];
 
   contraindications?: {
-    image: {
-      asset: {
-        _ref: string;
-        _type: "reference";
-        url?: string;
-      };
-    };
+    image: string;
     items?: string[];
   };
 
   types?: {
     title: string;
     list: {
-      image: {
-        asset: {
-          _ref: string;
-          _type: "reference";
-          url?: string;
-        };
-      };
+      image: string;
       title: string;
       text: string;
       details?: string[];
