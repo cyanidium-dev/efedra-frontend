@@ -1,4 +1,3 @@
-import Hero from "@/components/servicePage/hero/Hero";
 import VerticalTitleHero from "@/components/shared/hero/VerticalTitleHero";
 import Loader from "@/components/shared/loader/Loader";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
