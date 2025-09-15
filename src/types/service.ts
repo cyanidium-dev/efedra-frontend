@@ -1,46 +1,102 @@
-export interface Service {
+export type Service = {
+  _id: string;
+  _type: "service";
+  category: "dentistry" | "aesthetic";
   title: string;
-  slug: string;
-  category: string;
-  order: number;
-  categoryImage: string;
-  mainImage: string;
+  order?: number;
+  categoryImage: {
+    asset: {
+      _ref: string;
+      _type: "reference";
+      url?: string;
+    };
+  };
+  mainImage: {
+    asset: {
+      _ref: string;
+      _type: "reference";
+      url?: string;
+    };
+  };
   shortDescription: string;
-  procedureDescription: {
+  slug: {
+    _type: "slug";
+    current: string;
+  };
+
+  procedureDescription?: {
     text: string;
-    images: string[];
+    images: {
+      asset: {
+        _ref: string;
+        _type: "reference";
+        url?: string;
+      };
+    }[];
     info: string[];
   };
-  recommended: {
-    image: string;
-    text: string;
+
+  recommended?: {
+    image?: {
+      asset: {
+        _ref: string;
+        _type: "reference";
+        url?: string;
+      };
+    };
+    text?: string;
   }[];
-  howItGoes: {
-    image: string;
+
+  howItGoes?: {
+    image: {
+      asset: {
+        _ref: string;
+        _type: "reference";
+        url?: string;
+      };
+    };
     steps: {
       title: string;
       description: string;
     }[];
   };
-  advantages: {
-    icon: string;
-    title: string;
-    text: string;
+
+  advantages?: {
+    icon?: {
+      asset: {
+        _ref: string;
+        _type: "reference";
+        url?: string;
+      };
+    };
+    title?: string;
+    text?: string;
   }[];
-  contraindications: {
-    image: string;
-    items: string[];
+
+  contraindications?: {
+    image: {
+      asset: {
+        _ref: string;
+        _type: "reference";
+        url?: string;
+      };
+    };
+    items?: string[];
   };
-  types: {
+
+  types?: {
     title: string;
     list: {
-      image: string;
+      image: {
+        asset: {
+          _ref: string;
+          _type: "reference";
+          url?: string;
+        };
+      };
       title: string;
       text: string;
       details?: string[];
     }[];
   };
-  pricing: {
-    link: string;
-  };
-}
+};
