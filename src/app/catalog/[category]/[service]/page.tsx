@@ -1,3 +1,5 @@
+import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
+import MeetCenterCTA from "@/components/shared/cta/MeetCenterCTA";
 import VerticalTitleHero from "@/components/shared/hero/VerticalTitleHero";
 import Loader from "@/components/shared/loader/Loader";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
@@ -18,6 +20,8 @@ export default async function ServicePpage({ params }: ServicePageProps) {
 
   if (!currentService) return null;
 
+  const { category } = currentService;
+
   const variant = currentService?.category === "dentistry" ? "blue" : "beige";
 
   return (
@@ -29,6 +33,19 @@ export default async function ServicePpage({ params }: ServicePageProps) {
         />
         <MarqueeLine variant={variant} />
       </Suspense>
+      {category === "dentistry" ? (
+        <MeetCenterCTA
+          imageOne="/images/shared/cosmetic-procedure.webp"
+          imageTwo="/images/blogPage/hero/imageTwo.webp"
+          className="py-15 lg:py-25"
+        />
+      ) : (
+        <CTAFormWithBackground
+          buttonVariant={variant}
+          image="/images/aboutPage/cta/cta.webp"
+          className="py-15 lg:py-25"
+        />
+      )}
     </>
   );
 }
