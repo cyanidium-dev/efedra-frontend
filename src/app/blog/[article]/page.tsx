@@ -24,9 +24,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     <>
       <Suspense fallback={<Loader />}>
         <Hero post={post} />
-      </Suspense>
-      <MarqueeLine />
-      <Suspense fallback={<Loader />}>
+        <MarqueeLine />
         <Content post={post} />
       </Suspense>
       <Suspense fallback={<Loader />}>
