@@ -1,3 +1,4 @@
+import Cost from "@/components/servicePage/cost/Cost";
 import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
 import MeetCenterCTA from "@/components/shared/cta/MeetCenterCTA";
 import VerticalTitleHero from "@/components/shared/hero/VerticalTitleHero";
@@ -33,6 +34,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
         />
         <MarqueeLine variant={variant} />
       </Suspense>
+      <Cost variant={variant} />
       {category === "dentistry" ? (
         <MeetCenterCTA
           imageOne="/images/shared/cosmetic-procedure.webp"
