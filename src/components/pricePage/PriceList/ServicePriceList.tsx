@@ -34,9 +34,7 @@ export default function ServiceList({
                 <div
                   key={`title-${idx}`}
                   className={twMerge(
-                    `pl-[46px] pt-[10px] pb-[13px] text-[12px] md:text-[14px] leading-[150%] text-left border-t-[0.5px] border-${colorScheme} ${
-                      isLast ? "pb-6" : ""
-                    }`
+                    `flex items-center pl-[46px] py-3 text-[12px] md:text-[14px] leading-[150%] text-left border-t-[0.5px] border-${colorScheme}`
                   )}
                 >
                   {service.title}
@@ -44,18 +42,14 @@ export default function ServiceList({
                 <div
                   key={`price-${idx}`}
                   className={twMerge(
-                    `pt-[10px] pb-[13px] text-[12px] md:text-[14px] text-center border-t-[0.5px] border-${colorScheme} ${
-                      isLast ? "pb-6" : ""
-                    }`
+                    `flex items-center justify-center py-3 text-[12px] md:text-[14px] text-center border-t-[0.5px] border-${colorScheme}`
                   )}
                 >
                   {service.price || <span>—</span>}
                 </div>
                 <div
                   key={`duration-${idx}`}
-                  className={twMerge(`pr-[27px] pt-[10px] pb-[13px] text-[12px] md:text-[14px] text-center border-t-[0.5px] border-${colorScheme} ${
-                    isLast ? "pb-6" : ""
-                  }
+                  className={twMerge(`flex items-center justify-center pr-[27px] py-3 text-[12px] md:text-[14px] text-center border-t-[0.5px] border-${colorScheme}
                 `)}
                 >
                   {service.duration || <span>—</span>}
@@ -74,7 +68,7 @@ export default function ServiceList({
               <div
                 key={idx}
                 className={`flex flex-col gap-2 px-3 py-4 text-sm border-t-[0.5px] border-x border-${colorScheme} ${
-                  isLast ? "border-b rounded-b-[32px] pb-6" : ""
+                  isLast ? "border-b rounded-b-[32px]" : ""
                 }`}
               >
                 <p className="text-[12px] leading-[133%]">{service.title}</p>
