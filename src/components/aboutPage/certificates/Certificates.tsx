@@ -23,7 +23,7 @@ export default function Certificates() {
         </motion.h3>
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:gap-6 lg:pt-3">
-          <div className="hidden lg:block flex flex-col">
+          <div className="hidden lg:flex flex-col">
             <motion.h3
               initial="hidden"
               whileInView="visible"

@@ -1,4 +1,5 @@
 import Cost from "@/components/servicePage/cost/Cost";
+import Types from "@/components/servicePage/types/Types";
 import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
 import MeetCenterCTA from "@/components/shared/cta/MeetCenterCTA";
 import VerticalTitleHero from "@/components/shared/hero/VerticalTitleHero";
@@ -33,6 +34,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
           image={currentService?.mainImage}
         />
         <MarqueeLine variant={variant} />
+        <Types variant={variant} service={currentService} />
       </Suspense>
       <Cost variant={variant} />
       {category === "dentistry" ? (
