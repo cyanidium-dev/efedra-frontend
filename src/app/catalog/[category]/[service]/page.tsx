@@ -1,3 +1,4 @@
+import Contraindications from "@/components/servicePage/contraindications/Contraindications";
 import Cost from "@/components/servicePage/cost/Cost";
 import Types from "@/components/servicePage/types/Types";
 import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
@@ -34,6 +35,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
           image={currentService?.mainImage}
         />
         <MarqueeLine variant={variant} />
+        <Contraindications variant={variant} service={currentService} />
         <Types variant={variant} service={currentService} />
       </Suspense>
       <Cost variant={variant} />

@@ -34,7 +34,7 @@ export default function Types({ variant, service }: TypesProps) {
               key={idx}
               className="flex flex-col sm:odd:flex-row sm:even:flex-row-reverse gap-6 lg:gap-[95px]"
             >
-              <div className="sm:my-auto">
+              <div className="sm:my-auto shrink-0 max-w-[45%]">
                 <h3 className="mb-5 font-evolenta text-[24px] font-normal leading-[133%] uppercase">
                   {title}
                 </h3>
@@ -61,7 +61,7 @@ export default function Types({ variant, service }: TypesProps) {
                   scale: 0.95,
                   delay: 0.3,
                 })}
-                className="relative w-full max-w-[640px] h-[143px] xs:h-[200px] sm:h-auto sm:min-h-[260px] lg:min-h-[310px] rounded-[20px] overflow-hidden"
+                className="relative w-full h-[143px] xs:h-[200px] sm:h-auto sm:min-h-[260px] lg:min-h-[310px] rounded-[20px] overflow-hidden"
               >
                 <Image src={image} alt={title} fill className="object-cover" />
               </motion.div>
