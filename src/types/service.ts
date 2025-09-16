@@ -34,7 +34,7 @@ export type Service = {
 
   contraindications?: {
     image: string;
-    items?: string[];
+    items: string[];
   };
 
   types?: {
