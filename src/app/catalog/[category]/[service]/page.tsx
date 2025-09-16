@@ -1,6 +1,7 @@
 import Advantages from "@/components/servicePage/advantages/Advantages";
 import Contraindications from "@/components/servicePage/contraindications/Contraindications";
 import Cost from "@/components/servicePage/cost/Cost";
+import Description from "@/components/servicePage/description/Description";
 import Types from "@/components/servicePage/types/Types";
 import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
 import MeetCenterCTA from "@/components/shared/cta/MeetCenterCTA";
@@ -36,6 +37,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
           image={currentService?.mainImage}
         />
         <MarqueeLine variant={variant} />
+        <Description variant={variant} service={currentService} />
         <Advantages variant={variant} service={currentService} />
         <Contraindications variant={variant} service={currentService} />
         <Types variant={variant} service={currentService} />
