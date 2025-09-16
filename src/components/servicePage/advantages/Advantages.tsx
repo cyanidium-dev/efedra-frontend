@@ -34,7 +34,7 @@ export default function Advantages({ service, variant }: AdvantagesProps) {
               viewport={{ once: true, amount: 0.2 }}
               variants={listItemVariants}
               key={idx}
-              className={`flex flex-col justify-between items-center h-auto px-5 py-8 lg:py-10 rounded-[20px] first:rounded-t-[60px] md:first:rounded-l-[60px] 
+              className={`flex flex-col justify-between items-center md:w-[calc(33.33%-16px)] xl:w-[calc(33.33%-40px)] h-auto px-5 py-8 lg:py-10 rounded-[20px] first:rounded-t-[60px] md:first:rounded-l-[60px] 
                 md:first:rounded-r-[20px] last:rounded-b-[60px] md:last:rounded-r-[60px] md:last:rounded-l-[20px] text-white overflow-hidden 
                 ${variant === "blue" ? "bg-blue" : "bg-beige"}`}
             >
