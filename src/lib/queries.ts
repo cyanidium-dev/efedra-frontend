@@ -134,3 +134,18 @@ export const serviceBySlugQuery = `
     }
   }
 `;
+
+export const allPriceCategoriesQuery = `
+  *[_type == "priceCategory"] | order(_createdAt asc) {
+    title,
+    colorScheme,
+    subcategories[]{
+      title,
+      services[]{
+        title,
+        price,
+        duration
+      }
+    }
+  }
+`;
