@@ -27,9 +27,9 @@ export type Service = {
   };
 
   advantages?: {
-    icon?: string;
-    title?: string;
-    text?: string;
+    icon: string;
+    title: string;
+    text: string;
   }[];
 
   contraindications?: {
