@@ -18,7 +18,7 @@ export default function AboutPage() {
       <Values />
       <Certificates />
       <CTAFormWithBackground
-        image="/images/aboutPage/cta/cta.webp"
+        image="/images/shared/cosmetology.webp"
         className="py-15 lg:pt-35 lg:pb-25"
       />
     </>
