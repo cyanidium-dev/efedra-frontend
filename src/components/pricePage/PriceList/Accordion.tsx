@@ -39,9 +39,12 @@ export default function Accordion({
       <motion.div
         onClick={toggleAccordion}
         animate={{ borderRadius: isOpen ? "32px 32px 0 0" : "32px" }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{
+          duration: isOpen ? 0.5 : 0.02,
+          ease: "easeInOut",
+        }}
         className={twMerge(
-          "relative w-full flex justify-between items-center pt-[18px] pb-[19px] px-6 md:pl-[46px] text-left border cursor-pointer max-h-[57px] rounded-[32px] transition-all duration-300 ease-in-out",
+          "relative w-full flex justify-between items-center pt-[18px] pb-[19px] px-6 md:pl-[46px] text-left border cursor-pointer max-h-[57px] rounded-[32px] transition-colors duration-300 ease-in-out",
           `border-${colorScheme}`,
           colorSchemeHover[colorScheme],
           `${isOpen ? "border-b-0" : ""}`
