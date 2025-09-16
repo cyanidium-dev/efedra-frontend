@@ -4,7 +4,7 @@ import Container from "@/components/shared/container/Container";
 import Accordion from "./Accordion";
 import { listItemVariants, listVariants } from "@/utils/animationVariants";
 import { PriceCategory } from "@/types/price";
-import ServiceList from "./ServicePriceList";
+import ServicePriceList from "./ServicePriceList";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
 interface PriceListProps {
@@ -44,7 +44,7 @@ export default function PriceList({ categories }: PriceListProps) {
                         title={subcategory.title}
                         colorScheme={category.colorScheme}
                       >
-                        <ServiceList
+                        <ServicePriceList
                           key={idx}
                           services={subcategory.services || []}
                           colorScheme={category.colorScheme}

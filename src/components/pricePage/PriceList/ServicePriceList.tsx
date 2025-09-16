@@ -1,19 +1,19 @@
 import { PriceService } from "@/types/price";
 import { twMerge } from "tailwind-merge";
 
-interface ServiceListProps {
+interface ServicePriceListProps {
   services: PriceService[];
   colorScheme: "beige" | "blue" | "black";
 }
 
-export default function ServiceList({
+export default function ServicePriceList({
   services,
   colorScheme,
-}: ServiceListProps) {
+}: ServicePriceListProps) {
   return (
     <>
       <div
-        className={`hidden md:grid md:grid-cols-[2.5fr_1.75fr_0.7fr] lg:grid-cols-[2.5fr_1.75fr_0.5fr] border-x rounded-b-[32px] border-b border-t-[0.5px] border-${colorScheme}`}
+        className={`hidden md:grid md:grid-cols-[2.5fr_1.75fr_0.7fr] lg:grid-cols-[2.5fr_1.75fr_0.5fr] border-x rounded-b-[32px] border-b border-t border-${colorScheme} rounded-[32px] mt-[6px]`}
       >
         <div className="pl-[46px] py-[18px] uppercase font-evolenta text-[12px] md:text-[14px] text-left">
           Назва послуги
@@ -27,8 +27,7 @@ export default function ServiceList({
 
         {services
           .filter((service) => service?.title)
-          .map((service, idx, arr) => {
-            const isLast = idx === arr.length - 1;
+          .map((service, idx) => {
             return (
               <div key={idx} className={`contents`}>
                 <div
