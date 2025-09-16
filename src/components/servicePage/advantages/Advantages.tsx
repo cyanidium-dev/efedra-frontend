@@ -29,7 +29,7 @@ export default function Advantages({ service, variant }: AdvantagesProps) {
           variants={listVariants({ staggerChildren: 0.3, delayChildren: 0.3 })}
           className="flex flex-col md:flex-row gap-6 xl:gap-15"
         >
-          {advantages?.map(({ icon, title, text }, idx) => (
+          {advantages?.slice(0, 3).map(({ icon, title, text }, idx) => (
             <motion.li
               viewport={{ once: true, amount: 0.2 }}
               variants={listItemVariants}
