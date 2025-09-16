@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 
 interface SectionTitleProps {
   children?: ReactNode;
-  variant?: "beige" | "blue";
+  variant?: "beige" | "blue" | "black";
   type?: "bordered" | "solid";
   className?: string;
   animationDirection?: "left" | "right";
@@ -36,9 +36,13 @@ export default function SectionTitle({
           ? type === "solid"
             ? "text-white bg-beige/80"
             : "text-beige bg-white border-[1.8px] border-beige/80"
-          : type === "solid"
-            ? "text-white bg-blue/80"
-            : "text-blue bg-white border-[1.8px] border-blue/80"
+          : variant === "blue"
+            ? type === "solid"
+              ? "text-white bg-blue/80"
+              : "text-blue bg-white border-[1.8px] border-blue/80"
+            : type === "solid"
+              ? "text-white bg-black/80"
+              : "text-black bg-white border-[1.8px] border-black/80"
       }
       `,
           className
