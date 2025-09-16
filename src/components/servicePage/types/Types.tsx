@@ -34,7 +34,7 @@ export default function Types({ variant, service }: TypesProps) {
               key={idx}
               className="flex flex-col sm:odd:flex-row sm:even:flex-row-reverse gap-6 lg:gap-[95px]"
             >
-              <div className="sm:my-auto shrink-0 max-w-[45%]">
+              <div className="sm:my-auto shrink-0 sm:max-w-[45%]">
                 <h3 className="mb-5 font-evolenta text-[24px] font-normal leading-[133%] uppercase">
                   {title}
                 </h3>
