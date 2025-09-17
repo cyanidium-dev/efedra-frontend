@@ -3,12 +3,12 @@ export const allPostsQuery = `
     title,
     "slug": slug.current,
     image {
-    asset->{
-      _id,
-      url
-    },
-    crop,
-    hotspot
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
     },
     direction,
     description,
@@ -21,13 +21,13 @@ export const postBySlugQuery = `
   *[_type == "post" && slug.current == $slug][0] {
     title,
     "slug": slug.current,
-      image {
-    asset->{
-      _id,
-      url
-    },
-    crop,
-    hotspot
+    image {
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
     },
     direction,
     description,
@@ -36,23 +36,25 @@ export const postBySlugQuery = `
   }
 `;
 
-export const allDoctorsQuery = `*[_type == "doctor"] | order(order asc) {
- "id":_id,
-  name,
-  photo {
-    asset->{
-      _id,
-      url
+export const allDoctorsQuery = `
+  *[_type == "doctor"] | order(order asc) {
+    "id": _id,
+    name,
+    photo {
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
     },
-    crop,
-    hotspot
-  },
-  position,
-  startYear,
-  direction,
-  description,
-  order
-}`;
+    position,
+    startYear,
+    direction,
+    description,
+    order
+  }
+`;
 
 export const allServicesQuery = `
   *[_type == "service"] | order(order asc) {
@@ -61,51 +63,86 @@ export const allServicesQuery = `
     category,
     order,
     categoryImage {
-    asset->{
-      _id,
-      url
-    },
-    crop,
-    hotspot
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
     },
     mainImage {
-    asset->{
-      _id,
-      url
-    },
-    crop,
-    hotspot
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
     },
     shortDescription,
     procedureDescription {
       text,
-      "images": images[].asset->url,
+      images[] {
+        "asset": asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       info
     },
-    recommended[]{
-      "image": image.asset->url,
+    recommended[] {
+      image {
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       text
     },
     howItGoes {
-      "image": image.asset->url,
+      image {
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       steps {
         title,
         description
       }
     },
-    advantages[]{
+    advantages[] {
       "icon": icon.asset->url,
       title,
       text
     },
     contraindications {
-      "image": image.asset->url,
+      image {
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       items
     },
     types {
       title,
-      list[]{
-        "image": image.asset->url,
+      list[] {
+        image {
+          asset->{
+            _id,
+            url
+          },
+          crop,
+          hotspot
+        },
         title,
         text,
         details
@@ -118,64 +155,92 @@ export const allServicesQuery = `
 `;
 
 export const serviceBySlugQuery = `
-  *[_type == "service" && slug.current == $slug][0]{
+  *[_type == "service" && slug.current == $slug][0] {
     title,
     category,
     order,
     categoryImage {
-    asset->{
-      _id,
-      url
-    },
-    crop,
-    hotspot
-    },
-    mainImage {
-    asset->{
-      _id,
-      url
-    },
-    crop,
-    hotspot
-    },
-    shortDescription,
-    "slug": slug.current,
-    procedureDescription{
-    text,
-    images[]{
-      "asset": asset->{
+      asset->{
         _id,
         url
       },
-    crop,
-    hotspot
+      crop,
+      hotspot
     },
+    mainImage {
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
+    },
+    shortDescription,
+    "slug": slug.current,
+    procedureDescription {
+      text,
+      images[] {
+        "asset": asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       info
     },
-    recommended[]{
-      "image": image.asset->url,
+    recommended[] {
+      image {
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       text
     },
-    howItGoes{
-      "image": image.asset->url,
-      steps[]{
+    howItGoes {
+      image {
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
+      steps[] {
         title,
         description
       }
     },
-    advantages[]{
+    advantages[] {
       "icon": icon.asset->url,
       title,
       text
     },
-    contraindications{
-      "image": image.asset->url,
+    contraindications {
+      image {
+        asset->{
+          _id,
+          url
+        },
+        crop,
+        hotspot
+      },
       items
     },
-    types{
+    types {
       title,
-      list[]{
-        "image": image.asset->url,
+      list[] {
+        image {
+          asset->{
+            _id,
+            url
+          },
+          crop,
+          hotspot
+        },
         title,
         text,
         details
@@ -188,9 +253,9 @@ export const allPriceCategoriesQuery = `
   *[_type == "priceCategory"] | order(_createdAt asc) {
     title,
     colorScheme,
-    subcategories[]{
+    subcategories[] {
       title,
-      services[]{
+      services[] {
         title,
         price,
         duration
