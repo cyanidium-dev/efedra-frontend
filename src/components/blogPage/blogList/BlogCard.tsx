@@ -5,6 +5,7 @@ import { Post } from "@/types/post";
 import Image from "next/image";
 import Link from "next/link";
 import FormattedDate from "@/components/shared/formattedDate/FormattedDate";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface BlogCardProps {
   post: Post;
@@ -19,7 +20,12 @@ export default function BlogCard({ post }: BlogCardProps) {
       className="flex flex-col h-full rounded-[20px] border overflow-hidden"
     >
       <div className="relative w-full h-[223px] lg:h-[245px]">
-        <Image src={image} alt={title} fill className="object-cover" />
+        <Image
+          src={urlFor(image).fit("crop").url()}
+          alt={title}
+          fill
+          className="object-cover"
+        />
       </div>
       <div className="flex flex-col justify-between flex-grow py-4 px-2">
         <div>

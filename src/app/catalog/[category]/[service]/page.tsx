@@ -11,6 +11,7 @@ import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 import { serviceBySlugQuery } from "@/lib/queries";
 import { fetchSanityDataServer } from "@/utils/fetchSanityDataServer";
 import { Suspense } from "react";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ServicePageProps {
   params: Promise<{ service: string }>;
@@ -34,7 +35,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
       <Suspense fallback={<Loader />}>
         <VerticalTitleHero
           title={currentService?.title}
-          image={currentService?.mainImage}
+          image={urlFor(currentService?.mainImage).fit("crop").url()}
         />
         <MarqueeLine variant={variant} />
         <HowItGoes variant={variant} service={currentService} />

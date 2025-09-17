@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface CategoriesListDentistryProps {
   categories: Service[];
@@ -31,7 +32,7 @@ export default function CategoriesListDentistry({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[0].categoryImage}
+              src={urlFor(currentCategories[0].categoryImage).fit("crop").url()}
               alt={currentCategories[0].title}
               fill
               className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
@@ -46,7 +47,7 @@ export default function CategoriesListDentistry({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[1].categoryImage}
+              src={urlFor(currentCategories[1].categoryImage).fit("crop").url()}
               alt={currentCategories[1].title}
               fill
               className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
@@ -70,11 +71,10 @@ export default function CategoriesListDentistry({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[2].categoryImage}
+              src={urlFor(currentCategories[2].categoryImage).fit("crop").url()}
               alt={currentCategories[2].title}
               fill
-              className="-z-20 object-cover object-[center_-220px] md:object-[center_-270px] lg:object-[center_-330px] xl:object-[center_-460px]
-              xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[2].title}
@@ -86,7 +86,7 @@ export default function CategoriesListDentistry({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[3].categoryImage}
+              src={urlFor(currentCategories[3].categoryImage).fit("crop").url()}
               alt={currentCategories[3].title}
               fill
               className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
@@ -113,10 +113,10 @@ export default function CategoriesListDentistry({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[4].categoryImage}
+              src={urlFor(currentCategories[4].categoryImage).fit("crop").url()}
               alt={currentCategories[4].title}
               fill
-              className="-z-20 object-cover xl:object-[center_-150px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[4].title}
@@ -129,10 +129,10 @@ export default function CategoriesListDentistry({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[5].categoryImage}
+              src={urlFor(currentCategories[5].categoryImage).fit("crop").url()}
               alt={currentCategories[5].title}
               fill
-              className="-z-20 object-cover xl:object-[center_-35px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[5].title}
