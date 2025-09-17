@@ -38,7 +38,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 scale: 0.95,
                 delay: 0.3,
               })}
-              className="relative w-full h-[194px] h-[212px] md:h-[310px] rounded-[20px] overflow-hidden"
+              className="relative w-full h-[194px] h-[212px] md:min-h-[310px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
                 src={images[0]}
@@ -69,9 +69,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 variants={fadeInAnimation({ x: -20, delay: 0.3 })}
                 className="leading-[122%]"
               >
-                Аугментація — це відновлення втрачених об’ємів кісткової тканини
-                або ясен для можливості проведення імплантації чи естетичної
-                корекції.
+                {text}
               </motion.p>
             </div>
           </div>
@@ -86,7 +84,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 scale: 0.95,
                 delay: 0.5,
               })}
-              className="md:hidden lg:block relative w-full lg:max-w-[280px] xl:max-w-[328px] h-[235px] md:h-[253px] rounded-[20px] overflow-hidden"
+              className="md:hidden lg:block relative w-full lg:max-w-[280px] xl:max-w-[328px] h-[235px] md:min-h-[253px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
                 src={images[2]}
@@ -141,7 +139,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 scale: 0.95,
                 delay: 0.4,
               })}
-              className="hidden md:block relative w-full max-w-[360px] lg:max-w-[300px] xl:max-w-[360px] h-[235px] md:h-[253px] rounded-[20px] overflow-hidden"
+              className="hidden md:block relative w-full max-w-[360px] lg:max-w-[300px] xl:max-w-[360px] h-[235px] md:min-h-[253px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
                 src={images[1]}
