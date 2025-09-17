@@ -2,6 +2,7 @@ import MainButton from "@/components/shared/buttons/MainButton";
 import { Service } from "@/types/service";
 import Image from "next/image";
 import Link from "next/link";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ServiceCardProps {
   service: Service;
@@ -22,7 +23,12 @@ export default function ServiceCard({
       className={`flex flex-col h-full border lg:border-2 rounded-[12px] lg:rounded-[20px] overflow-hidden ${variant === "blue" ? "border-blue" : "border-beige"}`}
     >
       <div className="relative w-full h-30 lg:h-60 rounded-t-[12px] lg:rounded-t-[20px]">
-        <Image src={categoryImage} fill alt={title} className="object-cover" />
+        <Image
+          src={urlFor(categoryImage).fit("crop").url()}
+          fill
+          alt={title}
+          className="object-cover"
+        />
       </div>
       <div className="flex flex-col flex-grow justify-between p-3 lg:p-6">
         <h2 className="mb-2 lg:mb-4 font-evolenta text-[12px] lg:text-[24px] font-normal leading-[133%] uppercase">
