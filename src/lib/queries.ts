@@ -46,7 +46,14 @@ export const allServicesQuery = `
     "slug": slug.current,
     category,
     order,
-    "categoryImage": categoryImage.asset->url,
+    categoryImage {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
     "mainImage": mainImage.asset->url,
     shortDescription,
     procedureDescription {

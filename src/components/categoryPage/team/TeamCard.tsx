@@ -1,12 +1,6 @@
 import { Doctor } from "@/types/doctor";
 import Image from "next/image";
-import imageUrlBuilder from "@sanity/image-url";
-import { client } from "@/lib/sanityClient";
-
-const builder = imageUrlBuilder(client);
-function urlFor(source: any) {
-  return builder.image(source);
-}
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface TeamCardProps {
   doctor: Doctor;
