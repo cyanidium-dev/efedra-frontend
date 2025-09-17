@@ -12,6 +12,7 @@ import { serviceBySlugQuery } from "@/lib/queries";
 import { fetchSanityDataServer } from "@/utils/fetchSanityDataServer";
 import { Suspense } from "react";
 import { urlFor } from "@/utils/getUrlForSanityImage";
+import Recommended from "@/components/servicePage/recommended/Recommended";
 
 interface ServicePageProps {
   params: Promise<{ service: string }>;
@@ -38,6 +39,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
           image={urlFor(currentService?.mainImage).fit("crop").url()}
         />
         <MarqueeLine variant={variant} />
+        <Recommended variant={variant} service={currentService} />
         <HowItGoes variant={variant} service={currentService} />
         <Advantages variant={variant} service={currentService} />
         <Contraindications variant={variant} service={currentService} />

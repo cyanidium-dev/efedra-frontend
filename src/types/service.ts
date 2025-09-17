@@ -14,8 +14,8 @@ export type Service = {
   };
 
   recommended?: {
-    image?: string;
-    text?: string;
+    image: string;
+    text: string;
   }[];
 
   howItGoes?: {
