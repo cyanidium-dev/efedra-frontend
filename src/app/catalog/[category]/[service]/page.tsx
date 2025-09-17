@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Advantages from "@/components/servicePage/advantages/Advantages";
 import Contraindications from "@/components/servicePage/contraindications/Contraindications";
 import Cost from "@/components/servicePage/cost/Cost";
+import Description from "@/components/servicePage/description/Description";
 import HowItGoes from "@/components/servicePage/howItGoes/HowItGoes";
 import Types from "@/components/servicePage/types/Types";
 import CTAFormWithBackground from "@/components/shared/cta/CTAFormWithBackground";
@@ -69,6 +70,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
           image={urlFor(currentService?.mainImage).fit("crop").url()}
         />
         <MarqueeLine variant={variant} />
+        <Description variant={variant} service={currentService} />
         <Recommended variant={variant} service={currentService} />
         <HowItGoes variant={variant} service={currentService} />
         <Advantages variant={variant} service={currentService} />
