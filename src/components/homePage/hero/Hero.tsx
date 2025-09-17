@@ -14,7 +14,11 @@ export default function Hero() {
           whileInView="visible"
           exit="exit"
           viewport={{ once: true, amount: 0.1 }}
-          variants={fadeInAnimation({ scale: 0.95, duration: 1.5 })}
+          variants={fadeInAnimation({
+            scale: 0.95,
+            duration: 1.5,
+            opacity: 0.01,
+          })}
           className="lg:hidden absolute left-[calc(50%-639px)] top-[30px] -z-10 pointer-events-none w-[1063px] h-auto"
         >
           <Image
@@ -31,7 +35,11 @@ export default function Hero() {
           whileInView="visible"
           exit="exit"
           viewport={{ once: true, amount: 0.1 }}
-          variants={fadeInAnimation({ scale: 0.95, duration: 1.5 })}
+          variants={fadeInAnimation({
+            scale: 0.95,
+            duration: 1.5,
+            opacity: 0.01,
+          })}
           className="hidden lg:block absolute left-[calc(50%-1339px)] lg:left-[calc(50%-1349px)] top-[30px] lg:top-[-92px] -z-10 pointer-events-none w-[2295px] h-auto"
         >
           <Image
