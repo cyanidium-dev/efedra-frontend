@@ -4,6 +4,7 @@ import { Service } from "@/types/service";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { listVariants, listItemVariants } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface RecommendedProps {
   service: Service;
@@ -40,7 +41,7 @@ export default function Recommended({ service, variant }: RecommendedProps) {
                 className={`size-[122px] lg:size-[176px] relative mb-2 lg:mb-8 rounded-full overflow-hidden border-2 ${variant === "blue" ? "border-blue" : "border-beige"}`}
               >
                 <Image
-                  src={image}
+                  src={urlFor(image).fit("crop").url()}
                   alt="recommended"
                   fill
                   className="object-cover"

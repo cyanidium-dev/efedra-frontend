@@ -7,6 +7,7 @@ import Image from "next/image";
 import StepsList from "./StepsList";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface HowItGoesProps {
   service: Service;
@@ -49,7 +50,12 @@ export default function HowItGoes({ service, variant }: HowItGoesProps) {
           className="relative aspect-square lg:aspect-[640/685] w-auto h-[319px] md:h-[369px] lg:h-[480px] xl:h-[685px] mx-auto sm:mx-0 
         rounded-t-[300px] rounded-bl-[300px] rounded-br-[20px] overflow-hidden"
         >
-          <Image src={image} alt="background" fill className="object-cover " />
+          <Image
+            src={urlFor(image).fit("crop").url()}
+            alt="background"
+            fill
+            className="object-cover "
+          />
         </motion.div>
       </Container>
     </section>

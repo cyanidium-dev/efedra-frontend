@@ -4,6 +4,7 @@ import { Service } from "@/types/service";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface TypesProps {
   service: Service;
@@ -63,7 +64,12 @@ export default function Types({ variant, service }: TypesProps) {
                 })}
                 className="relative w-full h-[143px] xs:h-[200px] sm:h-auto sm:min-h-[260px] lg:min-h-[310px] rounded-[20px] overflow-hidden"
               >
-                <Image src={image} alt={title} fill className="object-cover" />
+                <Image
+                  src={urlFor(image).fit("crop").url()}
+                  alt={title}
+                  fill
+                  className="object-cover"
+                />
               </motion.div>
             </motion.li>
           ))}

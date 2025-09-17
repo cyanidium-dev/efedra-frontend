@@ -5,6 +5,7 @@ import ContraindicationItem from "./ContraindicationItem";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ContraindicationsProps {
   service: Service;
@@ -54,7 +55,12 @@ export default function Contraindications({
             })}
             className="relative w-full lg:w-[280px] xl:w-[306px] h-[194px] sm:h-[280px] lg:h-auto rounded-[20px] overflow-hidden"
           >
-            <Image src={image} alt="background" fill className="object-cover" />
+            <Image
+              src={urlFor(image).fit("crop").url()}
+              alt="background"
+              fill
+              className="object-cover"
+            />
           </motion.div>
           <motion.ul
             initial="hidden"

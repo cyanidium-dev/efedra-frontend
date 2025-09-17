@@ -21,15 +21,15 @@ export default function Description({ service, variant }: DescriptionProps) {
   if (!procedureDescription) return null;
 
   const { images, info, text } = procedureDescription;
-  
+
   return (
-    <section className="pt-15 lg:pt-[100px]">
+    <section className="pt-15 lg:pt-25">
       <Container>
         <SectionTitle variant={variant} className="md:hidden">
           опис процедури
         </SectionTitle>
         <div className="flex flex-col gap-6 md:gap-10 lg:gap-15 pt-1 md:pt-0">
-          <div className="flex flex-col md:flex-row-reverse gap-6 gap-5 xl:gap-[95px]">
+          <div className="flex flex-col md:flex-row-reverse gap-6 xl:gap-[95px]">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -39,7 +39,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 scale: 0.95,
                 delay: 0.3,
               })}
-              className="relative w-full h-[194px] h-[212px] md:min-h-[310px] md:h-auto rounded-[20px] overflow-hidden"
+              className="relative w-full h-[212px] md:min-h-[310px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
                 src={urlFor(images[0]).fit("crop").url()}
