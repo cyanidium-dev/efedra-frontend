@@ -5,6 +5,7 @@ import DirectionTag from "../../shared/directionTag/DirectionTag";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ArticleTwoProps {
   post: Post;
@@ -27,7 +28,12 @@ export default function ArticleTwo({ post }: ArticleTwoProps) {
         className="flex flex-col h-full px-4 py-5 bg-gray-light"
       >
         <div className="flex-grow relative w-full mb-4 rounded-[12px] overflow-hidden">
-          <Image src={image} alt={title} fill className="object-cover" />
+          <Image
+            src={urlFor(image).fit("crop").url()}
+            alt={title}
+            fill
+            className="object-cover"
+          />
         </div>
 
         <h3 className="mb-5 font-evolenta text-[15px] font-normal leading-[133%] uppercase">
