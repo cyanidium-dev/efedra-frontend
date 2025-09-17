@@ -2,7 +2,14 @@ export const allPostsQuery = `
   *[_type == "post"] | order(_createdAt desc) {
     title,
     "slug": slug.current,
-    "image": image.asset->url,
+    image {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
     direction,
     description,
     content,
@@ -14,7 +21,14 @@ export const postBySlugQuery = `
   *[_type == "post" && slug.current == $slug][0] {
     title,
     "slug": slug.current,
-    "image": image.asset->url,
+      image {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
     direction,
     description,
     content,
@@ -46,8 +60,22 @@ export const allServicesQuery = `
     "slug": slug.current,
     category,
     order,
-    "categoryImage": categoryImage.asset->url,
-    "mainImage": mainImage.asset->url,
+    categoryImage {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
+    mainImage {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
     shortDescription,
     procedureDescription {
       text,
@@ -94,8 +122,22 @@ export const serviceBySlugQuery = `
     title,
     category,
     order,
-    "categoryImage": categoryImage.asset->url,
-    "mainImage": mainImage.asset->url,
+    categoryImage {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
+    mainImage {
+    asset->{
+      _id,
+      url
+    },
+    crop,
+    hotspot
+    },
     shortDescription,
     "slug": slug.current,
     procedureDescription{

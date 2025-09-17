@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface CategoriesListAestheticProps {
   categories: Service[];
@@ -31,7 +32,7 @@ export default function CategoriesListAesthetic({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[0].categoryImage}
+              src={urlFor(currentCategories[0].categoryImage).fit("crop").url()}
               alt={currentCategories[0].title}
               fill
               className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
@@ -46,7 +47,7 @@ export default function CategoriesListAesthetic({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[1].categoryImage}
+              src={urlFor(currentCategories[1].categoryImage).fit("crop").url()}
               alt={currentCategories[1].title}
               fill
               className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
@@ -70,10 +71,10 @@ export default function CategoriesListAesthetic({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[2].categoryImage}
+              src={urlFor(currentCategories[2].categoryImage).fit("crop").url()}
               alt={currentCategories[2].title}
               fill
-              className="-z-20 object-cover object-[center_-2px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[2].title}
@@ -85,11 +86,10 @@ export default function CategoriesListAesthetic({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[3].categoryImage}
+              src={urlFor(currentCategories[3].categoryImage).fit("crop").url()}
               alt={currentCategories[3].title}
               fill
-              className="-z-20 object-cover object-bottom sm:object-[center_-255px] md:object-[center_-310px] lg:object-[center_-395px] 
-              xl:object-[center_-514px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[3].title}
@@ -113,10 +113,10 @@ export default function CategoriesListAesthetic({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[3].categoryImage}
+              src={urlFor(currentCategories[3].categoryImage).fit("crop").url()}
               alt={currentCategories[3].title}
               fill
-              className="-z-20 object-cover object-bottom xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[3].title}
@@ -128,11 +128,10 @@ export default function CategoriesListAesthetic({
           >
             <div className="absolute -z-10 inset-0 bg-[linear-gradient(193.03deg,rgba(0,0,0,0)_44.79%,rgba(0,0,0,0.5)_88.65%)]" />
             <Image
-              src={currentCategories[4].categoryImage}
+              src={urlFor(currentCategories[4].categoryImage).fit("crop").url()}
               alt={currentCategories[4].title}
               fill
-              className="-z-20 object-cover object-bottom sm:object-[center_-385px] md:object-[center_-475px] lg:object-[center_-600px] 
-              xl:object-[center_-775px] xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
+              className="-z-20 object-cover xl:group-hover:scale-105 transition duration-1000 ease-in-out will-change-transform"
             />
             <h3 className="font-evolenta text-[10px] lg:text-[16px] font-normal leading-[133%] text-white uppercase">
               {currentCategories[4].title}
@@ -140,7 +139,7 @@ export default function CategoriesListAesthetic({
           </Link>
         </div>
         <Link
-          href="/catalog/dentistry"
+          href="/catalog/aesthetic"
           className="group cursor-pointer flex items-center sm:items-end justify-between sm:w-[calc(33.33%-4px)] lg:w-[calc(33.33%-11px)] px-[18px] sm:p-3 lg:p-[22px] h-14 sm:h-auto bg-beige rounded-full sm:rounded-[20px] xl:hover:brightness-125 focus-visible:brightness-125
           active:brightness-125 transition duration-300 ease-in-out shrink-0"
         >

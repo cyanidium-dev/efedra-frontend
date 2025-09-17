@@ -6,6 +6,7 @@ import DirectionTag from "@/components/shared/directionTag/DirectionTag";
 import EstimatedReadingTime from "@/components/shared/estReadingTime/estimatedReadingTime";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface HeroProps {
   post: Post;
@@ -28,7 +29,7 @@ export default function Hero({ post }: HeroProps) {
           className="relative sm:w-[calc(50%-11px)] lg:w-[calc(50%-23px)] h-[195px] sm:h-auto sm:min-h-[240px] lg:min-h-[280px] xl:min-h-[350px] rounded-[20px]"
         >
           <Image
-            src={image}
+            src={urlFor(image).fit("crop").url()}
             priority
             fill
             alt={title}

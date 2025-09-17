@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Advantages from "@/components/servicePage/advantages/Advantages";
 import Contraindications from "@/components/servicePage/contraindications/Contraindications";
 import Cost from "@/components/servicePage/cost/Cost";
@@ -12,9 +13,40 @@ import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 import { serviceBySlugQuery } from "@/lib/queries";
 import { fetchSanityDataServer } from "@/utils/fetchSanityDataServer";
 import { Suspense } from "react";
+import Recommended from "@/components/servicePage/recommended/Recommended";
+import { getDefaultMetadata } from "@/utils/getDefaultMetadata";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ServicePageProps {
   params: Promise<{ service: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ServicePageProps): Promise<Metadata> {
+  const { service } = await params;
+
+  const currentService = await fetchSanityDataServer(serviceBySlugQuery, {
+    slug: service,
+  });
+
+  return {
+    title: `${currentService?.title}` || getDefaultMetadata().title,
+    description:
+      currentService?.shortDescription || getDefaultMetadata().description,
+    openGraph: {
+      images: [
+        {
+          url:
+            urlFor(currentService?.mainImage).fit("crop").url() ||
+            "/opengraph-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Glimmer",
+        },
+      ],
+    },
+  };
 }
 
 export default async function ServicePpage({ params }: ServicePageProps) {
@@ -35,10 +67,11 @@ export default async function ServicePpage({ params }: ServicePageProps) {
       <Suspense fallback={<Loader />}>
         <VerticalTitleHero
           title={currentService?.title}
-          image={currentService?.mainImage}
+          image={urlFor(currentService?.mainImage).fit("crop").url()}
         />
         <MarqueeLine variant={variant} />
         <Description variant={variant} service={currentService} />
+        <Recommended variant={variant} service={currentService} />
         <HowItGoes variant={variant} service={currentService} />
         <Advantages variant={variant} service={currentService} />
         <Contraindications variant={variant} service={currentService} />
