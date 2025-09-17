@@ -8,6 +8,7 @@ import {
   listItemVariants,
   listVariants,
 } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface DescriptionProps {
   service: Service;
@@ -20,7 +21,7 @@ export default function Description({ service, variant }: DescriptionProps) {
   if (!procedureDescription) return null;
 
   const { images, info, text } = procedureDescription;
-
+  
   return (
     <section className="pt-15 lg:pt-[100px]">
       <Container>
@@ -41,7 +42,7 @@ export default function Description({ service, variant }: DescriptionProps) {
               className="relative w-full h-[194px] h-[212px] md:min-h-[310px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
-                src={images[0]}
+                src={urlFor(images[0]).fit("crop").url()}
                 alt="procedure"
                 fill
                 className="object-cover"
@@ -87,7 +88,7 @@ export default function Description({ service, variant }: DescriptionProps) {
               className="md:hidden lg:block relative w-full lg:max-w-[280px] xl:max-w-[328px] h-[235px] md:min-h-[253px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
-                src={images[2]}
+                src={urlFor(images[2]).fit("crop").url()}
                 alt="procedure"
                 fill
                 className="object-cover"
@@ -142,7 +143,7 @@ export default function Description({ service, variant }: DescriptionProps) {
               className="hidden md:block relative w-full max-w-[360px] lg:max-w-[300px] xl:max-w-[360px] h-[235px] md:min-h-[253px] md:h-auto rounded-[20px] overflow-hidden"
             >
               <Image
-                src={images[1]}
+                src={urlFor(images[1]).fit("crop").url()}
                 alt="procedure"
                 fill
                 className="object-cover"

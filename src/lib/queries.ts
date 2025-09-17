@@ -141,8 +141,15 @@ export const serviceBySlugQuery = `
     shortDescription,
     "slug": slug.current,
     procedureDescription{
-      text,
-      "images": images[].asset->url,
+    text,
+    images[]{
+      "asset": asset->{
+        _id,
+        url
+      },
+    crop,
+    hotspot
+    },
       info
     },
     recommended[]{
