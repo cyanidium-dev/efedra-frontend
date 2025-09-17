@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ArticleOneProps {
   post: Post;
@@ -35,7 +36,12 @@ export default function ArticleOne({ post }: ArticleOneProps) {
             </SecondaryButton>
           </div>
           <div className="relative h-[202px] xl:h-[344px] rounded-[20px] overflow-hidden">
-            <Image src={image} alt={title} fill className="object-cover" />
+            <Image
+              src={urlFor(image).fit("crop").url()}
+              alt={title}
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </Link>

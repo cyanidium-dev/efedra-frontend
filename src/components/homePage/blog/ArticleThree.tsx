@@ -5,6 +5,7 @@ import EstimatedReadingTime from "@/components/shared/estReadingTime/estimatedRe
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { fadeInAnimation } from "@/utils/animationVariants";
+import { urlFor } from "@/utils/getUrlForSanityImage";
 
 interface ArticleThreeProps {
   post: Post;
@@ -44,7 +45,12 @@ export default function ArticleThree({ post }: ArticleThreeProps) {
           />
         </div>
         <div className="flex-grow relative w-full rounded-[12px] overflow-hidden">
-          <Image src={image} alt={title} fill className="object-cover" />
+          <Image
+            src={urlFor(image).fit("crop").url()}
+            alt={title}
+            fill
+            className="object-cover"
+          />
         </div>
       </motion.div>
     </Link>
