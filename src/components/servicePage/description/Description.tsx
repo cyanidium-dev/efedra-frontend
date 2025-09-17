@@ -90,10 +90,10 @@ export default function Description({ service, variant }: DescriptionProps) {
                 src={images[2]}
                 alt="procedure"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
               />
             </motion.div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 md:justify-center">
               <motion.h3
                 initial="hidden"
                 whileInView="visible"
@@ -145,7 +145,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 src={images[1]}
                 alt="procedure"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover"
               />
             </motion.div>
           </div>
