@@ -58,7 +58,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader className="h-[440px] lg:h-[700px]" />}>
         <Hero post={post} />
         <MarqueeLine />
         <Content post={post} />
