@@ -4,9 +4,6 @@
   preferredstrategy: "pseudoelements";
 }
 
-:root {
-}
-
 @theme inline {
   --breakpoint-xs: 440px;
 
