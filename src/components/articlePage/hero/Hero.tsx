@@ -31,6 +31,7 @@ export default function Hero({ post }: HeroProps) {
           <Image
             src={urlFor(image).fit("crop").url()}
             priority
+            fetchPriority="high"
             fill
             alt={title}
             className="object-cover rounded-[20px]"

@@ -1,3 +1,40 @@
+export const postsAndPostBySlugQuery = `
+{
+  "allPosts": *[_type == "post"] | order(_createdAt desc) {
+    title,
+    "slug": slug.current,
+    image {
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
+    },
+    direction,
+    description,
+    content,
+    "createdAt": _createdAt
+  },
+  "postBySlug": *[_type == "post" && slug.current == $slug][0] {
+    title,
+    "slug": slug.current,
+    image {
+      asset->{
+        _id,
+        url
+      },
+      crop,
+      hotspot
+    },
+    direction,
+    description,
+    content,
+    "createdAt": _createdAt
+  }
+}
+`;
+
 export const allPostsQuery = `
   *[_type == "post"] | order(_createdAt desc) {
     title,
