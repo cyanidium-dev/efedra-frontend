@@ -25,6 +25,7 @@ export default function Hero() {
             src="/images/homePage/hero/bgMob.webp"
             alt="background"
             priority
+            fetchPriority="high"
             width={1063}
             height={868}
             className="object-cover"
