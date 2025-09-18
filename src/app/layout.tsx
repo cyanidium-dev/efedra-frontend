@@ -3,16 +3,22 @@ import { getDefaultMetadata } from "@/utils/getDefaultMetadata";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import Header from "@/components/shared/header/Header";
-import Footer from "@/components/shared/footer/Footer";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("@/components/shared/footer/Footer"), {
+  ssr: true,
+});
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin", "cyrillic"],
+  display: "swap",
 });
 
 const evolenta = localFont({
   src: "../fonts/evolenta-regular.ttf",
   variable: "--font-evolenta",
+  display: "swap",
 });
 
 export async function generateMetadata() {
