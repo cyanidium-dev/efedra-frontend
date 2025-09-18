@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/articlePage/hero/Hero";
 import { Suspense } from "react";
 import { fetchSanityDataServer } from "@/utils/fetchSanityDataServer";
-import { allPostsQuery, postBySlugQuery } from "@/lib/queries";
+import { postsAndPostBySlugQuery, postBySlugQuery } from "@/lib/queries";
 import Loader from "@/components/shared/loader/Loader";
 import MarqueeLine from "@/components/shared/marquee/MarqueeLine";
 import Content from "@/components/articlePage/content/Content";
@@ -44,8 +44,14 @@ export async function generateMetadata({
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { article } = await params;
-  const post = await fetchSanityDataServer(postBySlugQuery, { slug: article });
-  const allPosts = await fetchSanityDataServer(allPostsQuery);
+
+  const res = await fetchSanityDataServer(postsAndPostBySlugQuery, {
+    slug: article,
+  });
+
+  const post = res?.postBySlug;
+  const allPosts = res?.allPosts;
+
   const recommendedPosts = allPosts
     ?.filter((post: Post) => post?.slug !== article)
     .slice(0, 12);
