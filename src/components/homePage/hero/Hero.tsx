@@ -22,12 +22,12 @@ export default function Hero() {
           className="lg:hidden absolute left-[calc(50%-639px)] top-[30px] -z-10 pointer-events-none w-[1063px] h-auto"
         >
           <Image
-            src="/images/homePage/hero/bgMob.png"
+            src="/images/homePage/hero/bgMob.webp"
             alt="background"
             priority
             fetchPriority="high"
-            // unoptimized
-            quality={100}
+            unoptimized
+            // quality={100}
             sizes="(min-width: 1024px) 0px, 100vw"
             width={1063}
             height={868}
@@ -47,12 +47,12 @@ export default function Hero() {
           className="hidden lg:block absolute left-[calc(50%-1339px)] lg:left-[calc(50%-1349px)] top-[30px] lg:top-[-92px] -z-10 pointer-events-none w-[2295px] h-auto"
         >
           <Image
-            src="/images/homePage/hero/bgDesk.png"
+            src="/images/homePage/hero/bgDesk.webp"
             alt="background"
             priority
             fetchPriority="high"
-            quality={100}
-            // unoptimized
+            // quality={100}
+            unoptimized
             sizes="(max-width: 1023px) 0px, 100vw"
             width={2295}
             height={1093}
