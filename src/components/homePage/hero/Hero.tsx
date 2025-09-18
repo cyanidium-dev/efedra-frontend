@@ -25,6 +25,8 @@ export default function Hero() {
             src="/images/homePage/hero/bgMob.webp"
             alt="background"
             priority
+            fetchPriority="high"
+            sizes="(min-width: 1024px) 0px, 100vw"
             width={1063}
             height={868}
             className="object-cover"
@@ -46,6 +48,8 @@ export default function Hero() {
             src="/images/homePage/hero/bgDesk.webp"
             alt="background"
             priority
+            fetchPriority="high"
+            sizes="(max-width: 1023px) 0px, 100vw"
             width={2295}
             height={1093}
             className="object-cover"
