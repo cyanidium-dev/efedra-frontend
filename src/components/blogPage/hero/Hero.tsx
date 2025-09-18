@@ -22,6 +22,7 @@ export default function Hero() {
               alt="background"
               fill
               priority
+              fetchPriority="high"
               className="object-cover"
             />
           </div>

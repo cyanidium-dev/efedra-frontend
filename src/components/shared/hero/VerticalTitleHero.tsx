@@ -47,6 +47,7 @@ export default function VerticalTitleHero({
               alt="background"
               fill
               priority
+              fetchPriority="high"
               className="object-cover"
             />
           </motion.div>

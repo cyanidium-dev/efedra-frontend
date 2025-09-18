@@ -32,6 +32,7 @@ export default function Hero({ category, variant }: HeroProps) {
             alt="hero image"
             fill
             priority
+            fetchPriority="high"
             className="object-cover"
           />
         </motion.div>
@@ -49,6 +50,8 @@ export default function Hero({ category, variant }: HeroProps) {
               alt="hero image"
               fill
               priority
+              fetchPriority="high"
+              sizes="(max-width: 1279px) 0px, 33vw"
               className="object-cover object-center"
             />
           </motion.div>

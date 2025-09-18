@@ -45,6 +45,7 @@ export default function Map() {
           alt="map"
           fill
           priority
+          fetchPriority="high"
           className="object-cover "
         />
       </motion.a>
