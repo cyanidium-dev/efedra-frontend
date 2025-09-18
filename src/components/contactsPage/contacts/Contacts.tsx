@@ -27,7 +27,7 @@ export default function Contacts() {
               exit="exit"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInAnimation({ x: -20, delay: 0.3 })}
-              className="relative w-full h-full rounded-[16px] overflow-hidden z-10"
+              className="relative w-full h-full rounded-[16px] overflow-hidden"
             >
               <Image
                 src="/images/contactsPage/contacts/decoration.webp"
@@ -63,6 +63,8 @@ export default function Contacts() {
                 alt="building"
                 fill
                 priority
+                fetchPriority="high"
+                sizes="(max-width: 767px) 0px, 80vw"
                 className="object-cover object-[20px_-55px] md:object-[center_31%] scale-[125%] md:scale-[130%]   xl:scale-none"
               />
             </motion.div>

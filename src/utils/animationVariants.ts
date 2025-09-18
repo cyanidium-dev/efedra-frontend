@@ -1,5 +1,5 @@
 export const headerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0.01 },
   visible: {
     opacity: 1,
 
@@ -12,7 +12,7 @@ export const headerVariants = {
 };
 
 export const ctaVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0.01, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
@@ -30,7 +30,7 @@ export const fadeInAnimation = ({
   scale = 1,
   delay = 0,
   duration = 0.7,
-  opacity = 0,
+  opacity = 0.01,
 }) => ({
   hidden: {
     opacity: opacity,
@@ -72,7 +72,7 @@ export const listVariants = ({
   staggerChildren = 0.3,
   delayChildren = 0,
 } = {}) => ({
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0.01 },
   visible: {
     opacity: 1,
     transition: {
@@ -83,7 +83,7 @@ export const listVariants = ({
 });
 
 export const approachItemVariants = {
-  hidden: { opacity: 0, x: 30 },
+  hidden: { opacity: 0.01, x: 30 },
   visible: {
     opacity: 1,
     x: 0,
@@ -111,7 +111,7 @@ export const iconItemVariants = {
 };
 
 export const listItemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0.01, y: 20 },
   visible: {
     opacity: 1,
     y: 0,

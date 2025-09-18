@@ -34,6 +34,7 @@ export default function Hero() {
                 className="object-cover object-center"
                 fill
                 priority
+                fetchPriority="high"
               />
             </motion.div>
             <motion.p
