@@ -51,7 +51,7 @@ export default function Hero() {
             priority
             fetchPriority="high"
             unoptimized
-            sizes="(max-width: 1023px) 0px, 100vw"
+            sizes="(max-width: 1023px) 100vw, 0px"
             width={2295}
             height={1093}
             className="object-cover"
