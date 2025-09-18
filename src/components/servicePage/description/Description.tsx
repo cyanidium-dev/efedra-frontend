@@ -45,6 +45,8 @@ export default function Description({ service, variant }: DescriptionProps) {
                 src={urlFor(images[0]).fit("crop").url()}
                 alt="procedure"
                 fill
+                priority
+                fetchPriority="high"
                 className="object-cover"
               />
             </motion.div>
@@ -91,6 +93,7 @@ export default function Description({ service, variant }: DescriptionProps) {
                 src={urlFor(images[2]).fit("crop").url()}
                 alt="procedure"
                 fill
+                sizes="(min-width: 1280px) 328px, 280px"
                 className="object-cover"
               />
             </motion.div>
