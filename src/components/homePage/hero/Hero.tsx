@@ -46,6 +46,7 @@ export default function Hero() {
             src="/images/homePage/hero/bgDesk.webp"
             alt="background"
             priority
+            fetchPriority="high"
             width={2295}
             height={1093}
             className="object-cover"
