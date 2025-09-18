@@ -27,7 +27,6 @@ export default function Hero() {
             priority
             fetchPriority="high"
             unoptimized
-            // quality={100}
             sizes="(min-width: 1024px) 0px, 100vw"
             width={1063}
             height={868}
@@ -51,7 +50,6 @@ export default function Hero() {
             alt="background"
             priority
             fetchPriority="high"
-            // quality={100}
             unoptimized
             sizes="(max-width: 1023px) 0px, 100vw"
             width={2295}
