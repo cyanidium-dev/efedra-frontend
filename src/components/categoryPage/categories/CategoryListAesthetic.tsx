@@ -143,7 +143,7 @@ export default function CategoriesListAesthetic({
           className="group cursor-pointer flex items-center sm:items-end justify-between sm:w-[calc(33.33%-4px)] lg:w-[calc(33.33%-11px)] px-[18px] sm:p-3 lg:p-[22px] h-14 sm:h-auto bg-beige rounded-full sm:rounded-[20px] xl:hover:brightness-125 focus-visible:brightness-125
           active:brightness-125 transition duration-300 ease-in-out shrink-0"
         >
-          <p className="max-w-[147px] mt-1 font-evolenta text-[13px] sm:text-[10px] lg:text-[16px] font-normal leading-[133%] uppercase text-white">
+          <p className="sm:max-w-[100px] lg:max-w-[147px] mt-1 font-evolenta text-[13px] sm:text-[10px] lg:text-[16px] font-normal leading-[133%] uppercase text-white">
             Переглянути інші послуги
           </p>
           <button
