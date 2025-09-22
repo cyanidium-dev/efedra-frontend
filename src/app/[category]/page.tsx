@@ -20,7 +20,7 @@ interface CategoryPageProps {
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = await params;
-  
+
   const { dentistry, aesthetic } = categoriesData;
 
   const doctorsList = await fetchSanityDataServer(allDoctorsQuery);
@@ -60,7 +60,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       ) : (
         <CTAFormWithBackground
           buttonVariant={variant}
-          image="/images/aboutPage/cta/cta.webp"
+          image="/images/shared/cosmetology.webp"
           className="py-15 lg:pt-[126px] lg:pb-25"
         />
       )}
