@@ -16,7 +16,7 @@ export default function Contacts() {
       <ul className="flex flex-col gap-3 mb-4.5">
         <li>
           <a
-            href="tel:0800550130"
+            href={`tel:${PHONE}`}
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="block text-[12px] font-normal leading-[120%] active:text-gray-300 xl:hover:text-gray-300 focus-visible:text-gray-300 transition duration-300 ease-in-out"

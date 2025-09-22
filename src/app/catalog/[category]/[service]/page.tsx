@@ -87,7 +87,7 @@ export default async function ServicePpage({ params }: ServicePageProps) {
       ) : (
         <CTAFormWithBackground
           buttonVariant={variant}
-          image="/images/aboutPage/cta/cta.webp"
+          image="/images/shared/cosmetology.webp"
           className="py-15 lg:py-25"
         />
       )}
