@@ -59,6 +59,7 @@ export default function VerticalTitleHero({
             variants={fadeInAnimation({ x: 10, delay: 0.6 })}
           >
             <MainButton
+              onClick={() => setIsModalShown(true)}
               variant="bordered"
               withArrow
               className="md:hidden absolute -bottom-[20px] -right-[12px] px-[17px] max-w-[158px] h-[43px] text-[14px]"
