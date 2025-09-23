@@ -15,7 +15,7 @@ export default function Footer() {
           </h2>
           <div className="flex sm:flex-row flex-col gap-10 xl:gap-[110px]">
             <Contacts />
-            <div className="flex gap-[30px] lg:gap-10 xl:gap-[110px]">
+            <div className="flex gap-4 xs:gap-[30px] lg:gap-10 xl:gap-[110px]">
               <Schedule />
               <FollowUs />
             </div>

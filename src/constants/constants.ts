@@ -11,7 +11,10 @@ export const ADDRESS = "вул. Академіка Філатова, 60А";
 export const GOOGLE_MAPS_URL =
   "https://maps.app.goo.gl/vDPL6gmow28vzMD86?g_st=av";
 
-export const INSTAGRAM_URL = "https://www.instagram.com/efedra.od";
+export const INSTAGRAM_AESTHETIC_URL = "https://www.instagram.com/efedra.od";
+
+export const INSTAGRAM_DENTISTRY_URL =
+  "https://www.instagram.com/efedra.dental";
 
 export const FACEBOOK_URL = "";
 

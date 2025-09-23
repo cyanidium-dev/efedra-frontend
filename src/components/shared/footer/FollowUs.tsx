@@ -4,8 +4,8 @@ import FooterSubtitle from "./FooterSubtitle";
 export default function FollowUs() {
   return (
     <div>
-      <FooterSubtitle>Слідкуйте за нами</FooterSubtitle>
-      <SocialMedia/>
+      <FooterSubtitle className="max-w-[144px]">Слідкуйте за нами в Instagram!</FooterSubtitle>
+      <SocialMedia />
     </div>
   );
 }
