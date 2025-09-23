@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface FooterSubtitleProps {
   children: ReactNode;
@@ -10,6 +11,8 @@ export default function FooterSubtitle({
   className = "",
 }: FooterSubtitleProps) {
   return (
-    <h3 className={`mb-4 font-evolenta uppercase ${className}`}>{children}</h3>
+    <h3 className={twMerge(`mb-4 font-evolenta uppercase`, className)}>
+      {children}
+    </h3>
   );
 }
