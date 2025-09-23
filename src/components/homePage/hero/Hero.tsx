@@ -57,7 +57,7 @@ export default function Hero() {
             className="object-cover"
           />
         </motion.div>
-        <div className="flex flex-col lg:items-center lg:ml-8 mb-[337px] lg:mb-[331px]">
+        <div className="flex flex-col lg:items-center lg:ml-8 mb-[337px] lg:mb-[261px]">
           <div>
             <motion.h1
               initial="hidden"
