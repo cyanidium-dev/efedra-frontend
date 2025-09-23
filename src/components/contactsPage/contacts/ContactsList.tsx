@@ -6,7 +6,7 @@ import ContactItem from "./ContactItem";
 
 export default function ContactsList() {
   return (
-    <div className="flex flex-col min-[360px]:flex-row gap-[15px] min-[360px]:gap-[37px] md:gap-12 lg:gap-[70px] md:pt-[56px] md:w-[49%]">
+    <div className="flex flex-col min-[360px]:flex-row gap-[15px] min-[360px]:gap-[37px] md:gap-12 lg:gap-[70px] md:w-[49%]">
       <motion.ul
         initial="hidden"
         whileInView="visible"
